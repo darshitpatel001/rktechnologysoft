@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import {Tab, Tabs} from 'react-bootstrap'
+import { Tab, Tabs } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 import Arrow1 from "../assets/images/Arrow-1.png"
 import Arrow2 from "../assets/images/Arrow-2.png"
@@ -49,19 +49,19 @@ export default function Customer() {
   const [customerDetail, setCustomerDetail] = useState();
 
   useEffect(() => {
-        
-      fetch("http://localhost:3001/customer", {
-          method: "GET",
-          headers: {"content-type":"application/json"}
-      }).then(async (res) => {
 
-          let record = await res.json();
+    fetch("http://localhost:3001/customer", {
+      method: "GET",
+      headers: { "content-type": "application/json" }
+    }).then(async (res) => {
 
-          setCustomerDetail(record);
-          
-      }).catch((err) => {
-          console.log("Record not found");
-      })
+      let record = await res.json();
+
+      setCustomerDetail(record);
+
+    }).catch((err) => {
+      console.log("Record not found");
+    })
 
   }, [])
 
@@ -69,69 +69,69 @@ export default function Customer() {
 
     e.preventDefault();
 
-    let character = partyName.slice(0,1);
+    let character = partyName.slice(0, 1);
 
-    if(partyName === "" || phoneNumber === "" || countryAmount === "" || gstin === "" || billingAddress === "" || areaLocality === "" || pinCode === "" || city === "" || state === ""){
-      
-      if(partyName === ""){
+    if (partyName === "" || phoneNumber === "" || countryAmount === "" || gstin === "" || billingAddress === "" || areaLocality === "" || pinCode === "" || city === "" || state === "") {
+
+      if (partyName === "") {
         setPartyNameError("Please fill this field. This field is required.");
       }
-      else{
+      else {
         setPartyNameError("")
       }
-      if(phoneNumber === ""){
+      if (phoneNumber === "") {
         setPhoneNumberError("Please fill this field. This field is required.");
       }
-      else{
+      else {
         setPhoneNumberError("")
       }
-      if(countryAmount === ""){
+      if (countryAmount === "") {
         setCountryAmountError("Please fill this field. This field is required.");
       }
-      else{
+      else {
         setCountryAmountError("")
       }
-      if(gstin === ""){
+      if (gstin === "") {
         setGstinError("Please fill this field. This field is required.");
       }
-      else{
+      else {
         setGstinError("")
       }
-      if(billingAddress === ""){
+      if (billingAddress === "") {
         setBillingAddressError("Please fill this field. This field is required.");
       }
-      else{
+      else {
         setBillingAddressError("")
       }
-      if(areaLocality === ""){
+      if (areaLocality === "") {
         setareaLocalityError("Please fill this field. This field is required.");
       }
-      else{
+      else {
         setareaLocalityError("")
       }
-      if(pinCode === ""){
+      if (pinCode === "") {
         setPinCodeError("Please fill this field. This field is required.");
       }
-      else{
+      else {
         setPinCodeError("")
       }
-      if(city === ""){
+      if (city === "") {
         setCityError("Please fill this field. This field is required.");
       }
-      else{
+      else {
         setCityError("")
       }
-      if(state === ""){
+      if (state === "") {
         setStateError("Please fill this field. This field is required.");
       }
-      else{
+      else {
         setStateError("")
       }
 
     }
-    else{
-      
-      const customerRecord = {    
+    else {
+
+      const customerRecord = {
         firstCharacter: character,
         partyname: partyName,
         phonenumber: phoneNumber,
@@ -146,13 +146,13 @@ export default function Customer() {
       }
 
       fetch("http://localhost:3001/customer", {
-          method: "POST",
-          headers: {"content-type":"application/json"},
-          body: JSON.stringify(customerRecord)
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(customerRecord)
       }).then((res) => {
-          console.log("Blog record uploaded");
+        console.log("Blog record uploaded");
       }).catch((err) => {
-          console.log("Blog record not uploaded");
+        console.log("Blog record not uploaded");
       })
       setShow("")
 
@@ -235,27 +235,27 @@ export default function Customer() {
                 <h5>Amount</h5>
               </div>
               <div className='user-details'>
-              {
-                customerDetail&&customerDetail.map((value, index) => {
-                  return(
-                    <NavLink>
-                      <div className='single-user-details'>
-                        <div className='username'>
-                          <span>{value.firstCharacter}</span>
-                          <div className='name'>
-                            <h4>{value.partyname}</h4>
-                            <p>11 days ago</p>
+                {
+                  customerDetail && customerDetail.map((value, index) => {
+                    return (
+                      <NavLink>
+                        <div className='single-user-details'>
+                          <div className='username'>
+                            <span>{value.firstCharacter}</span>
+                            <div className='name'>
+                              <h4>{value.partyname}</h4>
+                              <p>11 days ago</p>
+                            </div>
                           </div>
-                        </div>
-                        <div className='amount'>
+                          <div className='amount'>
                             <h4>₹ {value.countryamount}</h4>
                             <p>{value.gavegot}</p>
+                          </div>
                         </div>
-                      </div>
-                    </NavLink>
-                  )
-                })
-              }
+                      </NavLink>
+                    )
+                  })
+                }
               </div>
               <div className='add-customer'>
                 <Button variant="primary" onClick={handleShow}>+ Add Customer</Button>
@@ -269,131 +269,131 @@ export default function Customer() {
       </div>
       <div className='single-user-data'>
         <div className='username'>
-        <div className='name'>
+          <div className='name'>
             <span>A</span>
             <div className='name-number'>
-            <h4>Aditya Patel</h4>
-            <p>+91 98523 45620</p>
+              <h4>Aditya Patel</h4>
+              <p>+91 98523 45620</p>
             </div>
-        </div>
-        <div className='report-setting-btn'>
+          </div>
+          <div className='report-setting-btn'>
             <button className='report'><span><img src={Fileicon2} alt='' /></span>Report</button>
             <button className='setting'><img src={Settingicon} alt='' /></button>
-        </div>
+          </div>
         </div>
         <div className='date-balance-row'>
-        <div className='due-date'>
+          <div className='due-date'>
             <h3><span><img src={Alarmicon} alt='' /></span>Due Date:</h3>
             <div className='date'>
-            <p>02 July 2023</p>
-            <button>Edit</button>
+              <p>02 July 2023</p>
+              <button>Edit</button>
             </div>
-        </div>
-        <div className='net-balance'>
+          </div>
+          <div className='net-balance'>
             <h4>Net Balance</h4>
             <p>You'll Get: <span>₹1,256.25</span></p>
-        </div>
+          </div>
         </div>
         <div className='send-reminder-row'>
-        <h6>Send Reminder<span><img src={Lettericon} alt='' /></span></h6>
-        <div className='send-reminder-btn'>
+          <h6>Send Reminder<span><img src={Lettericon} alt='' /></span></h6>
+          <div className='send-reminder-btn'>
             <button className='whatsapp'><img src={Whatsappicon} alt='' />via<span>Whatsapp</span>from your number</button>
             <button className='sms'><img src={Smsicon} alt='' />via<span>SMS</span>from Khatabook's number</button>
-        </div>
+          </div>
         </div>
         <div className='entries-table-section'>
-        <table>
+          <table>
             <thead>
-            <tr>
+              <tr>
                 <td className='entries'>Entries</td>
                 <td className='you-gave'>You Gave</td>
                 <td className='you-got'>You Got</td>
-            </tr>
+              </tr>
             </thead>
             <tbody>
-            <tr>
+              <tr>
                 <td className='entries'>
-                <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
-                <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
-                <p className='items'><span>391</span>items.</p>
+                  <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
+                  <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
+                  <p className='items'><span>391</span>items.</p>
                 </td>
                 <td className='you-gave'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
                 <td className='you-got'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
-            </tr>
-            <tr>
+              </tr>
+              <tr>
                 <td className='entries'>
-                <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
-                <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
-                <p className='items'><span>391</span>items.</p>
+                  <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
+                  <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
+                  <p className='items'><span>391</span>items.</p>
                 </td>
                 <td className='you-gave'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
                 <td className='you-got'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
-            </tr>
-            <tr>
+              </tr>
+              <tr>
                 <td className='entries'>
-                <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
-                <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
-                <p className='items'><span>391</span>items.</p>
+                  <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
+                  <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
+                  <p className='items'><span>391</span>items.</p>
                 </td>
                 <td className='you-gave'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
                 <td className='you-got'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
-            </tr>
-            <tr>
+              </tr>
+              <tr>
                 <td className='entries'>
-                <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
-                <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
-                <p className='items'><span>391</span>items.</p>
+                  <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
+                  <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
+                  <p className='items'><span>391</span>items.</p>
                 </td>
                 <td className='you-gave'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
                 <td className='you-got'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
-            </tr>
-            <tr>
+              </tr>
+              <tr>
                 <td className='entries'>
-                <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
-                <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
-                <p className='items'><span>391</span>items.</p>
+                  <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
+                  <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
+                  <p className='items'><span>391</span>items.</p>
                 </td>
                 <td className='you-gave'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
                 <td className='you-got'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
-            </tr>
-            <tr>
+              </tr>
+              <tr>
                 <td className='entries'>
-                <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
-                <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
-                <p className='items'><span>391</span>items.</p>
+                  <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
+                  <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
+                  <p className='items'><span>391</span>items.</p>
                 </td>
                 <td className='you-gave'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
                 <td className='you-got'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
-            </tr>
-            <tr>
+              </tr>
+              <tr>
                 <td className='entries'>
-                <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
-                <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
-                <p className='items'><span>391</span>items.</p>
+                  <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
+                  <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
+                  <p className='items'><span>391</span>items.</p>
                 </td>
                 <td className='you-gave'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
                 <td className='you-got'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
-            </tr>
-            <tr>
+              </tr>
+              <tr>
                 <td className='entries'>
-                <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
-                <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
-                <p className='items'><span>391</span>items.</p>
+                  <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
+                  <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
+                  <p className='items'><span>391</span>items.</p>
                 </td>
                 <td className='you-gave'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
                 <td className='you-got'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
-            </tr>
-            <tr>
+              </tr>
+              <tr>
                 <td className='entries'>
-                <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
-                <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
-                <p className='items'><span>391</span>items.</p>
+                  <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
+                  <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
+                  <p className='items'><span>391</span>items.</p>
                 </td>
                 <td className='you-gave'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
                 <td className='you-got'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
-            </tr>
+              </tr>
             </tbody>
-        </table>
+          </table>
         </div>
         <div className='you-gave-got-btn'>
           <button className='gave'>You Gave ₹</button>

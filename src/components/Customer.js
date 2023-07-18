@@ -131,7 +131,7 @@ export default function Customer() {
     }
     else{
       
-      const customerRecord = {
+      const customerRecord = {    
         firstCharacter: character,
         partyname: partyName,
         phonenumber: phoneNumber,

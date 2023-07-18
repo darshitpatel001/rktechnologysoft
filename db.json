@@ -55,34 +55,6 @@
       "city": "13135",
       "state": "1131513",
       "id": 4
-    },
-    {
-      "firstCharacter": "d",
-      "partyname": "darshit",
-      "phonenumber": "09561850391",
-      "countryamount": "45",
-      "gavegot": "You'll Gave",
-      "gstin": "fsdfd",
-      "billingaddress": "fsdf",
-      "arealocality": "fsdffdf",
-      "pincode": "-2",
-      "city": "dsfsfdfs",
-      "state": "dfsd",
-      "id": 5
-    },
-    {
-      "firstCharacter": "d",
-      "partyname": "darshit R Akbari ",
-      "phonenumber": "9773498912",
-      "countryamount": "500000",
-      "gavegot": "You Got",
-      "gstin": "Ddfbgm102152",
-      "billingaddress": "20",
-      "arealocality": "surat",
-      "pincode": "395008",
-      "city": "surart ",
-      "state": "surat",
-      "id": 6
     }
   ]
 }

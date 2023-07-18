@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; box-shadow: none; outline: none; }
+
+a { text-decoration: none; }
+
+body { font-family: 'Jost', sans-serif; background-color: #F9FBFC; }
+
+img { display: block; width: 100%; }
+
+ul, ol { list-style: none; padding: 0; margin: 0; }
+
+table, thead, tbody, tr, td, th { display: block; }
+
+.dashboard { display: flex; flex-wrap: wrap; align-items: flex-start; }
+.dashboard .sidebar-section { width: 20%; height: 100vh; overflow: hidden; background: #FFFFFF; box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06); padding: 45px 0 0 50px; position: relative; z-index: 1; }
+.dashboard .sidebar-section .software-logo { padding-right: 50px; }
+.dashboard .sidebar-section .software-logo img { width: 125px; margin: 0 auto; }
+.dashboard .sidebar-section .user-box { margin-top: 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; background-color: #1A9EDA; padding: 22px 0; margin-right: 40px; margin-bottom: 40px; border-radius: 10px; }
+.dashboard .sidebar-section .user-box .user-icon h5 { font-size: 26px; font-weight: 500; line-height: 1; color: #FFFFFF; margin: 0; padding: 5px; border: 1px solid #FFFFFF; }
+.dashboard .sidebar-section .user-box .user-name h2 { font-size: 26px; font-weight: 500; line-height: 1; color: #FFFFFF; margin: 0 15px 0; }
+.dashboard .sidebar-section .user-box .arrow { display: grid; }
+.dashboard .sidebar-section .user-box .arrow svg path { fill: #FFFFFF; }
+.dashboard .sidebar-section .menu h5 { font-size: 20px; font-weight: 400; line-height: 1; color: #8B9DB0; margin: 0 0 15px; text-transform: uppercase; }
+.dashboard .sidebar-section .menu ul { margin: 0 0 20px; }
+.dashboard .sidebar-section .menu ul li { margin: 0; }
+.dashboard .sidebar-section .menu ul li:last-child { margin: 0; }
+.dashboard .sidebar-section .menu ul li a { display: flex; flex-wrap: wrap; align-items: center; font-size: 18px; font-weight: 400; line-height: 1; color: #8B9DB0; padding: 8px 20px; background-color: transparent; border-radius: 10px 0 0 10px; }
+.dashboard .sidebar-section .menu ul li a span img { width: 25px; margin-right: 20px; }
+
+.dashboard .customer-section { width: 80%; height: 100vh; overflow: hidden; display: flex; flex-wrap: wrap; align-items: flex-start; }
+.dashboard .customer-section .detail-section, .dashboard .customer-section .single-user-data { width: 50%; height: 100vh; overflow: hidden; position: relative; }
+.dashboard .customer-section .detail-section .nav-tabs { border-bottom: 1px solid #CFCFCF; margin: 0 !important; padding: 30px 0 30px 46px; }
+.dashboard .customer-section .detail-section .nav-tabs .nav-item { margin-right: 130px; }
+.dashboard .customer-section .detail-section .nav-tabs .nav-item:last-child { margin-right: 0px; }
+.dashboard .customer-section .detail-section .nav-tabs .nav-item .nav-link { border: none; background-color: transparent; font-size: 26px; font-weight: 400; line-height: 1; color: #8B9DB0; padding: 0; }
+.dashboard .customer-section .detail-section .nav-tabs .nav-item .nav-link.active { color: #1A9EDA; text-decoration: underline; }
+
+.dashboard .customer-section .detail-section .tab-content .tab-pane .amount-row { display: flex; flex-wrap: wrap; align-items: center; padding: 30px 46px; }
+.dashboard .customer-section .detail-section .tab-content .tab-pane .amount-row .amount { display: flex; flex-wrap: wrap; align-items: center; margin-right: 60px; }
+.dashboard .customer-section .detail-section .tab-content .tab-pane .amount-row .amount h3 { font-size: 18px; font-weight: 600; line-height: 1; color: #8B9DB0; margin: 0 10px 0 0; }
+.dashboard .customer-section .detail-section .tab-content .tab-pane .amount-row .amount h6 { font-size: 16px; font-weight: 600; line-height: 1; color: #000000; margin: 0 10px 0 0; }
+.dashboard .customer-section .detail-section .tab-content .tab-pane .amount-row .amount span { width: 20px; }
+.dashboard .customer-section .detail-section .tab-content .tab-pane .amount-row .report-btn { margin-left: auto; }
+.dashboard .customer-section .detail-section .tab-content .tab-pane .amount-row .report-btn button { display: flex; flex-wrap: wrap; align-items: center; font-size: 16px; font-weight: 600; line-height: 1; color: #1A9EDA; background-color: transparent; border: 1px solid #1A9EDA; border-radius: 10px; padding: 15px 25px; }
+.dashboard .customer-section .detail-section .tab-content .tab-pane .amount-row .report-btn button span { display: inline-block; margin: 0 10px 0 0; }
+
+.dashboard .customer-section .detail-section .tab-content .tab-pane .filter-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 30px 46px; border-top: 1px solid #CFCFCF; }
+.dashboard .customer-section .detail-section .tab-content .tab-pane .filter-row .filter h4 { font-size: 18px; font-weight: 600; line-height: 1; color: #8B9DB0; margin: 0 0 15px; }
+.dashboard .customer-section .detail-section .tab-content .tab-pane .filter-row .search-filter { width: 36%; }
+.dashboard .customer-section .detail-section .tab-content .tab-pane .filter-row .search-filter .search-filter-input { position: relative; }
+.dashboard .customer-section .detail-section .tab-content .tab-pane .filter-row .search-filter .search-filter-input img { position: absolute; top: 50%; left: 15px; transform: translateY(-50%); width: auto; }
+.dashboard .customer-section .detail-section .tab-content .tab-pane .filter-row .search-filter .search-filter-input input { font-size: 16px; font-weight: 600; color: #CFCFCF; border: 2px solid #8B9DB0; background-color: transparent; padding: 10px 20px 10px 50px; border-radius: 10px; width: 100%; }
+
+.dashboard .customer-section .detail-section .tab-content .tab-pane .filter-row .filter .select { position: relative; }
+.dashboard .customer-section .detail-section .tab-content .tab-pane .filter-row .filter .select .filter-icon { position: absolute; top: 50%; left: 15px; transform: translateY(-50%); width: auto; }
+.dashboard .customer-section .detail-section .tab-content .tab-pane .filter-row .filter .select .down-icon { position: absolute; top: 50%; right: 10px; transform: translateY(-50%); width: auto; }
+.dashboard .customer-section .detail-section .tab-content .tab-pane .filter-row .filter .select select { font-size: 16px; font-weight: 600; color: #CFCFCF; border: 2px solid #8B9DB0; background-color: transparent; padding: 10px 30px 10px 50px; border-radius: 10px; appearance: none; }
+.dashboard .customer-section .detail-section .tab-content .tab-pane .filter-row .filter .select-filter-select.select select { padding: 10px 30px 10px 40px; }
+
+.dashboard .customer-section .detail-section .tab-content .tab-pane .user-detail-section { position: relative; }
+.dashboard .customer-section .detail-section .tab-content .tab-pane .user-detail-section .user-detail-title { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 5px 46px; background-color: #f0f0f0; }
+.dashboard .customer-section .detail-section .tab-content .tab-pane .user-detail-section .user-detail-title h5 { font-size: 20px; font-weight: 400; line-height: 1; color: #757575; margin: 0; }
+
+.dashboard .customer-section .detail-section .tab-content .tab-pane .user-detail-section .user-details { height: 597px; overflow-y: scroll; }
+.dashboard .customer-section .detail-section .tab-content .tab-pane .user-detail-section .user-details .single-user-details { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 15px 46px; background-color: #FFFFFF; border-bottom: 1px solid rgb(207, 207, 207, 0.3); }
+.dashboard .customer-section .detail-section .tab-content .tab-pane .user-detail-section .user-details .single-user-details .username { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+.dashboard .customer-section .detail-section .tab-content .tab-pane .user-detail-section .user-details .single-user-details .username span { width: 40px; height: 40px; font-size: 18px; font-weight: 500; line-height: 40px; color: #1A9EDA; background-color: rgba(26, 158, 218, 0.2); border-radius: 50px; text-align: center; margin-right: 10px; }
+.dashboard .customer-section .detail-section .tab-content .tab-pane .user-detail-section .user-details .single-user-details .username .name h4 { font-size: 18px; font-weight: 500; line-height: 1; color: #000000; margin: 0 0 5px; }
+.dashboard .customer-section .detail-section .tab-content .tab-pane .user-detail-section .user-details .single-user-details .username .name p { font-size: 14px; font-weight: 400; line-height: 1; color: #979797; margin: 0; }
+.dashboard .customer-section .detail-section .tab-content .tab-pane .user-detail-section .user-details .single-user-details .amount { text-align: end; }
+.dashboard .customer-section .detail-section .tab-content .tab-pane .user-detail-section .user-details .single-user-details .amount h4 { font-size: 18px; font-weight: 400; line-height: 1; color: #ff0000; margin: 0 0 5px; }
+.dashboard .customer-section .detail-section .tab-content .tab-pane .user-detail-section .user-details .single-user-details .amount p { font-size: 14px; font-weight: 400; line-height: 1; color: #979797; margin: 0; }
+
+.dashboard .customer-section .detail-section .tab-content .tab-pane .user-detail-section .add-customer { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 1; }
+.dashboard .customer-section .detail-section .tab-content .tab-pane .user-detail-section .add-customer button { font-size: 20px; font-weight: 400; line-height: 1; color: #FFFFFF; background-color: #F16621; padding: 15px 20px; border: none; border-radius: 10px; }
+
+.dashboard .customer-section .single-user-data .username { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 20px 30px 0; }
+.dashboard .customer-section .single-user-data .username .name { display: flex; flex-wrap: wrap; align-items: center; }
+.dashboard .customer-section .single-user-data .username .name span { width: 40px; height: 40px; font-size: 18px; font-weight: 500; line-height: 40px; color: #1A9EDA; background-color: rgba(26, 158, 218, 0.2); border-radius: 50px; text-align: center; margin-right: 10px; }
+.dashboard .customer-section .single-user-data .username .name .name-number h4 { font-size: 18px; font-weight: 500; line-height: 1; color: #000000; margin: 0 0 5px; }
+.dashboard .customer-section .single-user-data .username .name .name-number p { font-size: 14px; font-weight: 400; line-height: 1; color: #979797; margin: 0; }
+
+.dashboard .customer-section .single-user-data { background-color: #FFFFFF; box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06); position: relative; z-index: 1; }
+.dashboard .customer-section .single-user-data .username .report-setting-btn { display: flex; flex-wrap: wrap; align-items: center; }
+.dashboard .customer-section .single-user-data .username .report-setting-btn .report { display: flex; flex-wrap: wrap; align-items: center; font-size: 16px; font-weight: 600; line-height: 1; color: #AEAEAE; background-color: transparent; border: 1px solid#AEAEAE; border-radius: 10px; padding: 12px 25px; }
+.dashboard .customer-section .single-user-data .username .report-setting-btn .report span { display: inline-block; margin: 0 10px 0 0; }
+.dashboard .customer-section .single-user-data .username .report-setting-btn .setting { position: relative; width: 48px; height: 48px; background-color: transparent; border: 1px solid#AEAEAE; border-radius: 10px; margin: 0 0 0 10px; }
+.dashboard .customer-section .single-user-data .username .report-setting-btn .setting img { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: auto; }
+
+.dashboard .customer-section .single-user-data .date-balance-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 30px; }
+.dashboard .customer-section .single-user-data .date-balance-row .due-date h3 { display: flex; flex-wrap: wrap; align-items: center; font-size: 18px; font-weight: 500; line-height: 1; color: #666666; }
+.dashboard .customer-section .single-user-data .date-balance-row .due-date h3 span img { width: 20px; margin-right: 15px; }
+.dashboard .customer-section .single-user-data .date-balance-row .due-date .date { display: flex; flex-wrap: wrap; align-items: center; }
+.dashboard .customer-section .single-user-data .date-balance-row .due-date .date p { font-size: 18px; font-weight: 400; line-height: 1; color: #666666; margin: 0 20px 0 0; }
+.dashboard .customer-section .single-user-data .date-balance-row .due-date .date button { font-size: 14px; font-weight: 400; line-height: 1; color: #1A9EDA; background-color: transparent; border: 1px solid #1A9EDA; border-radius: 5px; padding: 5px 10px; }
+
+.dashboard .customer-section .single-user-data .date-balance-row .net-balance { text-align: center; }
+.dashboard .customer-section .single-user-data .date-balance-row .net-balance h4 { font-size: 20px; font-weight: 400; line-height: 1; color: #757575; margin: 0 0 10px; text-transform: uppercase; }
+.dashboard .customer-section .single-user-data .date-balance-row .net-balance p { font-size: 16px; font-weight: 500; line-height: 1; color: #666666; margin: 0; }
+.dashboard .customer-section .single-user-data .date-balance-row .net-balance p span { color: #ff0000; }
+
+.dashboard .customer-section .single-user-data .send-reminder-row { background-color: #f0f0f0; margin: 0 30px; padding: 20px 30px; }
+.dashboard .customer-section .single-user-data .send-reminder-row h6 { font-size: 20px; font-weight: 400; line-height: 1; color: #757575; margin: 0 0 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; }
+.dashboard .customer-section .single-user-data .send-reminder-row h6 span { width: 20px; display: inline-block; margin-left: 5px; }
+.dashboard .customer-section .single-user-data .send-reminder-row .send-reminder-btn { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+.dashboard .customer-section .single-user-data .send-reminder-row .send-reminder-btn button { display: flex; flex-wrap: wrap; align-items: center; font-size: 16px; font-weight: 400; line-height: 1; color: #666666; background-color: #FFFFFF; border: none; border-radius: 10px; padding: 10px 20px; }
+.dashboard .customer-section .single-user-data .send-reminder-row .send-reminder-btn button img { width: 25px; margin-right: 10px; }
+.dashboard .customer-section .single-user-data .send-reminder-row .send-reminder-btn button.whatsapp span { font-weight: 500; margin: 0 5px; color: #39ae41; }
+.dashboard .customer-section .single-user-data .send-reminder-row .send-reminder-btn button.sms span { font-weight: 500; margin: 0 5px; color: #1A9EDA; }
+
+.dashboard .customer-section .single-user-data .entries-table-section { margin: 30px 30px 15px; }
+.dashboard .customer-section .single-user-data .entries-table-section table thead tr td { font-size: 18px; font-weight: 300; line-height: 1; color: #51515e; }
+.dashboard .customer-section .single-user-data .entries-table-section table thead tr { padding: 0 0 10px; border-bottom: 1px solid #CFCFCF; }
+.dashboard .customer-section .single-user-data .entries-table-section table tr { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+.dashboard .customer-section .single-user-data .entries-table-section table tr .entries { width: 60%; }
+.dashboard .customer-section .single-user-data .entries-table-section table tr .you-gave, .dashboard .customer-section .single-user-data .entries-table-section table tr .you-got { width: 20%; }
+.dashboard .customer-section .single-user-data .entries-table-section table tbody { height: 512px; overflow-y: scroll; }
+.dashboard .customer-section .single-user-data .entries-table-section table tbody tr { padding: 15px 0; border-bottom: 1px solid #CFCFCF; }
+.dashboard .customer-section .single-user-data .entries-table-section table tbody tr .entries .date-time { font-size: 16px; font-weight: 500; line-height: 1; color: #464646; margin: 0; }
+.dashboard .customer-section .single-user-data .entries-table-section table tbody tr .entries .balance { font-size: 16px; font-weight: 300; line-height: 1; color: #464646; margin: 8px 0 0; }
+.dashboard .customer-section .single-user-data .entries-table-section table tbody tr .entries .items { font-size: 16px; font-weight: 300; line-height: 1; color: #464646; margin: 10px 0 0; }
+.dashboard .customer-section .single-user-data .entries-table-section table tbody tr .you-gave { font-size: 16px; font-weight: 500; color: #ff0000; }
+.dashboard .customer-section .single-user-data .entries-table-section table tbody tr .you-gave .rupee-icon, .dashboard .customer-section .single-user-data .entries-table-section table tbody tr .you-gave .amount { display: none; }
+.dashboard .customer-section .single-user-data .entries-table-section table tbody tr .you-got { font-size: 16px; font-weight: 500; color: #058C4C; }
+.dashboard .customer-section .single-user-data .entries-table-section table tbody tr .you-got .blank { display: none; }
+
+.dashboard .customer-section .single-user-data .you-gave-got-btn { box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px; background-color: #FFFFFF; padding: 20px 30px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; position: absolute; bottom: 0; right: 0; z-index: 1; width: 100%; }
+.dashboard .customer-section .single-user-data .you-gave-got-btn button.gave { font-size: 16px; font-weight: 400; line-height: 1; color: #ff0000; padding: 10px 130px; border: none; border-radius: 10px; background-color: rgba(255, 0, 0, 0.2); }
+.dashboard .customer-section .single-user-data .you-gave-got-btn button.got { font-size: 16px; font-weight: 400; line-height: 1; color: #058c4c; padding: 10px 130px; border: none; border-radius: 10px; background-color: rgba(5, 140, 76, 0.2); }
+
+.add-customer .modal-dialog { position: absolute; top: 0; right: 0; margin: 0; width: 400px; height: 100vh; overflow-y: scroll; background-color: #FFFFFF; }
+.add-customer .modal-dialog .modal-content { border-radius: 0; border: none; height: 100vh; }
+.add-customer .modal-dialog .modal-content .modal-header .modal-title { font-size: 20px; font-weight: 500; line-height: 1; color: #313131; }
+.add-customer .modal-dialog .modal-content .modal-body { position: relative; }
+.add-customer .modal-dialog .modal-content .modal-body form .input { margin-bottom: 20px; }
+.add-customer .modal-dialog .modal-content .modal-body form .input .error { font-size: 12px; line-height: 1.2; display: inline-block; color: #ff0000; margin-top: 5px; }
+.add-customer .modal-dialog .modal-content .modal-body form .input .all-span { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+.add-customer .modal-dialog .modal-content .modal-body form .input > .label, .add-customer .modal-dialog .modal-content .modal-body form .input .all-span .label { display: block; font-size: 18px; font-weight: 400; line-height: 1; color: #464646; margin-bottom: 10px; }
+.add-customer .modal-dialog .modal-content .modal-body form .input input { display: block; background-color: #FFFFFF; border: 1px solid #CFCFCF; width: 100%; padding: 10px 20px 10px 30px; font-size: 16px; color: #AEAEAE; border-radius: 10px; }
+.add-customer .modal-dialog .modal-content .modal-body form .number input::-webkit-outer-spin-button, .add-customer .modal-dialog .modal-content .modal-body form .number input::-webkit-inner-spin-button, .accordion .accordion-item .accordion-collapse .accordion-body .billing-address .pin-code input::-webkit-outer-spin-button, .accordion .accordion-item .accordion-collapse .accordion-body .billing-address .pin-code input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.add-customer .modal-dialog .modal-content .modal-body form .number input[type=number], .accordion .accordion-item .accordion-collapse .accordion-body .billing-address .pin-code input[type=number] { -moz-appearance: textfield; }
+.add-customer .modal-dialog .modal-content .modal-body form .number .phone-number { position: relative; }
+.add-customer .modal-dialog .modal-content .modal-body form .number .phone-number input { padding: 10px 20px 10px 45px; }
+.add-customer .modal-dialog .modal-content .modal-body form .number .phone-number .country { position: absolute; top: 50%; left: 10px; transform: translateY(-50%); font-size: 16px; font-weight: 400; line-height: 1; color: #51515e; }
+.add-customer .modal-dialog .modal-content .modal-body form .number .amount { position: relative; display: flex; flex-wrap: wrap; align-items: center;justify-content: space-between; }
+.add-customer .modal-dialog .modal-content .modal-body form .number .amount .coutry-amount { position: relative; width: 70%; }
+.add-customer .modal-dialog .modal-content .modal-body form .number .amount .coutry-amount input { padding: 10px 20px 10px 35px; border-radius: 10px 0 0 10px; border-right: none; }
+.add-customer .modal-dialog .modal-content .modal-body form .number .amount .select { width: 30%; position: relative; }
+.add-customer .modal-dialog .modal-content .modal-body form .number .amount .select select { background-color: transparent; border: 1px solid #CFCFCF; padding: 10px 30px 10px 10px; font-size: 16px; color: #ff0000; border-radius: 0 10px 10px 0; appearance: none; z-index: 1; position: relative; }
+.add-customer .modal-dialog .modal-content .modal-body form .number .amount .select img { position: absolute; top: 50%; right: 10px; transform: translateY(-50%); width: 10px; z-index: 0; }
+.add-customer .modal-dialog .modal-content .modal-body form .number .amount .coutry-amount .amount-icon { position: absolute; top: 50%; left: 15px; transform: translateY(-50%); font-size: 16px; font-weight: 400; line-height: 1; color: #51515e; }
+
+.add-customer .modal-dialog .modal-content .modal-body form .accordion:visited, .add-customer .modal-dialog .modal-content .modal-body form .accordion .accordion-item:visited, .add-customer .modal-dialog .modal-content .modal-body form .accordion .accordion-item .accordion-header:visited, .add-customer .modal-dialog .modal-content .modal-body form .accordion .accordion-item .accordion-header .accordion-button:visited, .add-customer .modal-dialog .modal-content .modal-body form .accordion .accordion-item .accordion-header .accordion-button:focus { text-decoration: none; box-shadow: none; outline: none; border: none; }
+.add-customer .modal-dialog .modal-content .modal-body form .accordion .accordion-item { border: none; }
+.add-customer .modal-dialog .modal-content .modal-body form .accordion .accordion-item .accordion-header .accordion-button { padding: 0; background-color: transparent; box-shadow: none; color: #1A9EDA; }
+.add-customer .modal-dialog .modal-content .modal-body form .accordion .accordion-item .accordion-header .accordion-button::after { content: ""; background-image: url("../images/down-blue.png"); width: 14px; height: 8px; background-position: center; background-repeat: no-repeat; background-size: cover; }
+.add-customer .modal-dialog .modal-content .modal-body form .accordion .accordion-item .accordion-collapse .accordion-body { padding: 15px 0 0 0; }
+.add-customer .modal-dialog .modal-content .modal-body form .accordion .accordion-item .accordion-collapse .accordion-body .input .label { display: block; font-size: 18px; font-weight: 400; line-height: 1; color: #464646; margin-bottom: 10px; }
+.add-customer .modal-dialog .modal-content .modal-body form .accordion .accordion-item .accordion-collapse .accordion-body .input input { display: block; background-color: #FFFFFF; border: 1px solid #CFCFCF; width: 100%; padding: 10px 20px 10px 30px; font-size: 16px; color: #AEAEAE; border-radius: 10px; }
+.add-customer .modal-dialog .modal-content .modal-body form .accordion .accordion-item .accordion-collapse .accordion-body .billing-address h2 { display: block; font-size: 18px; font-weight: 400; line-height: 1; color: #464646; margin-bottom: 10px; }
+.add-customer .modal-dialog .modal-content .modal-body form .accordion .accordion-item .accordion-collapse .accordion-body .billing-address .input .label { display: block; font-size: 18px; font-weight: 400; line-height: 1; color: #464646; margin-bottom: 10px; }
+.add-customer .modal-dialog .modal-content .modal-body form .accordion .accordion-item .accordion-collapse .accordion-body .billing-address .input input { display: block; background-color: #FFFFFF; border: 1px solid #CFCFCF; width: 100%; padding: 10px 20px 10px 30px; font-size: 16px; color: #AEAEAE; border-radius: 10px; }
+.add-customer .modal-dialog .modal-content .modal-body form .accordion .accordion-item .accordion-collapse .accordion-body .billing-address .city-state { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+.add-customer .modal-dialog .modal-content .modal-body form .accordion .accordion-item .accordion-collapse .accordion-body .billing-address .city-state .city { width: calc(50% - 10px); margin-right: 10px; }
+.add-customer .modal-dialog .modal-content .modal-body form .accordion .accordion-item .accordion-collapse .accordion-body .billing-address .city-state .state { width: calc(50% - 10px); margin-left: 10px; }
+
+.add-customer .modal-dialog .modal-content .modal-body form .submit-btn { background-color: #1A9EDA; border: none; display: block; width: 100%; padding: 8px 0; color: #FFFFFF; border-radius: 10px; margin-top: 15px; }
+
+.Cash-section {width: 80%; display: flex; flex-wrap: wrap; align-items: flex-start; }
+.Cash-section .details-section, .Cash-section .details-section1 {width: 50%; }
+.Cash-section .details-section .Balance {border-bottom: 1px solid #CFCFCF; padding: 50px 30px 50px; background-color: #F9FBFC;}
+.Cash-section .details-section .pdf-button button { padding: 10px 20px; margin-left: 40px; border: 2px solid #1A9EDA; border-radius: 10px; background-color: white; color: #1A9EDA; margin-top: 0; font-family: 'Jost', sans-serif; font-size: 18px; font-weight: normal; line-height: 1; }
+.Cash-section .details-section .pdf-img { width: auto; padding: 0; margin-right: 10px; font-size: 20px;}
+.Cash-section .details-section  .rupees { font-family: 'Jost', sans-serif; font-size: 18px; font-weight: normal; line-height: 1; color: #000000; margin-right: 10px; }
+.Cash-section .details-section .you {margin-right: 2px;}
+.Cash-section .details-section .Total-balance { display: flex; flex-wrap: wrap; align-items: center; margin-right: 10px; padding-top: 15px; font-family: 'Jost', sans-serif; font-size: 18px; font-weight: normal; line-height: 1; color: #8B9DB0; }
+.Cash-section .details-section .Total-balance .rupeess { color: green; }
+.Cash-section .details-section .Payment-date {border-bottom: 1px solid #CFCFCF; padding: 30px 30px 30px; background-color: #F9FBFC;}
+.Cash-section .details-section .Payment-date label {color: #8B9DB0; font-size: 18px;}
+.Cash-section .details-section .Out-in{padding: 8px 30px 30px; color: #8B9DB0; font-weight: 500; background-color: #F9FBFC;}
+.Cash-section .details-section .Out-Date{padding: 0px 30px 15px; font-weight: 500; border-bottom: 1px solid #CFCFCF;background-color: #F9FBFC;}
+.Cash-section .details-section .Out-Date p{font-weight: 500;}
+.Cash-section .details-section .Out-Date .date{margin-bottom: 0;}
+.Cash-section .details-section .Out-Date span {color: #BECCDC;}
+.Cash-section .details-section .Out-Date .red {color: red; font-size: 20px;}
+.Cash-section .details-section .Out-Date .green {color: green; font-size: 20px;}
+.Cash-section .details-section .transation-img {width: 50%; margin: 0 auto; color: #8B9DB0;}
+.Cash-section .details-section .transation-img .transation-contant{margin-bottom: 0;}
+.Cash-section .details-section .transation-contant-btn { display: flex; flex-wrap: wrap; align-items: center; justify-content: center;}
+.Cash-section .details-section .transation-out button { padding: 10px 120px; margin: 10px; border: none; border-radius: 10px; background-color: #094A8E; color: white; }
+
+
+.details-section1 .circle {width: 50px; height: 50px; border-radius: 50%; background-color: #1A9EDA; position: relative; margin-right: 10px;}
+.details-section1 .circle::before { content: ""; width: 20px; height: 2px; background-color: white; position: absolute; border-radius: 10px; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+.details-section1 .circle::after { content: ""; width: 20px; height: 3px; background-color: white; position: absolute; border-radius: 10px; top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(90deg);}
+
+.details-section1 .single-user-data {border-bottom: 1px solid #CFCFCF; padding-bottom: 10px;}
+.details-section1 .single-user-data .username { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 20px 30px 0; }
+.details-section1 .single-user-data .username .name { display: flex; flex-wrap: wrap; align-items: center; }
+.details-section1 .single-user-data .username .name .name-number h4 { font-size: 18px; font-weight: 500; line-height: 1; color: #000000; margin: 0 0 5px; }
+.details-section1 .single-user-data .username .name .name-number p { font-size: 14px; font-weight: 400; line-height: 1; color: #979797; margin: 0; }
+
+.details-section1 .single-user-data .username .report-setting-btn { display: flex; flex-wrap: wrap; align-items: center; }
+.details-section1 .single-user-data .username .report-setting-btn .report { display: flex; flex-wrap: wrap; align-items: center; font-size: 16px; font-weight: 600; line-height: 1; color: #1A9EDA; background-color: transparent;  border-radius: 10px; padding: 12px 25px; margin-left: 20px; border: 1px solid #1A9EDA;}
+.details-section1 .single-user-data .username .report-setting-btn .report1 { display: flex; flex-wrap: wrap; align-items: center; font-size: 16px; font-weight: 600; line-height: 1; color: red; background-color: transparent;  border-radius: 10px; padding: 12px 25px; margin-left: 20px; border: 1px solid red;}
+.details-section1 .single-user-data .username .report-setting-btn .report span { display: inline-block; margin: 0 10px 0 0; }
+
+.details-section1 .Description { padding: 20px 30px 0; border-bottom: 1px solid #CFCFCF;}
+.details-section1 .Description .description-content {padding-left: 310px;}
+.details-section1 .Description .description-content1 {margin-bottom: 0;}
+.details-section1 .Description .description-content2 {color: #1A9EDA;}      

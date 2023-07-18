@@ -1,0 +1,74 @@
+{
+  "customer": [
+    {
+      "firstCharacter": "K",
+      "partyname": "Kiran Patel",
+      "phonenumber": "5464644354345",
+      "countryamount": "5245345",
+      "gavegot": "You'll Gave",
+      "gstin": "65564155564156",
+      "billingaddress": "534135413114",
+      "arealocality": "54156415145614",
+      "pincode": "53165151",
+      "city": "35151",
+      "state": "351531",
+      "id": 1
+    },
+    {
+      "firstCharacter": "D",
+      "partyname": "Darshit Akbari",
+      "phonenumber": "654654654",
+      "countryamount": "5456465",
+      "gavegot": "You'll Gave",
+      "gstin": "354153541",
+      "billingaddress": "31351",
+      "arealocality": "35115163",
+      "pincode": "35135135",
+      "city": "1351351",
+      "state": "513511",
+      "id": 2
+    },
+    {
+      "firstCharacter": "S",
+      "partyname": "Smit ",
+      "phonenumber": "35453313131",
+      "countryamount": "150",
+      "gavegot": "You'll Gave",
+      "gstin": "5516516116",
+      "billingaddress": "61651651561",
+      "arealocality": "651651651",
+      "pincode": "65165165",
+      "city": "16511",
+      "state": "116565",
+      "id": 3
+    },
+    {
+      "firstCharacter": "P",
+      "partyname": "Parth",
+      "phonenumber": "35351351",
+      "countryamount": "35135131",
+      "gavegot": "You'll Gave",
+      "gstin": "35351135",
+      "billingaddress": "1351351",
+      "arealocality": "5153135",
+      "pincode": "135135",
+      "city": "13135",
+      "state": "1131513",
+      "id": 4
+    },
+    {
+      "firstCharacter": "d",
+      "partyname": "darshit",
+      "phonenumber": "09561850391",
+      "countryamount": "45",
+      "gavegot": "You'll Gave",
+      "gstin": "fsdfd",
+      "billingaddress": "fsdf",
+      "arealocality": "fsdffdf",
+      "pincode": "-2",
+      "city": "dsfsfdfs",
+      "state": "dfsd",
+      "id": 5
+    }
+  ]
+}

@@ -69,6 +69,20 @@
       "city": "dsfsfdfs",
       "state": "dfsd",
       "id": 5
+    },
+    {
+      "firstCharacter": "d",
+      "partyname": "darshit R Akbari ",
+      "phonenumber": "9773498912",
+      "countryamount": "500000",
+      "gavegot": "You Got",
+      "gstin": "Ddfbgm102152",
+      "billingaddress": "20",
+      "arealocality": "surat",
+      "pincode": "395008",
+      "city": "surart ",
+      "state": "surat",
+      "id": 6
     }
   ]
 }

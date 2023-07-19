@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import {Tab, Tabs} from 'react-bootstrap'
-import { NavLink } from 'react-router-dom'
+import { Tab, Tabs } from 'react-bootstrap'
 import Arrow1 from "../assets/images/Arrow-1.png"
 import Arrow2 from "../assets/images/Arrow-2.png"
 import Fileicon from "../assets/images/file-icon.png"
@@ -49,97 +48,97 @@ export default function Customer() {
   const pageIdText = pageId.page;
 
   const [blankPage, setBlankPage] = useState();
-  
+
   useEffect(() => {
 
     fetch("http://localhost:3001/customer", {
       method: "GET",
-      headers: {"content-type":"application/json"}
+      headers: { "content-type": "application/json" }
     }).then(async (res) => {
-      
+
       let record = await res.json();
-      
+
       setCustomerDetail(record);
-      
+
     }).catch((err) => {
       console.log("Record not found");
     })
 
-    if(pageIdText === "customer"){
+    if (pageIdText === "customer") {
       setBlankPage("open");
     }
-    else{
+    else {
       setBlankPage("close");
     }
-  
+
   }, [])
 
   const customerData = (e) => {
 
     e.preventDefault();
 
-    let character = partyName.slice(0,1);
+    let character = partyName.slice(0, 1);
 
-    if(partyName === "" || phoneNumber === "" || countryAmount === "" || gstin === "" || billingAddress === "" || areaLocality === "" || pinCode === "" || city === "" || state === ""){
-      
-      if(partyName === ""){
+    if (partyName === "" || phoneNumber === "" || countryAmount === "" || gstin === "" || billingAddress === "" || areaLocality === "" || pinCode === "" || city === "" || state === "") {
+
+      if (partyName === "") {
         setPartyNameError("Please fill this field. This field is required.");
       }
-      else{
+      else {
         setPartyNameError("")
       }
-      if(phoneNumber === ""){
+      if (phoneNumber === "") {
         setPhoneNumberError("Please fill this field. This field is required.");
       }
-      else{
+      else {
         setPhoneNumberError("")
       }
-      if(countryAmount === ""){
+      if (countryAmount === "") {
         setCountryAmountError("Please fill this field. This field is required.");
       }
-      else{
+      else {
         setCountryAmountError("")
       }
-      if(gstin === ""){
+      if (gstin === "") {
         setGstinError("Please fill this field. This field is required.");
       }
-      else{
+      else {
         setGstinError("")
       }
-      if(billingAddress === ""){
+      if (billingAddress === "") {
         setBillingAddressError("Please fill this field. This field is required.");
       }
-      else{
+      else {
         setBillingAddressError("")
       }
-      if(areaLocality === ""){
+      if (areaLocality === "") {
         setareaLocalityError("Please fill this field. This field is required.");
       }
-      else{
+      else {
         setareaLocalityError("")
       }
-      if(pinCode === ""){
+      if (pinCode === "") {
         setPinCodeError("Please fill this field. This field is required.");
       }
-      else{
+      else {
         setPinCodeError("")
       }
-      if(city === ""){
+      if (city === "") {
         setCityError("Please fill this field. This field is required.");
       }
-      else{
+      else {
         setCityError("")
       }
-      if(state === ""){
+      if (state === "") {
         setStateError("Please fill this field. This field is required.");
       }
-      else{
+      else {
         setStateError("")
       }
 
     }
-    else{
-      
+    else {
+
       const customerRecord = {
         firstCharacter: character,
         partyname: partyName,
@@ -155,13 +154,13 @@ export default function Customer() {
       }
 
       fetch("http://localhost:3001/customer", {
-          method: "POST",
-          headers: {"content-type":"application/json"},
-          body: JSON.stringify(customerRecord)
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(customerRecord)
       }).then((res) => {
-          console.log("Blog record uploaded");
+        console.log("Blog record uploaded");
       }).catch((err) => {
-          console.log("Blog record not uploaded");
+        console.log("Blog record not uploaded");
       })
       setShow("")
 
@@ -244,27 +243,27 @@ export default function Customer() {
                 <h5>Amount</h5>
               </div>
               <div className='user-details'>
-              {
-                customerDetail&&customerDetail.map((value, index) => {
-                  return(
-                    <NavLink to={"/customer/"+value.partyname}>
-                      <div className='single-user-details'>
-                        <div className='username'>
-                          <span>{value.firstCharacter}</span>
-                          <div className='name'>
-                            <h4>{value.partyname}</h4>
-                            <p>11 days ago</p>
+                {
+                  customerDetail && customerDetail.map((value, index) => {
+                    return (
+                      <a href={"/customer/" + value.partyname}>
+                        <div className='single-user-details'>
+                          <div className='username'>
+                            <span>{value.firstCharacter}</span>
+                            <div className='name'>
+                              <h4>{value.partyname}</h4>
+                              <p>11 days ago</p>
+                            </div>
                           </div>
-                        </div>
-                        <div className='amount'>
+                          <div className='amount'>
                             <h4>₹ {value.countryamount}</h4>
                             <p>{value.gavegot}</p>
+                          </div>
                         </div>
-                      </div>
-                    </NavLink>
-                  )
-                })
-              }
+                      </a>
+                    )
+                  })
+                }
               </div>
               <div className='add-customer'>
                 <Button variant="primary" onClick={handleShow}>+ Add Customer</Button>

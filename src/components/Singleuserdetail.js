@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import Fileicon2 from "../assets/images/file-icon-grey.png"
 import Settingicon from "../assets/images/setting-grey.png"
-import Alarmicon from "../assets/images/circular-alar m-clock-tool.png"
+import Alarmicon from "../assets/images/circular-alarm-clock-tool.png"
 import Whatsappicon from "../assets/images/whatsapp.png"
 import Smsicon from "../assets/images/communication.png"
 import Lettericon from "../assets/images/letter-i.png"
@@ -16,15 +16,41 @@ export default function Singleuserdetail(props) {
 
     let blankPageId = props.blankPageId;
 
-    if (userId === "" || userId === null || userId === undefined || userId === "customer") {
+    if(userId === "" || userId === null || userId === undefined || userId === "customer"){
         blankPageId = "close";
     }
-    else {
+    else{
         blankPageId = "open";
     }
 
+    const [firstCharacter, setFirstCharacter] = useState("");
+    const [partyName, setPartyName] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("");
+
+    useEffect(() => {
+
+        fetch("http://localhost:3001/customer", {
+        method: "GET",
+        headers: {"content-type":"application/json"}
+        }).then(async (res) => {
+        
+            let record = await res.json();
+
+            for(var i = 0; i < record.length; i++){
+                if(record[i].partyname === userId){
+                    setFirstCharacter(record[i].firstCharacter);
+                    setPartyName(record[i].partyname);
+                    setPhoneNumber(record[i].phonenumber);
+                }
+            }
+        
+        }).catch((err) => {
+            console.log("Record not found");
+        })
+    }, [])
+    
     return (
-        <div className={'single-user-data ' + blankPageId}>
+        <div className={'single-user-data '+blankPageId}>
             <div className='blank-page'>
                 <img src={Usericon} alt='' />
                 <h4>No customer selected</h4>
@@ -32,10 +58,10 @@ export default function Singleuserdetail(props) {
             <div className='single-user-detail-page'>
                 <div className='username'>
                     <div className='name'>
-                        <span>A</span>
+                        <span>{firstCharacter}</span>
                         <div className='name-number'>
-                            <h4>Aditya Patel</h4>
-                            <p>+91 98523 45620</p>
+                            <h4>{partyName}</h4>
+                            <p>{phoneNumber}</p>
                         </div>
                     </div>
                     <div className='report-setting-btn'>
@@ -73,6 +99,78 @@ export default function Singleuserdetail(props) {
                             </tr>
                         </thead>
                         <tbody>
+                            <tr>
+                                <td className='entries'>
+                                    <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
+                                    <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
+                                    <p className='items'><span>391</span>items.</p>
+                                </td>
+                                <td className='you-gave'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                                <td className='you-got'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                            </tr>
+                            <tr>
+                                <td className='entries'>
+                                    <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
+                                    <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
+                                    <p className='items'><span>391</span>items.</p>
+                                </td>
+                                <td className='you-gave'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                                <td className='you-got'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                            </tr>
+                            <tr>
+                                <td className='entries'>
+                                    <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
+                                    <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
+                                    <p className='items'><span>391</span>items.</p>
+                                </td>
+                                <td className='you-gave'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                                <td className='you-got'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                            </tr>
+                            <tr>
+                                <td className='entries'>
+                                    <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
+                                    <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
+                                    <p className='items'><span>391</span>items.</p>
+                                </td>
+                                <td className='you-gave'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                                <td className='you-got'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                            </tr>
+                            <tr>
+                                <td className='entries'>
+                                    <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
+                                    <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
+                                    <p className='items'><span>391</span>items.</p>
+                                </td>
+                                <td className='you-gave'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                                <td className='you-got'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                            </tr>
+                            <tr>
+                                <td className='entries'>
+                                    <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
+                                    <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
+                                    <p className='items'><span>391</span>items.</p>
+                                </td>
+                                <td className='you-gave'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                                <td className='you-got'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                            </tr>
+                            <tr>
+                                <td className='entries'>
+                                    <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
+                                    <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
+                                    <p className='items'><span>391</span>items.</p>
+                                </td>
+                                <td className='you-gave'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                                <td className='you-got'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                            </tr>
+                            <tr>
+                                <td className='entries'>
+                                    <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
+                                    <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
+                                    <p className='items'><span>391</span>items.</p>
+                                </td>
+                                <td className='you-gave'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                                <td className='you-got'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                            </tr>
                             <tr>
                                 <td className='entries'>
                                     <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>

@@ -266,7 +266,7 @@ export default function Customer() {
             Tab content for Profile
           </Tab>
         </Tabs>
-      </div>
+      </div>  
       <div className='single-user-data'>
         <div className='username'>
           <div className='name'>

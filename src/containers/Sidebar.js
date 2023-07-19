@@ -37,7 +37,7 @@ export default function Sidebar() {
           <h5>Parties</h5>
           <ul>
             <li>
-              <Link to="/"><span><img src={Customericon} alt='icon' /></span>Customers</Link>
+              <Link to="/customer"><span><img src={Customericon} alt='icon' /></span>Customers</Link>
             </li>
             <li>
               <Link to="/"><span><img src={Suppliersicon} alt='icon' /></span>Suppliers</Link>

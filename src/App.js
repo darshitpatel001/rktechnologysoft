@@ -10,7 +10,8 @@ function App() {
       <BrowserRouter>
         <Sidebar />      
         <Routes>
-          <Route path='/' element={<Customer />} />
+          <Route path='/:page' element={<Customer />} />
+          <Route path='/customer/:id' element={<Customer />} />
           <Route path='/cashbook' element={<Item />} />
         </Routes>
       </BrowserRouter>

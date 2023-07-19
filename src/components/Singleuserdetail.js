@@ -22,21 +22,7 @@ export default function Singleuserdetail(props) {
     else {
         blankPageId = "open";
     }
-    const [state, setstate] = useState("")
-    useEffect(() => {
-        fetch("http://localhost:3001/customer", {
-            method: "GET",
-            headers: { "content-type": "application/json" }
-        }).then(async (res) => {
 
-            let record = await res.json();
-
-            setstate(record);
-
-        }).catch((err) => {
-            console.log("Record not found");
-        })
-    }, [])
     return (
         <div className={'single-user-data ' + blankPageId}>
             <div className='blank-page'>

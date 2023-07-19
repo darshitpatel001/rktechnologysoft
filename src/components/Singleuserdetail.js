@@ -2,7 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router'
 import Fileicon2 from "../assets/images/file-icon-grey.png"
 import Settingicon from "../assets/images/setting-grey.png"
-import Alarmicon from "../assets/images/circular-alarm-clock-tool.png"
+import Alarmicon from "../assets/images/circular-alar m-clock-tool.png"
 import Whatsappicon from "../assets/images/whatsapp.png"
 import Smsicon from "../assets/images/communication.png"
 import Lettericon from "../assets/images/letter-i.png"

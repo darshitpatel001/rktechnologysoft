@@ -1,4 +1,4 @@
-import React, { useEffect , useState } from 'react'
+import React from 'react'
 import { useParams } from 'react-router'
 import Fileicon2 from "../assets/images/file-icon-grey.png"
 import Settingicon from "../assets/images/setting-grey.png"
@@ -16,15 +16,15 @@ export default function Singleuserdetail(props) {
 
     let blankPageId = props.blankPageId;
 
-    if (userId === "" || userId === null || userId === undefined || userId === "customer") {
+    if(userId === "" || userId === null || userId === undefined || userId === "customer"){
         blankPageId = "close";
     }
-    else {
+    else{
         blankPageId = "open";
     }
 
     return (
-        <div className={'single-user-data ' + blankPageId}>
+        <div className={'single-user-data '+blankPageId}>
             <div className='blank-page'>
                 <img src={Usericon} alt='' />
                 <h4>No customer selected</h4>

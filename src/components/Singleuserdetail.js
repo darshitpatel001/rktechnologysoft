@@ -16,15 +16,15 @@ export default function Singleuserdetail(props) {
 
     let blankPageId = props.blankPageId;
 
-    if(userId === "" || userId === null || userId === undefined || userId === "customer"){
+    if (userId === "" || userId === null || userId === undefined || userId === "customer") {
         blankPageId = "close";
     }
-    else{
+    else {
         blankPageId = "open";
     }
 
     return (
-        <div className={'single-user-data '+blankPageId}>
+        <div className={'single-user-data ' + blankPageId}>
             <div className='blank-page'>
                 <img src={Usericon} alt='' />
                 <h4>No customer selected</h4>

@@ -16,7 +16,7 @@ import Singleuserdetail from './Singleuserdetail'
 
 export default function Customer() {
 
-  const [show, setShow] = useState(false);  
+  const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);

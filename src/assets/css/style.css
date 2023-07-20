@@ -217,3 +217,8 @@ table, thead, tbody, tr, td, th { display: block; }
 .details-section1 .Description .description-content {padding-left: 310px;}
 .details-section1 .Description .description-content1 {margin-bottom: 0;}
 .details-section1 .Description .description-content2 {color: #1A9EDA;}      
+
+.add-customer.you-gave-form .modal-dialog .modal-content .modal-body form .number .amount .coutry-amount { width: 100%; }
+.add-customer.you-gave-form .modal-dialog .modal-content .modal-body form .number .amount .coutry-amount input { border-right: 1px solid #CFCFCF; border-radius: 10px; }
+.add-customer.you-gave-form .modal-dialog .modal-content .modal-body form .input textarea { padding: 10px; border: 1px solid #CFCFCF; border-radius: 10px; font-size: 16px; color: #AEAEAE; width: 100%; }
+.add-customer.you-gave-form .modal-dialog .modal-content .modal-body form .calendar .App .rdtDays table thead tr th, .add-customer.you-gave-form .modal-dialog .modal-content .modal-body form .calendar .App .rdtDays table tbody tr td { display: inline-block; } 

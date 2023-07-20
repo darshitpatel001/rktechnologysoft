@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
+import { Button, Modal } from 'react-bootstrap'
+import DatePicker from 'react-datetime';
+import moment from 'moment';
+import 'react-datetime/css/react-datetime.css';
 import Fileicon2 from "../assets/images/file-icon-grey.png"
 import Settingicon from "../assets/images/setting-grey.png"
 import Alarmicon from "../assets/images/circular-alarm-clock-tool.png"
@@ -10,16 +14,26 @@ import Usericon from "../assets/images/user.png"
 
 export default function Singleuserdetail(props) {
 
+    const today = moment();
+    const disableFutureDt = current => {
+        return current.isBefore(today)
+    }
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     const customerId = useParams();
 
     const userId = customerId.id;
 
     let blankPageId = props.blankPageId;
 
-    if(userId === "" || userId === null || userId === undefined || userId === "customer"){
+    if (userId === "" || userId === null || userId === undefined || userId === "customer") {
         blankPageId = "close";
     }
-    else{
+    else {
         blankPageId = "open";
     }
 
@@ -28,27 +42,37 @@ export default function Singleuserdetail(props) {
     const [phoneNumber, setPhoneNumber] = useState("");
 
     useEffect(() => {
+
         fetch("http://localhost:3001/customer", {
-        method: "GET",
-        headers: {"content-type":"application/json"}
+            method: "GET",
+            headers: { "content-type": "application/json" }
         }).then(async (res) => {
-        
+
             let record = await res.json();
 
-            for(var i = 0; i < record.length; i++){
-                if(record[i].partyname === userId){
+            for (var i = 0; i < record.length; i++) {
+                if (record[i].partyname === userId) {
                     setFirstCharacter(record[i].firstCharacter);
                     setPartyName(record[i].partyname);
                     setPhoneNumber(record[i].phonenumber);
                 }
             }
+
         }).catch((err) => {
             console.log("Record not found");
         })
     }, [])
-    
+
+    const disablePastDate = () => {
+        const today = new Date();
+        const dd = String(today.getDate() + 1).padStart(2, "0");
+        const mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+        const yyyy = today.getFullYear();
+        return yyyy + "-" + mm + "-" + dd;
+    };
+
     return (
-        <div className={'single-user-data '+blankPageId}>
+        <div className={'single-user-data ' + blankPageId}>
             <div className='blank-page'>
                 <img src={Usericon} alt='' />
                 <h4>No customer selected</h4>
@@ -73,6 +97,7 @@ export default function Singleuserdetail(props) {
                         <div className='date'>
                             <p>02 July 2023</p>
                             <button>Edit</button>
+                            <input type='date' min={disablePastDate()} />
                         </div>
                     </div>
                     <div className='net-balance'>
@@ -106,12 +131,119 @@ export default function Singleuserdetail(props) {
                                 <td className='you-gave'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
                                 <td className='you-got'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
                             </tr>
+                            <tr>
+                                <td className='entries'>
+                                    <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
+                                    <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
+                                    <p className='items'><span>391</span>items.</p>
+                                </td>
+                                <td className='you-gave'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                                <td className='you-got'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                            </tr>
+                            <tr>
+                                <td className='entries'>
+                                    <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
+                                    <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
+                                    <p className='items'><span>391</span>items.</p>
+                                </td>
+                                <td className='you-gave'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                                <td className='you-got'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                            </tr>
+                            <tr>
+                                <td className='entries'>
+                                    <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
+                                    <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
+                                    <p className='items'><span>391</span>items.</p>
+                                </td>
+                                <td className='you-gave'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                                <td className='you-got'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                            </tr>
+                            <tr>
+                                <td className='entries'>
+                                    <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
+                                    <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
+                                    <p className='items'><span>391</span>items.</p>
+                                </td>
+                                <td className='you-gave'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                                <td className='you-got'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                            </tr>
+                            <tr>
+                                <td className='entries'>
+                                    <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
+                                    <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
+                                    <p className='items'><span>391</span>items.</p>
+                                </td>
+                                <td className='you-gave'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                                <td className='you-got'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                            </tr>
+                            <tr>
+                                <td className='entries'>
+                                    <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
+                                    <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
+                                    <p className='items'><span>391</span>items.</p>
+                                </td>
+                                <td className='you-gave'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                                <td className='you-got'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                            </tr>
+                            <tr>
+                                <td className='entries'>
+                                    <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
+                                    <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
+                                    <p className='items'><span>391</span>items.</p>
+                                </td>
+                                <td className='you-gave'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                                <td className='you-got'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                            </tr>
+                            <tr>
+                                <td className='entries'>
+                                    <h5 className='date-time'>02 Jul 2023<span className='time'>12:44 AM</span></h5>
+                                    <h6 className='balance'>Balance:- <span>1,570.00</span></h6>
+                                    <p className='items'><span>391</span>items.</p>
+                                </td>
+                                <td className='you-gave'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                                <td className='you-got'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
                 <div className='you-gave-got-btn'>
-                    <button className='gave'>You Gave ₹</button>
+                    <Button className='gave' variant="primary" onClick={handleShow}>You Gave ₹</Button>
                     <button className='got'>You Got ₹</button>
+                </div>
+                <div className='you-gave-form'>
+                    <Modal show={show} onHide={handleClose} className='add-customer you-gave-form'>
+                        <Modal.Header closeButton>
+                            <Modal.Title>Add New Entry</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            <form id='youGaveForm'>
+                                <div className='input number'>
+                                    <div className='all-span'>
+                                        <span className='label'>Amount</span>
+                                    </div>
+                                    <div className='amount'>
+                                        <div className='coutry-amount'>
+                                            <input type='number' placeholder='Enter amount' name='countryamount' />
+                                            <span className='amount-icon'>₹</span>
+                                        </div>
+                                        <span className='error'></span>
+                                    </div>
+                                </div>
+                                <div className='input textarea'>
+                                    <span className='label'>Description</span>
+                                    <textarea placeholder='Enter Details (Item Name, Bill No, Quantity, etc)' rows="6"></textarea>
+                                    <span className='error'></span>
+                                </div>
+                                <div className='input calendar'>
+                                    <span className='label'>Date</span>
+                                    <div className='App'>
+                                        <DatePicker timeFormat={false} isValidDate={disableFutureDt} />
+                                    </div>
+                                </div>
+                                <input type='submit' value="Save" className='submit-btn' />
+                            </form>
+                        </Modal.Body>
+                    </Modal>
                 </div>
             </div>
         </div>

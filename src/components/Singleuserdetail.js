@@ -28,7 +28,6 @@ export default function Singleuserdetail(props) {
     const [phoneNumber, setPhoneNumber] = useState("");
 
     useEffect(() => {
-
         fetch("http://localhost:3001/customer", {
         method: "GET",
         headers: {"content-type":"application/json"}

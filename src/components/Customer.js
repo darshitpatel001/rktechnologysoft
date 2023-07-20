@@ -13,10 +13,10 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Accordion from 'react-bootstrap/Accordion';
 import Singleuserdetail from './Singleuserdetail'
-
+  
 export default function Customer() {
 
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false);  
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);

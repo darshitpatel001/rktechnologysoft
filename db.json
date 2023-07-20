@@ -41,6 +41,20 @@
       "city": "13135",
       "state": "1131513",
       "id": 3
+    },
+    {
+      "firstCharacter": "R",
+      "partyname": "Raj ",
+      "phonenumber": "9265921545",
+      "countryamount": "500",
+      "gavegot": "You'll Gave",
+      "gstin": "sdsddfsadsdasd",
+      "billingaddress": "Flat No.801, Palm Grove Apartment,",
+      "arealocality": "d62f+",
+      "pincode": "201301",
+      "city": "Noida",
+      "state": "Noida",
+      "id": 4
     }
   ]
 }

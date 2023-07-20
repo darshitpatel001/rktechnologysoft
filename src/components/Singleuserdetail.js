@@ -42,7 +42,6 @@ export default function Singleuserdetail(props) {
                     setPhoneNumber(record[i].phonenumber);
                 }
             }
-        
         }).catch((err) => {
             console.log("Record not found");
         })

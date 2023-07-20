@@ -108,7 +108,6 @@ export default function Singleuserdetail(props) {
                                 <td className='you-gave'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
                                 <td className='you-got'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
                             </tr>
-                        
                         </tbody>
                     </table>
                 </div>

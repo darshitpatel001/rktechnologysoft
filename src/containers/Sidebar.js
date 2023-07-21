@@ -56,7 +56,7 @@ export default function Sidebar() {
           <h5>Bills</h5>
           <ul>
             <li>
-              <Link to="/"><span><img src={Salesicon} alt='icon' /></span>Sales</Link>
+              <Link to="/sales"><span><img src={Salesicon} alt='icon' /></span>Sales</Link>
             </li>
             <li>
               <Link to="/"><span><img src={Purchaseicon} alt='icon' /></span>Purchase</Link>

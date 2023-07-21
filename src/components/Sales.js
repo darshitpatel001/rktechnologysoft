@@ -83,7 +83,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
@@ -96,7 +96,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
@@ -109,7 +109,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
@@ -122,7 +122,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
@@ -135,7 +135,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
@@ -148,7 +148,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
@@ -161,7 +161,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
@@ -174,7 +174,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
@@ -187,7 +187,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
@@ -200,7 +200,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
@@ -210,6 +210,7 @@ export default function Sales() {
                                     </div>
                                 </div>
                             </div>
+                            <input type='submit' value="Add Customer" className='submit-btn' />
                         </Tab>
                         <Tab eventKey="purchase" title="Purchase">
                         <div className='filter-row'>
@@ -232,7 +233,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
@@ -245,7 +246,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
@@ -258,7 +259,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
@@ -271,7 +272,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
@@ -284,7 +285,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
@@ -297,7 +298,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
@@ -310,7 +311,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
@@ -323,7 +324,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
@@ -336,7 +337,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
@@ -349,7 +350,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
@@ -381,7 +382,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
@@ -394,7 +395,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
@@ -407,7 +408,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
@@ -420,7 +421,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
@@ -433,7 +434,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
@@ -446,7 +447,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
@@ -459,7 +460,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
@@ -472,7 +473,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
@@ -485,7 +486,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
@@ -498,7 +499,7 @@ export default function Sales() {
                                             <span>A</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
-                                                <p>11 days ago</p>
+                                                <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>

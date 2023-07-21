@@ -67,7 +67,7 @@ export default function Sales() {
                                 <div className='search-filter filter'>
                                     <h4>Search</h4>
                                     <div className='search-filter-input'>
-                                        <img src={Searchicon} alt='' />
+                                        <img src={Searchicon} alt=''/>
                                         <input type='text' placeholder='Customer Name' />
                                     </div>
                                 </div>

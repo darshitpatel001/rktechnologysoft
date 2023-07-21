@@ -212,10 +212,302 @@ export default function Sales() {
                             </div>
                         </Tab>
                         <Tab eventKey="purchase" title="Purchase">
-                            Tab content for Profile
+                        <div className='filter-row'>
+                                <div className='search-filter filter'>
+                                    <h4>Search</h4>
+                                    <div className='search-filter-input'>
+                                        <img src={Searchicon} alt='' />
+                                        <input type='text' placeholder='Name or Phonenumber' />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='user-detail-section'>
+                                <div className='user-detail-title'>
+                                    <h5>TRANSACTION</h5>
+                                    <h5>Amount</h5>
+                                </div>
+                                <div className='user-details'>
+                                    <div className='single-user-details'>
+                                        <div className='username'>
+                                            <span>A</span>
+                                            <div className='name'>
+                                                <h4>Darshit</h4>
+                                                <p>11 days ago</p>
+                                            </div>
+                                        </div>
+                                        <div className='amount'>
+                                            <h4>₹ 200</h4>
+                                            <p>Online</p>
+                                        </div>
+                                    </div>
+                                    <div className='single-user-details'>
+                                        <div className='username'>
+                                            <span>A</span>
+                                            <div className='name'>
+                                                <h4>Darshit</h4>
+                                                <p>11 days ago</p>
+                                            </div>
+                                        </div>
+                                        <div className='amount'>
+                                            <h4>₹ 200</h4>
+                                            <p>Online</p>
+                                        </div>
+                                    </div>
+                                    <div className='single-user-details'>
+                                        <div className='username'>
+                                            <span>A</span>
+                                            <div className='name'>
+                                                <h4>Darshit</h4>
+                                                <p>11 days ago</p>
+                                            </div>
+                                        </div>
+                                        <div className='amount'>
+                                            <h4>₹ 200</h4>
+                                            <p>Online</p>
+                                        </div>
+                                    </div>
+                                    <div className='single-user-details'>
+                                        <div className='username'>
+                                            <span>A</span>
+                                            <div className='name'>
+                                                <h4>Darshit</h4>
+                                                <p>11 days ago</p>
+                                            </div>
+                                        </div>
+                                        <div className='amount'>
+                                            <h4>₹ 200</h4>
+                                            <p>Online</p>
+                                        </div>
+                                    </div>
+                                    <div className='single-user-details'>
+                                        <div className='username'>
+                                            <span>A</span>
+                                            <div className='name'>
+                                                <h4>Darshit</h4>
+                                                <p>11 days ago</p>
+                                            </div>
+                                        </div>
+                                        <div className='amount'>
+                                            <h4>₹ 200</h4>
+                                            <p>Online</p>
+                                        </div>
+                                    </div>
+                                    <div className='single-user-details'>
+                                        <div className='username'>
+                                            <span>A</span>
+                                            <div className='name'>
+                                                <h4>Darshit</h4>
+                                                <p>11 days ago</p>
+                                            </div>
+                                        </div>
+                                        <div className='amount'>
+                                            <h4>₹ 200</h4>
+                                            <p>Online</p>
+                                        </div>
+                                    </div>
+                                    <div className='single-user-details'>
+                                        <div className='username'>
+                                            <span>A</span>
+                                            <div className='name'>
+                                                <h4>Darshit</h4>
+                                                <p>11 days ago</p>
+                                            </div>
+                                        </div>
+                                        <div className='amount'>
+                                            <h4>₹ 200</h4>
+                                            <p>Online</p>
+                                        </div>
+                                    </div>
+                                    <div className='single-user-details'>
+                                        <div className='username'>
+                                            <span>A</span>
+                                            <div className='name'>
+                                                <h4>Darshit</h4>
+                                                <p>11 days ago</p>
+                                            </div>
+                                        </div>
+                                        <div className='amount'>
+                                            <h4>₹ 200</h4>
+                                            <p>Online</p>
+                                        </div>
+                                    </div>
+                                    <div className='single-user-details'>
+                                        <div className='username'>
+                                            <span>A</span>
+                                            <div className='name'>
+                                                <h4>Darshit</h4>
+                                                <p>11 days ago</p>
+                                            </div>
+                                        </div>
+                                        <div className='amount'>
+                                            <h4>₹ 200</h4>
+                                            <p>Online</p>
+                                        </div>
+                                    </div>
+                                    <div className='single-user-details'>
+                                        <div className='username'>
+                                            <span>A</span>
+                                            <div className='name'>
+                                                <h4>Darshit</h4>
+                                                <p>11 days ago</p>
+                                            </div>
+                                        </div>
+                                        <div className='amount'>
+                                            <h4>₹ 200</h4>
+                                            <p>Online</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </Tab>
                         <Tab eventKey="expenses" title="Expenses">
-                            Tab content for Contact
+                        <div className='filter-row'>
+                                <div className='search-filter filter'>
+                                    <h4>Search</h4>
+                                    <div className='search-filter-input'>
+                                        <img src={Searchicon} alt='' />
+                                        <input type='text' placeholder='Name or Phonenumber' />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='user-detail-section'>
+                                <div className='user-detail-title'>
+                                    <h5>Name</h5>
+                                    <h5>Amount</h5>
+                                </div>
+                                <div className='user-details'>
+                                    <div className='single-user-details'>
+                                        <div className='username'>
+                                            <span>A</span>
+                                            <div className='name'>
+                                                <h4>Darshit</h4>
+                                                <p>11 days ago</p>
+                                            </div>
+                                        </div>
+                                        <div className='amount'>
+                                            <h4>₹ 200</h4>
+                                            <p>Online</p>
+                                        </div>
+                                    </div>
+                                    <div className='single-user-details'>
+                                        <div className='username'>
+                                            <span>A</span>
+                                            <div className='name'>
+                                                <h4>Darshit</h4>
+                                                <p>11 days ago</p>
+                                            </div>
+                                        </div>
+                                        <div className='amount'>
+                                            <h4>₹ 200</h4>
+                                            <p>Online</p>
+                                        </div>
+                                    </div>
+                                    <div className='single-user-details'>
+                                        <div className='username'>
+                                            <span>A</span>
+                                            <div className='name'>
+                                                <h4>Darshit</h4>
+                                                <p>11 days ago</p>
+                                            </div>
+                                        </div>
+                                        <div className='amount'>
+                                            <h4>₹ 200</h4>
+                                            <p>Online</p>
+                                        </div>
+                                    </div>
+                                    <div className='single-user-details'>
+                                        <div className='username'>
+                                            <span>A</span>
+                                            <div className='name'>
+                                                <h4>Darshit</h4>
+                                                <p>11 days ago</p>
+                                            </div>
+                                        </div>
+                                        <div className='amount'>
+                                            <h4>₹ 200</h4>
+                                            <p>Online</p>
+                                        </div>
+                                    </div>
+                                    <div className='single-user-details'>
+                                        <div className='username'>
+                                            <span>A</span>
+                                            <div className='name'>
+                                                <h4>Darshit</h4>
+                                                <p>11 days ago</p>
+                                            </div>
+                                        </div>
+                                        <div className='amount'>
+                                            <h4>₹ 200</h4>
+                                            <p>Online</p>
+                                        </div>
+                                    </div>
+                                    <div className='single-user-details'>
+                                        <div className='username'>
+                                            <span>A</span>
+                                            <div className='name'>
+                                                <h4>Darshit</h4>
+                                                <p>11 days ago</p>
+                                            </div>
+                                        </div>
+                                        <div className='amount'>
+                                            <h4>₹ 200</h4>
+                                            <p>Online</p>
+                                        </div>
+                                    </div>
+                                    <div className='single-user-details'>
+                                        <div className='username'>
+                                            <span>A</span>
+                                            <div className='name'>
+                                                <h4>Darshit</h4>
+                                                <p>11 days ago</p>
+                                            </div>
+                                        </div>
+                                        <div className='amount'>
+                                            <h4>₹ 200</h4>
+                                            <p>Online</p>
+                                        </div>
+                                    </div>
+                                    <div className='single-user-details'>
+                                        <div className='username'>
+                                            <span>A</span>
+                                            <div className='name'>
+                                                <h4>Darshit</h4>
+                                                <p>11 days ago</p>
+                                            </div>
+                                        </div>
+                                        <div className='amount'>
+                                            <h4>₹ 200</h4>
+                                            <p>Online</p>
+                                        </div>
+                                    </div>
+                                    <div className='single-user-details'>
+                                        <div className='username'>
+                                            <span>A</span>
+                                            <div className='name'>
+                                                <h4>Darshit</h4>
+                                                <p>11 days ago</p>
+                                            </div>
+                                        </div>
+                                        <div className='amount'>
+                                            <h4>₹ 200</h4>
+                                            <p>Online</p>
+                                        </div>
+                                    </div>
+                                    <div className='single-user-details'>
+                                        <div className='username'>
+                                            <span>A</span>
+                                            <div className='name'>
+                                                <h4>Darshit</h4>
+                                                <p>11 days ago</p>
+                                            </div>
+                                        </div>
+                                        <div className='amount'>
+                                            <h4>₹ 200</h4>
+                                            <p>Online</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </Tab>
                     </Tabs>
                 </div>

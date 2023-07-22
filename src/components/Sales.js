@@ -30,7 +30,6 @@ export default function Sales() {
                                 <div className='Total-balance'>
                                     <p className="you">
                                         Expenses
-
                                     </p>
                                     <p className='rupeess d-flex'>
                                         ₹29,069.15

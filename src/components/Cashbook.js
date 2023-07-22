@@ -1,9 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import transation from '../assets/images/image-removebg-preview-(7)-1.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFileLines } from "@fortawesome/free-regular-svg-icons"
+import { Button, Modal } from 'react-bootstrap'
+import DatePicker from 'react-datetime';
+import moment from 'moment';
 
 export default function Cashbook() {
+    const today = moment();
+    const disableFutureDt = current => {
+        return current.isBefore(today)
+    }
+    const [show, setShow] = useState(false);
+    const [show1, setShow1] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    const handleClose1 = () => setShow1(false);
+    const handleShow1 = () => setShow1(true);
     return (
         <>
             <section className="Cash-section">
@@ -94,10 +108,78 @@ export default function Cashbook() {
                     </div>
                     <div className='transation-contant-btn'>
                         <div className='transation-out'>
-                            <button>OUT</button>
+                            <Button onClick={handleShow}>OUT</Button>
                         </div>
+
+                        <Modal show={show} onHide={handleClose} className='add-customer you-gave-form'>
+                            <Modal.Header closeButton>
+                                <Modal.Title>Out Entry</Modal.Title>
+                            </Modal.Header>
+                            <Modal.Body>
+                                <form id='youGaveForm'>
+                                    <div className='input number'>
+                                        <div className='all-span'>
+                                            <span className='label'>Amount</span>
+                                        </div>
+                                        <div className='amount'>
+                                            <div className='coutry-amount'>
+                                                <input type='number' placeholder='Enter amount' name='countryamount' />
+                                                <span className='amount-icon'>₹</span>
+                                            </div>
+                                            <span className='error'></span>
+                                        </div>
+                                    </div>
+                                    <div className='input textarea'>
+                                        <span className='label'>Description</span>
+                                        <textarea placeholder='Enter Details (Item Name, Bill No, Quantity, etc)' rows="6"></textarea>
+                                        <span className='error'></span>
+                                    </div>
+                                    <div className='input calendar'>
+                                        <span className='label'>Date</span>
+                                        <div className='App'>
+                                            <DatePicker timeFormat={false} isValidDate={disableFutureDt} />
+                                        </div>
+                                    </div>
+                                    <input type='submit' value="Save" className='submit-btn' />
+                                </form>
+                            </Modal.Body>
+                        </Modal>
+
                         <div className='transation-out'>
-                            <button>IN</button>
+                            <Button onClick={handleShow1}>IN</Button>
+                            <Modal show={show1} onHide={handleClose1} className='add-customer you-gave-form'>
+                                <Modal.Header closeButton>
+                                    <Modal.Title>In Entry</Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body>
+                                    <form id='youGaveForm'>
+                                        <div className='input number'>
+                                            <div className='all-span'>
+                                                <span className='label'>Amount</span>
+                                            </div>
+                                            <div className='amount'>
+                                                <div className='coutry-amount'>
+                                                    <input type='number' placeholder='Enter amount' name='countryamount' />
+                                                    <span className='amount-icon'>₹</span>
+                                                </div>
+                                                <span className='error'></span>
+                                            </div>
+                                        </div>
+                                        <div className='input textarea'>
+                                            <span className='label'>Description</span>
+                                            <textarea placeholder='Enter Details (Item Name, Bill No, Quantity, etc)' rows="6"></textarea>
+                                            <span className='error'></span>
+                                        </div>
+                                        <div className='input calendar'>
+                                            <span className='label'>Date</span>
+                                            <div className='App'>
+                                                <DatePicker timeFormat={false} isValidDate={disableFutureDt} />
+                                            </div>
+                                        </div>
+                                        <input type='submit' value="Save" className='submit-btn' />
+                                    </form>
+                                </Modal.Body>
+                            </Modal>
                         </div>
                     </div>
                 </div>

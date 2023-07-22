@@ -251,11 +251,11 @@ table, thead, tbody, tr, td, th { display: block; }
 .Sales-section .details-section .filter-row .search-filter .search-filter-input { position: relative; }
 .Sales-section .details-section .filter-row .search-filter .search-filter-input img { position: absolute; top: 50%; left: 15px; transform: translateY(-50%); width: auto; }
 .Sales-section .details-section .filter-row .search-filter .search-filter-input input { font-size: 16px; font-weight: 400; color: #CFCFCF; border: 1px solid #8B9DB0; background-color: transparent; padding: 10px 20px 10px 50px; border-radius: 10px; width: 100%; }
-
+    
 .Sales-section .details-section .nav-tabs { border-bottom: 1px solid #CFCFCF; margin: 0 !important; padding: 30px 0 30px 46px; }
 .Sales-section .details-section .nav-tabs .nav-item { margin-right: 60px; } 
 .Sales-section .details-section .nav-tabs .nav-item:last-child { margin-right: 0px; }
 .Sales-section .details-section .nav-tabs .nav-item .nav-link { border: none; background-color: transparent; font-size: 18px; font-weight: 500; line-height: 1; color: #8B9DB0; padding: 0; }
 .Sales-section .details-section .nav-tabs .nav-item .nav-link.active { color: #1A9EDA; text-decoration: underline; }
 .Sales-section .details-section .btn { background-color: #F16621; padding: 12px 50px; font-size: 16px; font-family: 'Jost', sans-serif; color: white; border-radius: 7px; margin-left: 20px; border: none;}
-.Sales-section .details-section .user-detail-title { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; padding: 20px 20px;  background-color: #f0f0f0; }
+.Sales-section .details-section .user-detail-title { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; padding: 20px 20px;  background-color: #f0f0f0; border-top: 1px solid rgb(217, 217, 217);}

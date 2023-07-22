@@ -235,7 +235,7 @@ table, thead, tbody, tr, td, th { display: block; }
 .Sales-section .details-section .user-detail-section .user-detail-title { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 8px 46px; background-color: #f0f0f0; border-bottom: 1px solid rgb(217, 217, 217); border-top: 1px solid rgb(217, 217, 217);}
 .Sales-section .details-section .user-detail-section .user-detail-title h5 { font-size: 18px; font-weight: 400; line-height: 1; color: #757575; margin: 0; }
 
-.Sales-section .details-section .user-detail-section .user-details { height: 581px; overflow-y: scroll; }
+.Sales-section .details-section .user-detail-section .user-details { height: 485px; overflow-y: scroll; }
 .Sales-section .details-section .user-detail-section .user-details .single-user-details { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 15px 46px; background-color: #FFFFFF; border-bottom: 1px solid rgb(207, 207, 207, 0.3); }
 .Sales-section .details-section .user-detail-section .user-details .single-user-details .username { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
 .Sales-section .details-section .user-detail-section .user-details .single-user-details .username span { width: 40px; height: 40px; font-size: 18px; font-weight: 500; line-height: 40px; color: #1A9EDA; background-color: rgba(26, 158, 218, 0.2); border-radius: 50px; text-align: center; margin-right: 10px; text-transform: uppercase; }
@@ -257,3 +257,5 @@ table, thead, tbody, tr, td, th { display: block; }
 .Sales-section .details-section .nav-tabs .nav-item:last-child { margin-right: 0px; }
 .Sales-section .details-section .nav-tabs .nav-item .nav-link { border: none; background-color: transparent; font-size: 18px; font-weight: 500; line-height: 1; color: #8B9DB0; padding: 0; }
 .Sales-section .details-section .nav-tabs .nav-item .nav-link.active { color: #1A9EDA; text-decoration: underline; }
+.Sales-section .details-section .btn { background-color: #F16621; padding: 12px 50px; font-size: 16px; font-family: 'Jost', sans-serif; color: white; border-radius: 7px; margin-left: 20px; border: none;}
+.Sales-section .details-section .user-detail-title { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; padding: 20px 20px;  background-color: #f0f0f0; }

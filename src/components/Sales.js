@@ -2,6 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFileLines } from "@fortawesome/free-regular-svg-icons"
 import Tab from 'react-bootstrap/Tab';
+import Btn from "../assets/images/Group-298.png"
 import Tabs from 'react-bootstrap/Tabs';
 import Searchicon from "../assets/images/Group-38.png"
 import Arrow1 from "../assets/images/Arrow-1.png"
@@ -66,7 +67,7 @@ export default function Sales() {
                                 <div className='search-filter filter'>
                                     <h4>Search</h4>
                                     <div className='search-filter-input'>
-                                        <img src={Searchicon} alt=''/>
+                                        <img src={Searchicon} alt='' />
                                         <input type='text' placeholder='Customer Name' />
                                     </div>
                                 </div>
@@ -209,7 +210,14 @@ export default function Sales() {
                                     </div>
                                 </div>
                             </div>
-                            <input type='submit' value="Add Customer" className='submit-btn' />
+                            <div className='user-detail-title'>
+                                    <button class="btn">
+                                        More
+                                    </button>
+                                    <button class="btn">
+                                        + Add Purchase
+                                    </button>
+                            </div>
                         </Tab>
                         <Tab eventKey="purchase" title="Purchase">
                             purchase

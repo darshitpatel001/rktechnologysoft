@@ -64,7 +64,7 @@ export default function Cashbook() {
                                 <input type="date" class="form-control" name="Date" />
                             </div>
                             <div class="col">
-                                <label for="email">Email</label>
+                                <label for="email">Payment Mode</label>
                                 <select class="form-select" id="sel1" name="sellist1">
                                     <option>All</option>
                                     <option>All</option>

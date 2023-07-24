@@ -221,8 +221,7 @@ table, thead, tbody, tr, td, th { display: block; }
 .add-customer.you-gave-form .modal-dialog .modal-content .modal-body form .number .amount .coutry-amount { width: 100%; }
 .add-customer.you-gave-form .modal-dialog .modal-content .modal-body form .number .amount .coutry-amount input { border-right: 1px solid #CFCFCF; border-radius: 10px; }
 .add-customer.you-gave-form .modal-dialog .modal-content .modal-body form .input textarea { padding: 10px; border: 1px solid #CFCFCF; border-radius: 10px; font-size: 16px; color: #AEAEAE; width: 100%; }
-.add-customer.you-gave-form .modal-dialog .modal-content .modal-body form .calendar .App .rdtDays table thead tr th, .add-customer.you-gave-form .modal-dialog .modal-content .modal-body form .calendar .App .rdtDays table tbody tr td { display: inline-block; } 
-
+.add-customer.you-gave-form .modal-dialog .modal-content .modal-body form .calendar .App .rdtDays table thead tr th, .add-customer.you-gave-form .modal-dialog .modal-content .modal-body form .calendar .App .rdtDays table tbody tr td { display: inline-block; }
 .Sales-section {width: 80%; display: flex; flex-wrap: wrap; align-items: flex-start; }
 .Sales-section .details-section, .Sales-section .details-section1 {width: 50%; }
 .Sales-section .details-section .Sales {border-bottom: 10px solid #f0f0f0; padding: 40px 30px 10px; background-color: #F9FBFC;}

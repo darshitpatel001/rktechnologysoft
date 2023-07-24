@@ -179,6 +179,8 @@ export default function Customer() {
 
   }
 
+  const [search, setSearch] = useState("");
+
   return (
     <section className='customer-section'>
       <div className='detail-section'>
@@ -204,7 +206,7 @@ export default function Customer() {
                 <h4>Search for Customer</h4>
                 <div className='search-filter-input'>
                   <img src={Searchicon} alt='' />
-                  <input type='text' placeholder='Name or Phonenumber' />
+                  <input type='text' placeholder='Name or Phonenumber' onChange={(e) => setSearch(e.target.value)} />
                 </div>
               </div>
               <div className='select-filter filter'>
@@ -244,13 +246,28 @@ export default function Customer() {
               </div>
               <div className='user-details'>
                 {
-                  customerDetail && customerDetail.map((value, index) => {
+                  customerDetail?customerDetail
+                  .filter((value, index) => {
+                    if (search === "") {
+                      return value;
+                    }
+                    else if (value.partyname.includes(search)) {
+                      return value;
+                    }
+                    else if (value.partyname.toUpperCase().includes(search)) {
+                      return value;
+                    }
+                    else if (value.partyname.toLowerCase().includes(search)) {
+                      return value;
+                    }
+                  })
+                  .map((value, index) => {
                     return (
                       <a href={"/customer/" + value.partyname}>
                         <div className='single-user-details'>
                           <div className='username'>
                             <span>{value.firstCharacter}</span>
-                            <div className='name'> 
+                            <div className='name'>
                               <h4>{value.partyname}</h4>
                               <p>11 days ago</p>
                             </div>
@@ -262,7 +279,7 @@ export default function Customer() {
                         </div>
                       </a>
                     )
-                  })
+                  }):"No Record Found"
                 }
               </div>
               <div className='add-customer'>

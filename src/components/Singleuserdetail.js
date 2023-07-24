@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import { Button, Modal } from 'react-bootstrap'
-import DatePicker from 'react-datetime';
-import moment from 'moment';
-import 'react-datetime/css/react-datetime.css';
 import Fileicon2 from "../assets/images/file-icon-grey.png"
 import Settingicon from "../assets/images/setting-grey.png"
 import Alarmicon from "../assets/images/circular-alarm-clock-tool.png"
@@ -14,10 +11,38 @@ import Usericon from "../assets/images/user.png"
 
 export default function Singleuserdetail(props) {
 
-    const today = moment();
-    const disableFutureDt = current => {
-        return current.isBefore(today)
-    }
+    useEffect(() => {
+
+        fetch("http://localhost:3001/customer", {
+            method: "GET",
+            headers: { "content-type": "application/json" }
+        }).then(async (res) => {
+
+            let record = await res.json();
+
+            setSingleCustomerData(record);
+
+        }).catch((err) => {
+            console.log("Record not found");
+        })
+
+    }, [])
+
+    const disablePastDate = () => {
+        const today = new Date();
+        const dd = String(today.getDate() + 1).padStart(2, "0");
+        const mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+        const yyyy = today.getFullYear();
+        return yyyy + "-" + mm + "-" + dd;
+    };
+
+    const [selectedDate, setSelectedDate] = useState("");
+
+    const handleDateChange = (event) => {
+        setSelectedDate(event.target.value);
+    };
+
+    const currentDate = new Date().toISOString().split("T")[0];
 
     const [show, setShow] = useState(false);
 
@@ -37,9 +62,55 @@ export default function Singleuserdetail(props) {
         blankPageId = "open";
     }
 
+    const [singleCustomerData, setSingleCustomerData] = useState();
+
     const [firstCharacter, setFirstCharacter] = useState("");
     const [partyName, setPartyName] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
+
+    /* You Gave Form Start */
+    const [gaveAmount, setGaveAmount] = useState();
+    const [gaveDescription, setGaveDescription] = useState();
+
+    const youGaveData = {
+        gaveamount: gaveAmount,
+        gavedescription: gaveDescription,
+        gavedate: selectedDate
+    }
+
+    let customerYouGaveData = [];
+    
+    const yougaveform = (e) => {
+        
+        e.preventDefault();
+        
+
+        customerYouGaveData = [...customerYouGaveData, youGaveData];
+
+        console.log(customerYouGaveData);
+
+        console.log(singleCustomerData);
+
+        // if (singleCustomerData.partyname === partyName) {
+
+
+            // fetch("http://localhost:3001/customer/" + partyName, {
+            //     method: "PUT",
+            //     headers: { "content-type": "application/json" },
+            //     body: JSON.stringify(customerGaveData)
+            // }).then((rec) => {
+
+            //     console.log("Data add successfully");
+
+            // }).catch((err) => {
+            //     console.log(err.message)
+            // })
+
+        // }
+
+    }
+
+    /* You Gave Form End */
 
     useEffect(() => {
 
@@ -55,6 +126,7 @@ export default function Singleuserdetail(props) {
                     setFirstCharacter(record[i].firstCharacter);
                     setPartyName(record[i].partyname);
                     setPhoneNumber(record[i].phonenumber);
+                    setSingleCustomerData(record[i])
                 }
             }
 
@@ -62,14 +134,6 @@ export default function Singleuserdetail(props) {
             console.log("Record not found");
         })
     }, [])
-
-    const disablePastDate = () => {
-        const today = new Date();
-        const dd = String(today.getDate() + 1).padStart(2, "0");
-        const mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
-        const yyyy = today.getFullYear();
-        return yyyy + "-" + mm + "-" + dd;
-    };
 
     return (
         <div className={'single-user-data ' + blankPageId}>
@@ -216,14 +280,14 @@ export default function Singleuserdetail(props) {
                             <Modal.Title>Add New Entry</Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
-                            <form id='youGaveForm'>
+                            <form id='youGaveForm' onSubmit={(e) => yougaveform(e)}>
                                 <div className='input number'>
                                     <div className='all-span'>
                                         <span className='label'>Amount</span>
                                     </div>
                                     <div className='amount'>
                                         <div className='coutry-amount'>
-                                            <input type='number' placeholder='Enter amount' name='countryamount' />
+                                            <input type='number' placeholder='Enter amount' name='countryamount' onChange={(e) => setGaveAmount(e.target.value)} />
                                             <span className='amount-icon'>₹</span>
                                         </div>
                                         <span className='error'></span>
@@ -231,14 +295,12 @@ export default function Singleuserdetail(props) {
                                 </div>
                                 <div className='input textarea'>
                                     <span className='label'>Description</span>
-                                    <textarea placeholder='Enter Details (Item Name, Bill No, Quantity, etc)' rows="6"></textarea>
+                                    <textarea placeholder='Enter Details (Item Name, Bill No, Quantity, etc)' rows="6" onChange={(e) => setGaveDescription(e.target.value)}></textarea>
                                     <span className='error'></span>
                                 </div>
                                 <div className='input calendar'>
                                     <span className='label'>Date</span>
-                                    <div className='App'>
-                                        <DatePicker timeFormat={false} isValidDate={disableFutureDt} />
-                                    </div>
+                                    <input type="date" id="datepicker" value={selectedDate} onChange={handleDateChange} max={currentDate} />
                                 </div>
                                 <input type='submit' value="Save" className='submit-btn' />
                             </form>

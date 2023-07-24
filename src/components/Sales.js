@@ -120,16 +120,16 @@ export default function Sales() {
                                 </div>
                             </div>
                             <div className='user-detail-title'>
-                                    <button class="btn">
-                                        More
-                                    </button>
-                                    <button class="btn">
-                                        + Add Purchase
-                                    </button>
+                                <button className="btn">
+                                    More
+                                </button>
+                                <button className="btn">
+                                    + Add Purchase
+                                </button>
                             </div>
                         </Tab>
                         <Tab eventKey="purchase" title="Purchase">
-                        <div className='filter-row'>
+                            <div className='filter-row'>
                                 <div className='search-filter filter'>
                                     <h4>Search</h4>
                                     <div className='search-filter-input'>
@@ -186,16 +186,16 @@ export default function Sales() {
                                 </div>
                             </div>
                             <div className='user-detail-title'>
-                                    <button class="btn">
-                                        More
-                                    </button>
-                                    <button class="btn">
-                                        + Add Purchase
-                                    </button>
+                                <button className="btn">
+                                    More
+                                </button>
+                                <button className="btn">
+                                    + Add Purchase
+                                </button>
                             </div>
                         </Tab>
                         <Tab eventKey="expenses" title="Expenses">
-                        <div className='filter-row'>
+                            <div className='filter-row'>
                                 <div className='search-filter filter'>
                                     <h4>Search</h4>
                                     <div className='search-filter-input'>
@@ -252,12 +252,12 @@ export default function Sales() {
                                 </div>
                             </div>
                             <div className='user-detail-title'>
-                                    <button class="btn">
-                                        More
-                                    </button>
-                                    <button class="btn">
-                                        + Add Purchase
-                                    </button>
+                                <button className="btn">
+                                    More
+                                </button>
+                                <button className="btn">
+                                    + Add Purchase
+                                </button>
                             </div>
                         </Tab>
                     </Tabs>

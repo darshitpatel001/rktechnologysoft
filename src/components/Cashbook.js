@@ -54,7 +54,7 @@ export default function Cashbook() {
                                         View Report
                                     </button>
                                 </div>
-                            </div> 
+                            </div>
                         </div>
                     </div>
                     <div className='Payment-date'>

@@ -80,7 +80,7 @@ export default function Sales() {
                                 <div className='user-details'>
                                     <div className='single-user-details'>
                                         <div className='username'>
-                                            <span>A</span>
+                                            <span>D</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
                                                 <p>17 Jul 2023</p>
@@ -93,7 +93,7 @@ export default function Sales() {
                                     </div>
                                     <div className='single-user-details'>
                                         <div className='username'>
-                                            <span>A</span>
+                                            <span>D</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
                                                 <p>17 Jul 2023</p>
@@ -106,98 +106,7 @@ export default function Sales() {
                                     </div>
                                     <div className='single-user-details'>
                                         <div className='username'>
-                                            <span>A</span>
-                                            <div className='name'>
-                                                <h4>Darshit</h4>
-                                                <p>17 Jul 2023</p>
-                                            </div>
-                                        </div>
-                                        <div className='amount'>
-                                            <h4>₹ 200</h4>
-                                            <p>Online</p>
-                                        </div>
-                                    </div>
-                                    <div className='single-user-details'>
-                                        <div className='username'>
-                                            <span>A</span>
-                                            <div className='name'>
-                                                <h4>Darshit</h4>
-                                                <p>17 Jul 2023</p>
-                                            </div>
-                                        </div>
-                                        <div className='amount'>
-                                            <h4>₹ 200</h4>
-                                            <p>Online</p>
-                                        </div>
-                                    </div>
-                                    <div className='single-user-details'>
-                                        <div className='username'>
-                                            <span>A</span>
-                                            <div className='name'>
-                                                <h4>Darshit</h4>
-                                                <p>17 Jul 2023</p>
-                                            </div>
-                                        </div>
-                                        <div className='amount'>
-                                            <h4>₹ 200</h4>
-                                            <p>Online</p>
-                                        </div>
-                                    </div>
-                                    <div className='single-user-details'>
-                                        <div className='username'>
-                                            <span>A</span>
-                                            <div className='name'>
-                                                <h4>Darshit</h4>
-                                                <p>17 Jul 2023</p>
-                                            </div>
-                                        </div>
-                                        <div className='amount'>
-                                            <h4>₹ 200</h4>
-                                            <p>Online</p>
-                                        </div>
-                                    </div>
-                                    <div className='single-user-details'>
-                                        <div className='username'>
-                                            <span>A</span>
-                                            <div className='name'>
-                                                <h4>Darshit</h4>
-                                                <p>17 Jul 2023</p>
-                                            </div>
-                                        </div>
-                                        <div className='amount'>
-                                            <h4>₹ 200</h4>
-                                            <p>Online</p>
-                                        </div>
-                                    </div>
-                                    <div className='single-user-details'>
-                                        <div className='username'>
-                                            <span>A</span>
-                                            <div className='name'>
-                                                <h4>Darshit</h4>
-                                                <p>17 Jul 2023</p>
-                                            </div>
-                                        </div>
-                                        <div className='amount'>
-                                            <h4>₹ 200</h4>
-                                            <p>Online</p>
-                                        </div>
-                                    </div>
-                                    <div className='single-user-details'>
-                                        <div className='username'>
-                                            <span>A</span>
-                                            <div className='name'>
-                                                <h4>Darshit</h4>
-                                                <p>17 Jul 2023</p>
-                                            </div>
-                                        </div>
-                                        <div className='amount'>
-                                            <h4>₹ 200</h4>
-                                            <p>Online</p>
-                                        </div>
-                                    </div>
-                                    <div className='single-user-details'>
-                                        <div className='username'>
-                                            <span>A</span>
+                                            <span>D</span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
                                                 <p>17 Jul 2023</p>
@@ -220,10 +129,136 @@ export default function Sales() {
                             </div>
                         </Tab>
                         <Tab eventKey="purchase" title="Purchase">
-                            purchase
+                        <div className='filter-row'>
+                                <div className='search-filter filter'>
+                                    <h4>Search</h4>
+                                    <div className='search-filter-input'>
+                                        <img src={Searchicon} alt='' />
+                                        <input type='text' placeholder='Customer Name' />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='user-detail-section'>
+                                <div className='user-detail-title'>
+                                    <h5>TRANSACTION</h5>
+                                    <h5>Amount</h5>
+                                </div>
+                                <div className='user-details'>
+                                    <div className='single-user-details'>
+                                        <div className='username'>
+                                            <span>K</span>
+                                            <div className='name'>
+                                                <h4>Kapil</h4>
+                                                <p>17 Jul 2023</p>
+                                            </div>
+                                        </div>
+                                        <div className='amount'>
+                                            <h4>₹ 200</h4>
+                                            <p>Online</p>
+                                        </div>
+                                    </div>
+                                    <div className='single-user-details'>
+                                        <div className='username'>
+                                            <span>K</span>
+                                            <div className='name'>
+                                                <h4>Kapil</h4>
+                                                <p>17 Jul 2023</p>
+                                            </div>
+                                        </div>
+                                        <div className='amount'>
+                                            <h4>₹ 200</h4>
+                                            <p>Online</p>
+                                        </div>
+                                    </div>
+                                    <div className='single-user-details'>
+                                        <div className='username'>
+                                            <span>K</span>
+                                            <div className='name'>
+                                                <h4>Kapil</h4>
+                                                <p>17 Jul 2023</p>
+                                            </div>
+                                        </div>
+                                        <div className='amount'>
+                                            <h4>₹ 200</h4>
+                                            <p>Online</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='user-detail-title'>
+                                    <button class="btn">
+                                        More
+                                    </button>
+                                    <button class="btn">
+                                        + Add Purchase
+                                    </button>
+                            </div>
                         </Tab>
                         <Tab eventKey="expenses" title="Expenses">
-                            expenses
+                        <div className='filter-row'>
+                                <div className='search-filter filter'>
+                                    <h4>Search</h4>
+                                    <div className='search-filter-input'>
+                                        <img src={Searchicon} alt='' />
+                                        <input type='text' placeholder='Customer Name' />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='user-detail-section'>
+                                <div className='user-detail-title'>
+                                    <h5>TRANSACTION</h5>
+                                    <h5>Amount</h5>
+                                </div>
+                                <div className='user-details'>
+                                    <div className='single-user-details'>
+                                        <div className='username'>
+                                            <span>P</span>
+                                            <div className='name'>
+                                                <h4>Parth</h4>
+                                                <p>17 Jul 2023</p>
+                                            </div>
+                                        </div>
+                                        <div className='amount'>
+                                            <h4>₹ 200</h4>
+                                            <p>Online</p>
+                                        </div>
+                                    </div>
+                                    <div className='single-user-details'>
+                                        <div className='username'>
+                                            <span>P</span>
+                                            <div className='name'>
+                                                <h4>Parth</h4>
+                                                <p>17 Jul 2023</p>
+                                            </div>
+                                        </div>
+                                        <div className='amount'>
+                                            <h4>₹ 200</h4>
+                                            <p>Online</p>
+                                        </div>
+                                    </div>
+                                    <div className='single-user-details'>
+                                        <div className='username'>
+                                            <span>P</span>
+                                            <div className='name'>
+                                                <h4>Parth</h4>
+                                                <p>17 Jul 2023</p>
+                                            </div>
+                                        </div>
+                                        <div className='amount'>
+                                            <h4>₹ 200</h4>
+                                            <p>Online</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='user-detail-title'>
+                                    <button class="btn">
+                                        More
+                                    </button>
+                                    <button class="btn">
+                                        + Add Purchase
+                                    </button>
+                            </div>
                         </Tab>
                     </Tabs>
                 </div>

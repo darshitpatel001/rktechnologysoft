@@ -250,7 +250,7 @@ export default function Customer() {
                         <div className='single-user-details'>
                           <div className='username'>
                             <span>{value.firstCharacter}</span>
-                            <div className='name'>
+                            <div className='name'> 
                               <h4>{value.partyname}</h4>
                               <p>11 days ago</p>
                             </div>

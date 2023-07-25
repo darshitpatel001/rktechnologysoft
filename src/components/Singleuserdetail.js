@@ -49,6 +49,11 @@ export default function Singleuserdetail(props) {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    const [show1, setShow1] = useState(false);
+
+    const handleClose1 = () => setShow1(false);
+    const handleShow1 = () => setShow1(true);
+
     const customerId = useParams();
 
     const userId = customerId.id;
@@ -272,10 +277,43 @@ export default function Singleuserdetail(props) {
                 </div>
                 <div className='you-gave-got-btn'>
                     <Button className='gave' variant="primary" onClick={handleShow}>You Gave ₹</Button>
-                    <button className='got'>You Got ₹</button>
+                    <Button className='got' onClick={handleShow1}>You Got ₹</Button>
                 </div>
                 <div className='you-gave-form'>
                     <Modal show={show} onHide={handleClose} className='add-customer you-gave-form'>
+                        <Modal.Header closeButton>
+                            <Modal.Title>Add New Entry</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            <form id='youGaveForm' onSubmit={(e) => yougaveform(e)}>
+                                <div className='input number'>
+                                    <div className='all-span'>
+                                        <span className='label'>Amount</span>
+                                    </div>
+                                    <div className='amount'>
+                                        <div className='coutry-amount'>
+                                            <input type='number' placeholder='Enter amount' name='countryamount' onChange={(e) => setGaveAmount(e.target.value)} />
+                                            <span className='amount-icon'>₹</span>
+                                        </div>
+                                        <span className='error'></span>
+                                    </div>
+                                </div>
+                                <div className='input textarea'>
+                                    <span className='label'>Description</span>
+                                    <textarea placeholder='Enter Details (Item Name, Bill No, Quantity, etc)' rows="6" onChange={(e) => setGaveDescription(e.target.value)}></textarea>
+                                    <span className='error'></span>
+                                </div>
+                                <div className='input calendar'>
+                                    <span className='label'>Date</span>
+                                    <input type="date" id="datepicker" value={selectedDate} onChange={handleDateChange} max={currentDate} />
+                                </div>
+                                <input type='submit' value="Save" className='submit-btn' />
+                            </form>
+                        </Modal.Body>
+                    </Modal>
+                </div>
+                <div className='you-gave-form'>
+                    <Modal show={show1} onHide={handleClose1} className='add-customer you-gave-form'>
                         <Modal.Header closeButton>
                             <Modal.Title>Add New Entry</Modal.Title>
                         </Modal.Header>

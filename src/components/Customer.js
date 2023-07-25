@@ -19,7 +19,8 @@ export default function Customer() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
-v
+  const handleShow = () => setShow(true);
+
   const [partyName, setPartyName] = useState("");
   const [partyNameError, setPartyNameError] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");

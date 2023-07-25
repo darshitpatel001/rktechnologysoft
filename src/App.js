@@ -4,6 +4,7 @@ import Sidebar from './containers/Sidebar';
 import Item from './components/Cashbook';
 import Customer from './components/Customer';
 import Sales from './components/Sales';
+import Staff from './components/Staff';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path='/customer/:id' element={<Customer />} />
           <Route path='/cashbook' element={<Item />} />
           <Route path='/sales' element={<Sales />} />
+          <Route path='/staff' element={<Staff />} />
         </Routes>
       </BrowserRouter>
     </section>

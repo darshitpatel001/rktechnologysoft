@@ -214,11 +214,9 @@ export default function Customer() {
                 <div className='select-filter-select select'>
                   <img src={Filtericon} className='filter-icon' alt='' />
                   <select>
-                    <option>Select</option>
-                    <option>All</option>
-                    <option>You'll Give</option>
-                    <option>You'll Get</option>
-                    <option>Settled</option>
+                    <option value="">Select</option>
+                    <option value="">You'll Give</option>
+                    <option value="">You'll Get</option>
                   </select>
                   <img src={Downicon} className='down-icon' alt='' />
                 </div>
@@ -327,8 +325,8 @@ export default function Customer() {
                     </div>
                     <div className='select'>
                       <select name='gavegot' onChange={(e) => setGaveGot(e.target.value)}>
-                        <option>You Gave</option>
-                        <option>You Got</option>
+                        <option value="You'll Give">You Gave</option>
+                        <option value="You'll Get">You Got</option>
                       </select>
                       <img src={Downarrow} alt='' />
                     </div>

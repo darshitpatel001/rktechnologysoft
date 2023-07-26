@@ -178,7 +178,7 @@ export default function Customer() {
     }
 
   }
- 
+
   const [search, setSearch] = useState("");
 
   return (
@@ -244,40 +244,40 @@ export default function Customer() {
               </div>
               <div className='user-details'>
                 {
-                  customerDetail?customerDetail
-                  .filter((value, index) => {
-                    if (search === "") {
-                      return value;
-                    }
-                    else if (value.partyname.includes(search)) {
-                      return value;
-                    }
-                    else if (value.partyname.toUpperCase().includes(search)) {
-                      return value;
-                    }
-                    else if (value.partyname.toLowerCase().includes(search)) {
-                      return value;
-                    }
-                  })
-                  .map((value, index) => {
-                    return (
-                      <a href={"/customer/" + value.partyname}>
-                        <div className='single-user-details'>
-                          <div className='username'>
-                            <span>{value.firstCharacter}</span>
-                            <div className='name'>
-                              <h4>{value.partyname}</h4>
-                              <p>11 days ago</p>
+                  customerDetail ? customerDetail
+                    .filter((value, index) => {
+                      if (search === "") {
+                        return value;
+                      }
+                      else if (value.partyname.includes(search)) {
+                        return value;
+                      }
+                      else if (value.partyname.toUpperCase().includes(search)) {
+                        return value;
+                      }
+                      else if (value.partyname.toLowerCase().includes(search)) {
+                        return value;
+                      }
+                    })
+                    .map((value, index) => {
+                      return (
+                        <a href={"/customer/" + value.partyname}>
+                          <div className='single-user-details'>
+                            <div className='username'>
+                              <span>{value.firstCharacter}</span>
+                              <div className='name'>
+                                <h4>{value.partyname}</h4>
+                                <p>11 days ago</p>
+                              </div>
+                            </div>
+                            <div className='amount'>
+                              <h4>₹ {value.countryamount}</h4>
+                              <p>{value.gavegot}</p>
                             </div>
                           </div>
-                          <div className='amount'>
-                            <h4>₹ {value.countryamount}</h4>
-                            <p>{value.gavegot}</p>
-                          </div>
-                        </div>
-                      </a>
-                    )
-                  }):"No Record Found"
+                        </a>
+                      )
+                    }) : "No Record Found"
                 }
               </div>
               <div className='add-customer'>
@@ -288,7 +288,7 @@ export default function Customer() {
 
 
           <Tab eventKey="suppliers" title="Suppliers">
-        hello
+            hello
           </Tab>
         </Tabs>
       </div>
@@ -301,96 +301,6 @@ export default function Customer() {
             </Modal.Header>
             <Modal.Body>
               <form id='addcustomerform' onSubmit={(e) => customerData(e)} >
-                <div className='input name'>
-                  <span className='label'>Party Name</span>
-                  <input type='text' placeholder='Enter Party Name' name='partyname' value={partyName} onChange={(e) => setPartyName(e.target.value)} />
-                  <span className='error'>{partyNameError}</span>
-                </div>
-                <div className='input number'>
-                  <div className='all-span'>
-                    <span className='label'>Phone Number</span>
-                  </div>
-                  <div className='phone-number'>
-                    <input type='number' placeholder='Enter Phone Number' name='phonenumber' value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
-                    <span className='country'>+91</span>
-                  </div>
-                  <span className='error'>{phoneNumberError}</span>
-                </div>
-                <div className='input number'>
-                  <div className='all-span'>
-                    <span className='label'>Opening Balance</span>
-                  </div>
-                  <div className='amount'>
-                    <div className='coutry-amount'>
-                      <input type='number' placeholder='Enter amount' name='countryamount' value={countryAmount} onChange={(e) => setCountryAmount(e.target.value)} />
-                      <span className='amount-icon'>₹</span>
-                    </div>
-                    <div className='select'>
-                      <select name='gavegot' onChange={(e) => setGaveGot(e.target.value)}>
-                        <option value="You'll Give">You Gave</option>
-                        <option value="You'll Get">You Got</option>
-                      </select>
-                      <img src={Downarrow} alt='' />
-                    </div>
-                    <span className='error'>{countryAmountError}</span>
-                  </div>
-                </div>
-                <Accordion>
-                  <Accordion.Item eventKey="0">
-                    <Accordion.Header>Add GSTIN & Address</Accordion.Header>
-                    <Accordion.Body>
-                      <div className='input gstin'>
-                        <span className='label'>Gstin</span>
-                        <input type='text' placeholder='Add GSTIN' name='gstin' value={gstin} onChange={(e) => setGstin(e.target.value)} />
-                        <span className='error'>{gstinError}</span>
-                      </div>
-                      <div className='billing-address'>
-                        <h2>Billing Address</h2>
-                        <div className='input flat-number'>
-                          <span className='label'>Flat / Building Number</span>
-                          <input type='text' name='billingaddress' value={billingAddress} onChange={(e) => setBillingAddress(e.target.value)} />
-                          <span className='error'>{billingAddressError}</span>
-                        </div>
-                        <div className='input area-locality'>
-                          <span className='label'>Area / Locality</span>
-                          <input type='text' className='arealocality' value={areaLocality} onChange={(e) => setareaLocality(e.target.value)} />
-                          <span className='error'>{areaLocalityError}</span>
-                        </div>
-                        <div className='input pin-code'>
-                          <span className='label'>PIN Code</span>
-                          <input type='number' name='pincode' value={pinCode} onChange={(e) => setPinCode(e.target.value)} />
-                          <span className='error'>{pinCodeError}</span>
-                        </div>
-                        <div className='city-state'>
-                          <div className='input city'>
-                            <span className='label'>City</span>
-                            <input type='text' name='city' value={city} onChange={(e) => setCity(e.target.value)} />
-                            <span className='error'>{cityError}</span>
-                          </div>
-                          <div className='input state'>
-                            <span className='label'>State</span>
-                            <input type='text' name='state' value={state} onChange={(e) => setState(e.target.value)} />
-                            <span className='error'>{stateError}</span>
-                          </div>
-                        </div>
-                      </div>
-                    </Accordion.Body>
-                  </Accordion.Item>
-                </Accordion>
-                <input type='submit' value="Add Customer" className='submit-btn' />
-              </form>
-            </Modal.Body>
-          </Modal>
-        </div>
-      </div>
-      <div className='forms'>
-        <div className='add-customer-form'>
-          <Modal show={show1} onHide={handleClose1} className='add-customer'>
-            <Modal.Header closeButton>
-              <Modal.Title>Add New Party</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-              <form id='addcustomerform' onSubmit={(e) => supplierData(e)} >
                 <div className='input name'>
                   <span className='label'>Party Name</span>
                   <input type='text' placeholder='Enter Party Name' name='partyname' value={partyName} onChange={(e) => setPartyName(e.target.value)} />

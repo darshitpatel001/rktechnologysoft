@@ -286,7 +286,6 @@ export default function Customer() {
             </div>
           </Tab>
 
-
           <Tab eventKey="suppliers" title="Suppliers">
             hello
           </Tab>

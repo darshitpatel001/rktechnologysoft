@@ -48,7 +48,7 @@ export default function Sidebar() {
           <h5>Management Inventory</h5>
           <ul>
             <li>
-              <Link to="/"><span><img src={Itemsicon} alt='icon' /></span>Item</Link>
+              <Link to="/item"><span><img src={Itemsicon} alt='icon' /></span>Item</Link>
             </li>
           </ul>
         </div>

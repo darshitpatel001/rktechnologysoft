@@ -141,7 +141,7 @@ export default function Singleuserdetail(props) {
     }, [])
 
     return (
-        <div className={'single-user-data ' + blankPageId}>
+        <div className={'single-user-data' + blankPageId}>
             <div className='blank-page'>
                 <img src={Usericon} alt='' />
                 <h4>No customer selected</h4>

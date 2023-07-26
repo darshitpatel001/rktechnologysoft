@@ -346,6 +346,6 @@ export default function Singleuserdetail(props) {
                     </Modal>
                 </div>
             </div>
-        </div>
+        </div>  
     )
 }

@@ -7,17 +7,28 @@ import DatePicker from 'react-datetime';
 import moment from 'moment';
 
 export default function Cashbook() {
-    const today = moment();
-    const disableFutureDt = current => {
-        return current.isBefore(today)
-    }
+    const [selectedDate, setSelectedDate] = useState("");
+
+    const handleDateChange = (event) => {
+        setSelectedDate(event.target.value);
+    };
+
+    const currentDate = new Date().toISOString().split("T")[0];
     const [show, setShow] = useState(false);
-    const [show1, setShow1] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    const [show1, setShow1] = useState(false);
     const handleClose1 = () => setShow1(false);
     const handleShow1 = () => setShow1(true);
+
+    const [show2, setShow2] = useState(false);
+    const handleClose2 = () => setShow2(false);
+    const handleShow2 = () => setShow2(true);
+
+    const [show3, setShow3] = useState(false);
+    const handleClose3 = () => setShow3(false);
+    const handleShow3 = () => setShow3(true);
     return (
         <>
             <section className="Cash-section">
@@ -109,41 +120,38 @@ export default function Cashbook() {
                     <div className='transation-contant-btn'>
                         <div className='transation-out'>
                             <Button onClick={handleShow}>OUT</Button>
-                        </div>
-
-                        <Modal show={show} onHide={handleClose} className='add-customer you-gave-form'>
-                            <Modal.Header closeButton>
-                                <Modal.Title>Out Entry</Modal.Title>
-                            </Modal.Header>
-                            <Modal.Body>
-                                <form id='youGaveForm'>
-                                    <div className='input number'>
-                                        <div className='all-span'>
-                                            <span className='label'>Amount</span>
-                                        </div>
-                                        <div className='amount'>
-                                            <div className='coutry-amount'>
-                                                <input type='number' placeholder='Enter amount' name='countryamount' />
-                                                <span className='amount-icon'>₹</span>
+                            <Modal show={show} onHide={handleClose} className='add-customer you-gave-form'>
+                                <Modal.Header closeButton>
+                                    <Modal.Title>Out Entry</Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body>
+                                    <form id='youGaveForm'>
+                                        <div className='input number'>
+                                            <div className='all-span'>
+                                                <span className='label'>Amount</span>
                                             </div>
+                                            <div className='amount'>
+                                                <div className='coutry-amount'>
+                                                    <input type='number' placeholder='Enter amount' name='countryamount' />
+                                                    <span className='amount-icon'>₹</span>
+                                                </div>
+                                                <span className='error'></span>
+                                            </div>
+                                        </div>
+                                        <div className='input textarea'>
+                                            <span className='label'>Description</span>
+                                            <textarea placeholder='Enter Details (Item Name, Bill No, Quantity, etc)' rows="6" ></textarea>
                                             <span className='error'></span>
                                         </div>
-                                    </div>
-                                    <div className='input textarea'>
-                                        <span className='label'>Description</span>
-                                        <textarea placeholder='Enter Details (Item Name, Bill No, Quantity, etc)' rows="6"></textarea>
-                                        <span className='error'></span>
-                                    </div>
-                                    <div className='input calendar'>
-                                        <span className='label'>Date</span>
-                                        <div className='App'>
-                                            <DatePicker timeFormat={false} isValidDate={disableFutureDt} />
+                                        <div className='input calendar'>
+                                            <span className='label'>Date</span>
+                                            <input type="date" id="datepicker" value={selectedDate} onChange={handleDateChange} max={currentDate} />
                                         </div>
-                                    </div>
-                                    <input type='submit' value="Save" className='submit-btn' />
-                                </form>
-                            </Modal.Body>
-                        </Modal>
+                                        <input type='submit' value="Save" className='submit-btn' />
+                                    </form>
+                                </Modal.Body>
+                            </Modal>
+                        </div>
 
                         <div className='transation-out'>
                             <Button onClick={handleShow1}>IN</Button>
@@ -167,14 +175,12 @@ export default function Cashbook() {
                                         </div>
                                         <div className='input textarea'>
                                             <span className='label'>Description</span>
-                                            <textarea placeholder='Enter Details (Item Name, Bill No, Quantity, etc)' rows="6"></textarea>
+                                            <textarea placeholder='Enter Details (Item Name, Bill No, Quantity, etc)' rows="6" ></textarea>
                                             <span className='error'></span>
                                         </div>
                                         <div className='input calendar'>
                                             <span className='label'>Date</span>
-                                            <div className='App'>
-                                                <DatePicker timeFormat={false} isValidDate={disableFutureDt} />
-                                            </div>
+                                            <input type="date" id="datepicker" value={selectedDate} onChange={handleDateChange} max={currentDate} />
                                         </div>
                                         <input type='submit' value="Save" className='submit-btn' />
                                     </form>
@@ -194,8 +200,54 @@ export default function Cashbook() {
                                 </div>
                             </div>
                             <div className='report-setting-btn'>
-                                <button className='report'>Edit</button>
-                                <button className='report1'>Delete </button>
+                                <Button className='report' onClick={handleShow2}>Edit</Button>
+                                <Modal show={show2} onHide={handleClose2} className='add-customer you-gave-form'>
+                                    <Modal.Header closeButton>
+                                        <Modal.Title>In Entry</Modal.Title>
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                        <form id='youGaveForm'>
+                                            <div className='input number'>
+                                                <div className='all-span'>
+                                                    <span className='label'>Amount</span>
+                                                </div>
+                                                <div className='amount'>
+                                                    <div className='coutry-amount'>
+                                                        <input type='number' placeholder='Enter amount' name='countryamount' />
+                                                        <span className='amount-icon'>₹</span>
+                                                    </div>
+                                                    <span className='error'></span>
+                                                </div>
+                                            </div>
+                                            <div className='input textarea'>
+                                                <span className='label'>Description</span>
+                                                <textarea placeholder='Enter Details (Item Name, Bill No, Quantity, etc)' rows="6" ></textarea>
+                                                <span className='error'></span>
+                                            </div>
+                                            <div className='input calendar'>
+                                                <span className='label'>Date</span>
+                                                <input type="date" id="datepicker" value={selectedDate} onChange={handleDateChange} max={currentDate} />
+                                            </div>
+                                            <input type='submit' value="Save" className='submit-btn' />
+                                        </form>
+                                    </Modal.Body>
+                                </Modal>
+
+                                <Button className='report1' onClick={handleShow3}>Delete </Button>
+                                <Modal show={show3} onHide={handleClose3} animation={false}>
+                                    <Modal.Header closeButton>
+                                        <Modal.Title>Delete entry</Modal.Title>
+                                    </Modal.Header>
+                                    <Modal.Body>Are you sure you want to delete this entry? This action cannot be undone.</Modal.Body>
+                                    <Modal.Footer>
+                                        <Button variant="secondary" onClick={handleClose3}>
+                                            Cancel
+                                        </Button>
+                                        <Button variant="primary" onClick={handleClose3}>
+                                            Yes Delete
+                                        </Button>
+                                    </Modal.Footer>
+                                </Modal>
                             </div>
                         </div>
                     </div>

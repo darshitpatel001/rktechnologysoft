@@ -49,11 +49,6 @@ export default function Singleuserdetail(props) {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const [show1, setShow1] = useState(false);
-
-    const handleClose1 = () => setShow1(false);
-    const handleShow1 = () => setShow1(true);
-
     const customerId = useParams();
 
     const userId = customerId.id;
@@ -140,8 +135,52 @@ export default function Singleuserdetail(props) {
         })
     }, [])
 
+    const [dueDate, setDueDate] = useState("");
+
+    let dueDateYear = dueDate.slice(0, 4);
+    let dueDateMonth = dueDate.slice(5, 7);
+    let dueDateDate = dueDate.slice(8, 10);
+
+    if(dueDateMonth === "01"){
+        dueDateMonth = "January"
+    }
+    else if(dueDateMonth === "02"){
+        dueDateMonth = "February"
+    }
+    else if(dueDateMonth === "03"){
+        dueDateMonth = "March"
+    }
+    else if(dueDateMonth === "04"){
+        dueDateMonth = "April"
+    }
+    else if(dueDateMonth === "05"){
+        dueDateMonth = "May"
+    }
+    else if(dueDateMonth === "06"){
+        dueDateMonth = "June"
+    }
+    else if(dueDateMonth === "07"){
+        dueDateMonth = "July"
+    }
+    else if(dueDateMonth === "08"){
+        dueDateMonth = "August"
+    }
+    else if(dueDateMonth === "09"){
+        dueDateMonth = "September"
+    }
+    else if(dueDateMonth === "10"){
+        dueDateMonth = "October"
+    }
+    else if(dueDateMonth === "11"){
+        dueDateMonth = "November"
+    }
+    else if(dueDateMonth === "12"){
+        dueDateMonth = "December"
+    }
+
+    console.log(dueDateMonth)
     return (
-        <div className={'single-user-data' + blankPageId}>
+        <div className={'single-user-data ' + blankPageId}>
             <div className='blank-page'>
                 <img src={Usericon} alt='' />
                 <h4>No customer selected</h4>
@@ -152,7 +191,7 @@ export default function Singleuserdetail(props) {
                         <span>{firstCharacter}</span>
                         <div className='name-number'>
                             <h4>{partyName}</h4>
-                            <p>{phoneNumber}</p>
+                            <p>+91 {phoneNumber}</p>
                         </div>
                     </div>
                     <div className='report-setting-btn'>
@@ -164,9 +203,11 @@ export default function Singleuserdetail(props) {
                     <div className='due-date'>
                         <h3><span><img src={Alarmicon} alt='' /></span>Due Date:</h3>
                         <div className='date'>
-                            <p>02 July 2023</p>
-                            <button>Edit</button>
-                            <input type='date' min={disablePastDate()} />
+                            <p>{dueDateDate  + " " + dueDateMonth + " " + dueDateYear}</p>
+                            <div className='date-btn'>
+                                <button>Edit</button>
+                                <input type='date' onChange={(e) => setDueDate(e.target.value)} min={disablePastDate()} />
+                            </div>
                         </div>
                     </div>
                     <div className='net-balance'>
@@ -277,7 +318,7 @@ export default function Singleuserdetail(props) {
                 </div>
                 <div className='you-gave-got-btn'>
                     <Button className='gave' variant="primary" onClick={handleShow}>You Gave ₹</Button>
-                    <Button className='got' onClick={handleShow1}>You Got ₹</Button>
+                    <button className='got'>You Got ₹</button>
                 </div>
                 <div className='you-gave-form'>
                     <Modal show={show} onHide={handleClose} className='add-customer you-gave-form'>
@@ -312,40 +353,7 @@ export default function Singleuserdetail(props) {
                         </Modal.Body>
                     </Modal>
                 </div>
-                <div className='you-gave-form'>
-                    <Modal show={show1} onHide={handleClose1} className='add-customer you-gave-form'>
-                        <Modal.Header closeButton>
-                            <Modal.Title>Add New Entry</Modal.Title>
-                        </Modal.Header>
-                        <Modal.Body>
-                            <form id='youGaveForm' onSubmit={(e) => yougaveform(e)}>
-                                <div className='input number'>
-                                    <div className='all-span'>
-                                        <span className='label'>Amount</span>
-                                    </div>
-                                    <div className='amount'>
-                                        <div className='coutry-amount'>
-                                            <input type='number' placeholder='Enter amount' name='countryamount' onChange={(e) => setGaveAmount(e.target.value)} />
-                                            <span className='amount-icon'>₹</span>
-                                        </div>
-                                        <span className='error'></span>
-                                    </div>
-                                </div>
-                                <div className='input textarea'>
-                                    <span className='label'>Description</span>
-                                    <textarea placeholder='Enter Details (Item Name, Bill No, Quantity, etc)' rows="6" onChange={(e) => setGaveDescription(e.target.value)}></textarea>
-                                    <span className='error'></span>
-                                </div>
-                                <div className='input calendar'>
-                                    <span className='label'>Date</span>
-                                    <input type="date" id="datepicker" value={selectedDate} onChange={handleDateChange} max={currentDate} />
-                                </div>
-                                <input type='submit' value="Save" className='submit-btn' />
-                            </form>
-                        </Modal.Body>
-                    </Modal>
-                </div>
             </div>
-        </div>  
+        </div>
     )
 }

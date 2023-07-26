@@ -83,11 +83,11 @@ export default function Singleuserdetail(props) {
     }
 
     let customerYouGaveData = [];
-    
+
     const yougaveform = (e) => {
-        
+
         e.preventDefault();
-        
+
 
         customerYouGaveData = [...customerYouGaveData, youGaveData];
 
@@ -98,17 +98,17 @@ export default function Singleuserdetail(props) {
         // if (singleCustomerData.partyname === partyName) {
 
 
-            // fetch("http://localhost:3001/customer/" + partyName, {
-            //     method: "PUT",
-            //     headers: { "content-type": "application/json" },
-            //     body: JSON.stringify(customerGaveData)
-            // }).then((rec) => {
+        // fetch("http://localhost:3001/customer/" + partyName, {
+        //     method: "PUT",
+        //     headers: { "content-type": "application/json" },
+        //     body: JSON.stringify(customerGaveData)
+        // }).then((rec) => {
 
-            //     console.log("Data add successfully");
+        //     console.log("Data add successfully");
 
-            // }).catch((err) => {
-            //     console.log(err.message)
-            // })
+        // }).catch((err) => {
+        //     console.log(err.message)
+        // })
 
         // }
 
@@ -145,40 +145,40 @@ export default function Singleuserdetail(props) {
     let dueDateMonth = dueDate.slice(5, 7);
     let dueDateDate = dueDate.slice(8, 10);
 
-    if(dueDateMonth === "01"){
+    if (dueDateMonth === "01") {
         dueDateMonth = "January"
     }
-    else if(dueDateMonth === "02"){
+    else if (dueDateMonth === "02") {
         dueDateMonth = "February"
     }
-    else if(dueDateMonth === "03"){
+    else if (dueDateMonth === "03") {
         dueDateMonth = "March"
     }
-    else if(dueDateMonth === "04"){
+    else if (dueDateMonth === "04") {
         dueDateMonth = "April"
     }
-    else if(dueDateMonth === "05"){
+    else if (dueDateMonth === "05") {
         dueDateMonth = "May"
     }
-    else if(dueDateMonth === "06"){
+    else if (dueDateMonth === "06") {
         dueDateMonth = "June"
     }
-    else if(dueDateMonth === "07"){
+    else if (dueDateMonth === "07") {
         dueDateMonth = "July"
     }
-    else if(dueDateMonth === "08"){
+    else if (dueDateMonth === "08") {
         dueDateMonth = "August"
     }
-    else if(dueDateMonth === "09"){
+    else if (dueDateMonth === "09") {
         dueDateMonth = "September"
     }
-    else if(dueDateMonth === "10"){
+    else if (dueDateMonth === "10") {
         dueDateMonth = "October"
     }
-    else if(dueDateMonth === "11"){
+    else if (dueDateMonth === "11") {
         dueDateMonth = "November"
     }
-    else if(dueDateMonth === "12"){
+    else if (dueDateMonth === "12") {
         dueDateMonth = "December"
     }
 
@@ -207,7 +207,7 @@ export default function Singleuserdetail(props) {
                     <div className='due-date'>
                         <h3><span><img src={Alarmicon} alt='' /></span>Due Date:</h3>
                         <div className='date'>
-                            <p>{dueDateDate  + " " + dueDateMonth + " " + dueDateYear}</p>
+                            <p>{dueDateDate + " " + dueDateMonth + " " + dueDateYear}</p>
                             <div className='date-btn'>
                                 <button>Edit</button>
                                 <input type='date' onChange={(e) => setDueDate(e.target.value)} min={disablePastDate()} />

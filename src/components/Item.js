@@ -1,12 +1,21 @@
 import React, { useState, useEffect } from 'react'
+import { Button, Modal } from 'react-bootstrap'
 import { Tab, Tabs } from 'react-bootstrap'
 import Downicon from "../assets/images/Vector.png"
-import Button from 'react-bootstrap/Button';
 import Searchicon from "../assets/images/Group-38.png"
 import Filtericon from "../assets/images/Group-41.png"
 import Sorticon from "../assets/images/Group-44.png"
 
 export default function Item() {
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    const [show1, setShow1] = useState(false);
+
+    const handleClose1 = () => setShow1(false);
+    const handleShow1 = () => setShow1(true);
     return (
         <>
             <section className='Item-section'>
@@ -164,6 +173,133 @@ export default function Item() {
                         <h5>Track your profits on this item</h5>
                         <h6><a href=''>STOCK OUT TO TRACK PROFIT </a></h6>
                     </div>
+                    <div className='Item-table-section'>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td className='entries'>STOCK ENTRY</td>
+                                    <td className='you-gave'>STOCK OUT</td>
+                                    <td className='you-got'>STOCK IN</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td className='entries'>
+                                        <h5 className='date-time'>02 Jul 2023<span className='time'> 12:44 AM</span></h5>
+                                        <h6 className='balance'>Stock bal.91KGS</h6>
+                                    </td>
+                                    <td className='you-gave'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                                    <td className='you-got'><span className='rupee-icon'>₹</span><span className='amount'>100.00</span><span className='blank'>-</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div className='you-gave-got-btn'>
+                        <Button className='gave' variant="primary" onClick={handleShow}>Stock Out</Button>
+                        <Button className='got' onClick={handleShow1}>Stock In</Button>
+                    </div>
+
+                    <Modal show={show} onHide={handleClose} className='Item-customer'>
+                        <Modal.Header closeButton>
+                            <Modal.Title>Stock Out</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            <form>
+                                <div className='input number'>
+                                    <div className='all-span'>
+                                        <span className='label'>Enter the quantity of sold products*</span>
+                                    </div>
+                                    <div className='amount'>
+                                        <div className='coutry-amount'>
+                                            <input type='number' placeholder='Enter quantity' name='countryamount' />
+                                            <span className='amount-icon'>KGS</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='billing-address'>
+                                    <div className='amount'>
+                                        <div className='city-state'>
+                                            <div className='input Price'>
+                                                <div className='coutry-amount'>
+                                                    <span className='label'>Sale Price</span>
+                                                    <input type='number' name='city' />
+                                                </div>
+                                            </div>
+                                            <div className='input Date'>
+                                                <span className='label'>Sale Date*</span>
+                                                <input type='date' name='state' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='input number'>
+                                    <div className='all-span'>
+                                        <span className='label'>Add notes (Optional)</span>
+                                    </div>
+                                    <div className='amount'>
+                                        <div className='coutry-amount'>
+                                            <input type='text' placeholder='Enter details (Party name, Bill no. etc.)' />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='Stock-btn'>
+                                    <Button className='Stockout'>Stock Out</Button>
+                                </div>
+
+                            </form>
+                        </Modal.Body>
+                    </Modal>
+
+                    <Modal show={show1} onHide={handleClose1} className='Item-customer'>
+                        <Modal.Header closeButton>
+                            <Modal.Title>Stock In</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            <form>
+                                <div className='input number'>
+                                    <div className='all-span'>
+                                        <span className='label'>Enter the quantity of sold products*</span>
+                                    </div>
+                                    <div className='amount'>
+                                        <div className='coutry-amount'>
+                                            <input type='number' placeholder='Enter quantity' name='countryamount' />
+                                            <span className='amount-icon'>KGS</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='billing-address'>
+                                    <div className='amount'>
+                                        <div className='city-state'>
+                                            <div className='input Price'>
+                                                <div className='coutry-amount'>
+                                                    <span className='label'>Sale Price</span>
+                                                    <input type='number' name='city' />
+                                                </div>
+                                            </div>
+                                            <div className='input Date'>
+                                                <span className='label'>Sale Date*</span>
+                                                <input type='date' name='state' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='input number'>
+                                    <div className='all-span'>
+                                        <span className='label'>Add notes (Optional)</span>
+                                    </div>
+                                    <div className='amount'>
+                                        <div className='coutry-amount'>
+                                            <input type='text' placeholder='Enter details (Party name, Bill no. etc.)' />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='Stock-btn'>
+                                    <Button className='Stock'>Stock Out</Button>
+                                </div>
+
+                            </form>
+                        </Modal.Body>
+                    </Modal>
                 </div>
             </section>
         </>

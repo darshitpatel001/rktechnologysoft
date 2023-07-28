@@ -310,6 +310,7 @@ table, thead, tbody, tr, td, th { display: block; }
 .Item-section .detail-section .tab-content .tab-pane .user-detail-section .add-customer { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 1; }
 .Item-section .detail-section .tab-content .tab-pane .user-detail-section .add-customer button { font-size: 20px; font-weight: 400; line-height: 1; color: #FFFFFF; background-color: #F16621; padding: 15px 20px; border: none; border-radius: 10px; }
 
+.Item-section .details-section1 {position: relative;    height: 100vh;}
 .Item-section .details-section1 .circle {width: 50px; height: 50px; border-radius: 50%; background-color: #1A9EDA; position: relative; margin-right: 10px;}
 .Item-section .details-section1 .single-user-detail-page .username { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 20px 30px 0; }
 .Item-section .details-section1 .single-user-detail-page .username .name { display: flex; flex-wrap: wrap; align-items: center; }
@@ -329,3 +330,45 @@ table, thead, tbody, tr, td, th { display: block; }
 .Item-section .Item-boxs .box{ border-bottom: 1px solid #CFCFCF; padding-top: 10px;}   
 .Item-section .item-box { background-color: rgba(26, 158, 218, 0.2); border-radius: 15px; margin-left: 20px; margin-right: 20px; padding: 10px 10px;}
 .Item-section .item-box h5 {padding-top: 8px;}
+
+.Item-section .Item-table-section { margin: 30px 30px 15px; }
+.Item-section .Item-table-section table thead tr td { font-size: 18px; font-weight: 300; line-height: 1; color: #51515e; margin-right: 20px;}
+.Item-section .Item-table-section table thead tr { padding: 0 0 10px; border-bottom: 1px solid #CFCFCF; }
+.Item-section .Item-table-section table tr { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+.Item-section .Item-table-section table tr .entries { width: 60%; }
+.Item-section .Item-table-section table tr .you-gave, .dashboard .customer-section .single-user-data .Item-table-section table tr .you-got { width: 20%; }
+.Item-section .Item-table-section table tbody { height: 392px; overflow-y: scroll; }
+.Item-section .Item-table-section table tbody tr { padding: 15px 0; border-bottom: 1px solid #CFCFCF; }
+.Item-section .Item-table-section table tbody tr .entries .date-time { font-size: 16px; font-weight: 500; line-height: 1; color: #464646; margin: 0; }
+.Item-section .Item-table-section table tbody tr .entries .balance { font-size: 16px; font-weight: 300; line-height: 1; color: #464646; margin: 8px 0 0; }
+.Item-section .Item-table-section table tbody tr .entries .items { font-size: 16px; font-weight: 300; line-height: 1; color: #464646; margin: 10px 0 0; }
+.Item-section .Item-table-section table tbody tr .you-gave { font-size: 16px; font-weight: 500; color: #ff0000; }
+.Item-section .Item-table-section table tbody tr .you-gave .rupee-icon, .dashboard .customer-section .single-user-data .Item-table-section table tbody tr .you-gave .amount { display: none; }
+.Item-section .Item-table-section table tbody tr .you-got { font-size: 16px; font-weight: 500; color: #058C4C; margin-right: 15px;}
+.Item-section .Item-table-section table tbody tr .you-got .blank { display: none; }
+
+.Item-section .you-gave-got-btn { box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px; background-color: #FFFFFF; padding: 20px 30px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; position: absolute; bottom: 0; right: 0; z-index: 1; width: 100%;}
+.Item-section .you-gave-got-btn button.gave { font-size: 16px; font-weight: 400; line-height: 1; color: #ff0000; padding: 10px 130px; border: none; border-radius: 10px; background-color: rgba(255, 0, 0, 0.2); }
+.Item-section .you-gave-got-btn button.got { font-size: 16px; font-weight: 400; line-height: 1; color: #058c4c; padding: 10px 130px; border: none; border-radius: 10px; background-color: rgba(5, 140, 76, 0.2); }
+
+.Item-customer .modal-dialog { position: absolute; top: 0; right: 0; margin: 0; width: 400px; height: 100vh; overflow-y: scroll; background-color: #FFFFFF; }
+.Item-customer .modal-dialog .modal-content { border-radius: 0; border: none; height: 100vh; }
+.Item-customer .modal-dialog .modal-content .modal-header .modal-title { font-size: 20px; font-weight: 500; line-height: 1; color: #313131; }
+.Item-customer .modal-dialog .modal-content .modal-body form .input { margin-bottom: 20px; }
+.Item-customer .modal-dialog .modal-content .modal-body form .input > .label, .Item-customer .modal-dialog .modal-content .modal-body form .input .all-span .label { display: block; font-size: 18px; font-weight: 400; line-height: 1; color: #464646; margin-bottom: 10px; }
+.Item-customer .modal-dialog .modal-content .modal-body form .input input { display: block; background-color: #FFFFFF; border: 1px solid #CFCFCF; width: 350px; padding: 10px 20px 10px 30px; font-size: 16px; color: #AEAEAE; border-radius: 10px; }
+.Item-customer .modal-dialog .modal-content .modal-body form .number .phone-number { position: relative; }
+.Item-customer .modal-dialog .modal-content .modal-body form .number .amount .coutry-amount { position: relative; }
+.Item-customer .modal-dialog .modal-content .modal-body form .number .amount .select select { background-color: transparent; border: 1px solid #CFCFCF; padding: 10px 30px 10px 10px; font-size: 16px; color: #ff0000; border-radius: 0 10px 10px 0; appearance: none; z-index: 1; position: relative; }
+.Item-customer .modal-dialog .modal-content .modal-body form .number .amount .select img { position: absolute; top: 50%; right: 10px; transform: translateY(-50%); width: 10px; z-index: 0; }
+.Item-customer .modal-dialog .modal-content .modal-body form .number .amount .coutry-amount .amount-icon { position: absolute; top: 50%; right: 15px; transform: translateY(-50%); font-size: 16px; font-weight: 400; line-height: 1; color: #51515e; }
+
+.Item-customer .billing-address .input .label { display: block; font-size: 18px; font-weight: 400; line-height: 1; color: #464646; margin-bottom: 10px; }
+.Item-customer .modal-dialog .modal-content .modal-body form .billing-address .input input { display: block; background-color: #FFFFFF; border: 1px solid #CFCFCF; width: 100%; padding: 10px 20px 10px 30px; font-size: 16px; color: #AEAEAE; border-radius: 10px; }
+.Item-customer .billing-address .city-state { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+.Item-customer .billing-address .city-state .Price { width: calc(50% - 10px); margin-right: 10px; }
+.Item-customer .billing-address .city-state .Date { width: calc(50% - 10px); margin-left: 10px; }
+
+.Item-customer .Stock-btn { box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px; background-color: #FFFFFF; padding: 20px 30px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; position: absolute; bottom: 0; right: 0; z-index: 1; width: 100%;}
+.Item-customer .Stock-btn button.Stockout { font-size: 15px; font-weight: 400; line-height: 1; color: #ff0000; padding: 10px 130px; border: none; border-radius: 10px; background-color: rgba(255, 0, 0, 0.2); }
+.Item-customer .Stock-btn button.Stock { font-size: 15px; font-weight: 400; line-height: 1; color: #058c4c; padding: 10px 130px; border: none; border-radius: 10px; background-color: rgba(5, 140, 76, 0.2); }

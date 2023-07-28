@@ -28,7 +28,7 @@ export default function Item() {
                                     <h4>Search for Products</h4>
                                     <div className='search-filter-input'>
                                         <img src={Searchicon} alt='' />
-                                        <input type='text' placeholder='Name or Phonenumber'/>
+                                        <input type='text' placeholder='Name or Phonenumber' />
                                     </div>
                                 </div>
                                 <div className='select-filter filter'>
@@ -92,6 +92,78 @@ export default function Item() {
                             Services
                         </Tab>
                     </Tabs>
+                </div>
+                <div className='details-section1'>
+                    <div className='single-user-detail-page'>
+                        <div className='username'>
+                            <div className='name'>
+                                <span>A</span>
+                                <div className='name-number'>
+                                    <h4>Poha</h4>
+                                </div>
+                            </div>
+                            <div className='report-setting-btn'>
+                                <button className='report'>Edit Product</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='Item-boxs'>
+                        <div class="container text-center ">
+                            <div class="row box">
+                                <div class="col-sm-3">
+                                    <h6>₹52.51</h6>
+                                    <p>SALE PRICE</p>
+                                </div>
+                                <div class="col-sm-3">
+                                    <h6>₹26.68</h6>
+                                    <p>PURCHASE PRICE</p>
+                                </div>
+                                <div class="col-sm-3">
+                                    <h6>164 NOS</h6>
+                                    <p>STOCK QUANTITY</p>
+                                </div>
+                                <div class="col-sm-3">
+                                    <h6>₹4,811.76</h6>
+                                    <p>STOCK VALUE</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="container text-center">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6>KGS</h6>
+                                    <p>UNITS</p>
+                                </div>
+                                <div class="col-sm-3">
+                                    <h6>0 KGS</h6>
+                                    <p>LOW STOCK</p>
+                                </div>
+                                <div class="col-sm-3">
+                                    <h6>-</h6>
+                                    <p>HSN CODE</p>
+                                </div>
+                                <div class="col-sm-3">
+                                    <h6>GST@ 0.1%</h6>
+                                    <p>GST %</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='Profit-Tracker'>
+                        <h6>ITEM PROFIT TRACKER</h6>
+                    </div>
+                    <div className='report-setting-btn'>
+                        <button className='report'>Today</button>
+                        <button className='report'>Yesterday</button>
+                        <button className='report'>This Week</button>
+                        <button className='report'>This Month</button>
+                        <button className='report'>Custom dates</button>
+                    </div>
+                    <div className='item-box'>
+                        <h5>Track your profits on this item</h5>
+                        <h6><a href=''>STOCK OUT TO TRACK PROFIT </a></h6>
+                    </div>
                 </div>
             </section>
         </>

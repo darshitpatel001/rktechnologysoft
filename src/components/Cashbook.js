@@ -234,7 +234,8 @@ export default function Cashbook() {
                                 </Modal>
 
                                 <Button className='report1' onClick={handleShow3}>Delete </Button>
-                                <Modal show={show3} onHide={handleClose3} animation={false}>
+                                <div className='Delete-Cashbook1    '>
+                                <Modal show={show3} onHide={handleClose3} animation={false} className='Delete-Cashbook'>
                                     <Modal.Header closeButton>
                                         <Modal.Title>Delete entry</Modal.Title>
                                     </Modal.Header>
@@ -248,6 +249,7 @@ export default function Cashbook() {
                                         </Button>
                                     </Modal.Footer>
                                 </Modal>
+                                </div>
                             </div>
                         </div>
                     </div>

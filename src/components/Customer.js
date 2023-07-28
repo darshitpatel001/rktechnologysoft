@@ -287,7 +287,104 @@ export default function Customer() {
           </Tab>
 
           <Tab eventKey="suppliers" title="Suppliers">
-            hello
+                 <div className='amount-row'>
+              <div className='you-give-amount amount'>
+                <h3>You'll Give:</h3>
+                <h6>₹0</h6>
+                <span><img src={Arrow1} alt='arrow' /></span>
+              </div>
+              <div className='you-get-amount amount'>
+                <h3>You'll Get:</h3>
+                <h6>₹40,983</h6>
+                <span><img src={Arrow2} alt='arrow' /></span>
+              </div>
+              <div className='report-btn'>
+                <button><span><img src={Fileicon} alt='icon' /></span>View Report</button>
+              </div>
+            </div>
+            <div className='filter-row'>
+              <div className='search-filter filter'>
+                <h4>Search for Customer</h4>
+                <div className='search-filter-input'>
+                  <img src={Searchicon} alt='' />
+                  <input type='text' placeholder='Name or Phonenumber' onChange={(e) => setSearch(e.target.value)} />
+                </div>
+              </div>
+              <div className='select-filter filter'>
+                <h4>Filter By</h4>
+                <div className='select-filter-select select'>
+                  <img src={Filtericon} className='filter-icon' alt='' />
+                  <select>
+                    <option value="">Select</option>
+                    <option value="">You'll Give</option>
+                    <option value="">You'll Get</option>
+                  </select>
+                  <img src={Downicon} className='down-icon' alt='' />
+                </div>
+              </div>
+              <div className='sort-filter filter'>
+                <h4>Sort By</h4>
+                <div className='sort-filter-select select'>
+                  <img src={Sorticon} className='filter-icon' alt='' />
+                  <select>
+                    <option>Select</option>
+                    <option>Most Recent</option>
+                    <option>Highest Amount</option>
+                    <option>Least Amount</option>
+                    <option>By Name</option>
+                    <option>Oldest</option>
+                  </select>
+                  <img src={Downicon} className='down-icon' alt='' />
+                </div>
+              </div>
+            </div>
+            <div className='user-detail-section'>
+              <div className='user-detail-title'>
+                <h5>Name</h5>
+                <h5>Amount</h5>
+              </div>
+              <div className='user-details'>
+                {
+                  customerDetail ? customerDetail
+                    .filter((value, index) => {
+                      if (search === "") {
+                        return value;
+                      }
+                      else if (value.partyname.includes(search)) {
+                        return value;
+                      }
+                      else if (value.partyname.toUpperCase().includes(search)) {
+                        return value;
+                      }
+                      else if (value.partyname.toLowerCase().includes(search)) {
+                        return value;
+                      }
+                    })
+                    .map((value, index) => {
+                      return (
+                        <a href={"/customer/" + value.partyname}>
+                          <div className='single-user-details'>
+                            <div className='username'>
+                              <span>{value.firstCharacter}</span>
+                              <div className='name'>
+                                <h4>{value.partyname}</h4>
+                                <p>11 days ago</p>
+                              </div>
+                            </div>
+                            <div className='amount'>
+                              <h4>₹ {value.countryamount}</h4>
+                              <p>{value.gavegot}</p>
+                            </div>
+                          </div>
+                        </a>
+                      )
+                    }) : "No Record Found"
+                }
+              </div>
+              <div className='add-customer'>
+                <Button variant="primary" onClick={handleShow}>+ Add Customer</Button>
+              </div>
+            </div>
           </Tab>
         </Tabs>
       </div>

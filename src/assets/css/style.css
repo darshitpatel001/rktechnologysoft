@@ -379,3 +379,5 @@ table, thead, tbody, tr, td, th { display: block; }
 .staff .staff-details { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 .staff .staff-details img { width: auto; }
 .staff .staff-details h4 { display: inline-block; }
+.staff .staff-details .add-staff {padding-top: 20px;}
+.staff .staff-details .add-staff button { font-size: 18px; font-weight: 400; line-height: 1; color: #FFFFFF; background-color: #1A9EDA  ; padding: 10px 20px; border: none; border-radius: 10px; }

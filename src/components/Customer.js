@@ -287,7 +287,7 @@ export default function Customer() {
           </Tab>
 
           <Tab eventKey="suppliers" title="Suppliers">
-                 <div className='amount-row'>
+            <div className='amount-row'>
               <div className='you-give-amount amount'>
                 <h3>You'll Give:</h3>
                 <h6>₹0</h6>

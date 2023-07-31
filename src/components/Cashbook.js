@@ -18,17 +18,17 @@ export default function Cashbook() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const [show1, setShow1] = useState(false);
-    const handleClose1 = () => setShow1(false);
-    const handleShow1 = () => setShow1(true);
+    const [InEnteryshow, setInEnteryshow] = useState(false);
+    const InEnteryClose = () => setInEnteryshow(false);
+    const InEntery = () => setInEnteryshow(true);
 
-    const [show2, setShow2] = useState(false);
-    const handleClose2 = () => setShow2(false);
-    const handleShow2 = () => setShow2(true);
+    const [EditInEntryshow, setEditInEntryshow] = useState(false);
+    const EditInEntryclose = () => setEditInEntryshow(false);
+    const EditInEntry = () => setEditInEntryshow(true);
 
-    const [show3, setShow3] = useState(false);
-    const handleClose3 = () => setShow3(false);
-    const handleShow3 = () => setShow3(true);
+    const [Deleteshow, setDeleteshow] = useState(false);
+    const DeleteEnteryClose = () => setDeleteshow(false);
+    const DeleteEntery = () => setDeleteshow(true);
     return (
         <>
             <section className="Cash-section">
@@ -154,8 +154,8 @@ export default function Cashbook() {
                         </div>
 
                         <div className='transation-out'>
-                            <Button onClick={handleShow1}>IN</Button>
-                            <Modal show={show1} onHide={handleClose1} className='add-customer you-gave-form'>
+                            <Button onClick={InEntery}>IN</Button>
+                            <Modal show={InEnteryshow} onHide={InEnteryClose} className='add-customer you-gave-form'>
                                 <Modal.Header closeButton>
                                     <Modal.Title>In Entry</Modal.Title>
                                 </Modal.Header>
@@ -200,8 +200,8 @@ export default function Cashbook() {
                                 </div>
                             </div>
                             <div className='report-setting-btn'>
-                                <Button className='report' onClick={handleShow2}>Edit</Button>
-                                <Modal show={show2} onHide={handleClose2} className='add-customer you-gave-form'>
+                                <Button className='report' onClick={EditInEntry}>Edit</Button>
+                                <Modal show={EditInEntryshow} onHide={EditInEntryclose} className='add-customer you-gave-form'>
                                     <Modal.Header closeButton>
                                         <Modal.Title>In Entry</Modal.Title>
                                     </Modal.Header>
@@ -233,22 +233,22 @@ export default function Cashbook() {
                                     </Modal.Body>
                                 </Modal>
 
-                                <Button className='report1' onClick={handleShow3}>Delete </Button>
+                                <Button className='report1' onClick={DeleteEntery}>Delete </Button>
                                 <div className='Delete-Cashbook1    '>
-                                <Modal show={show3} onHide={handleClose3} animation={false} className='Delete-Cashbook'>
-                                    <Modal.Header closeButton>
-                                        <Modal.Title>Delete entry</Modal.Title>
-                                    </Modal.Header>
-                                    <Modal.Body>Are you sure you want to delete this entry? This action cannot be undone.</Modal.Body>
-                                    <Modal.Footer>
-                                        <Button variant="secondary" onClick={handleClose3}>
-                                            Cancel
-                                        </Button>
-                                        <Button variant="primary" onClick={handleClose3}>
-                                            Yes Delete
-                                        </Button>
-                                    </Modal.Footer>
-                                </Modal>
+                                    <Modal show={Deleteshow} onHide={DeleteEnteryClose} animation={false} className='Delete-Cashbook'>
+                                        <Modal.Header closeButton>
+                                            <Modal.Title>Delete entry</Modal.Title>
+                                        </Modal.Header>
+                                        <Modal.Body>Are you sure you want to delete this entry? This action cannot be undone.</Modal.Body>
+                                        <Modal.Footer>
+                                            <Button variant="secondary" onClick={DeleteEnteryClose}>
+                                                Cancel
+                                            </Button>
+                                            <Button variant="primary" onClick={DeleteEnteryClose}>
+                                                Yes Delete
+                                            </Button>
+                                        </Modal.Footer>
+                                    </Modal>
                                 </div>
                             </div>
                         </div>

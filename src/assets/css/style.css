@@ -380,4 +380,33 @@ table, thead, tbody, tr, td, th { display: block; }
 .staff .staff-details img { width: auto; }
 .staff .staff-details h4 { display: inline-block; }
 .staff .staff-details .add-staff {padding-top: 20px;}
-.staff .staff-details .add-staff button { font-size: 18px; font-weight: 400; line-height: 1; color: #FFFFFF; background-color: #1A9EDA  ; padding: 10px 20px; border: none; border-radius: 10px; }
+.staff .staff-details .add-staff button { font-size: 18px; font-weight: 400; line-height: 1; color: #FFFFFF; background-color: #1A9EDA; padding: 10px 20px; border: none; border-radius: 10px; }
+
+.setting-customer .setting-customer .single-user-detail-page .username { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 20px 30px 0; }
+.setting-customer .single-user-detail-page .username .name { display: flex; flex-wrap: wrap; align-items: center; }
+.setting-customer .single-user-detail-page .username .name span { width: 40px; height: 40px; font-size: 18px; font-weight: 500; line-height: 40px; color: #1A9EDA; background-color: rgba(26, 158, 218, 0.2); border-radius: 50px; text-align: center; margin-right: 10px; }
+.setting-customer .single-user-detail-page .username .name .name-number h4 { font-size: 18px; font-weight: 500; line-height: 1; color: #000000; margin: 0 0 5px; }
+.setting-customer .single-user-detail-page .username .name .name-number p { font-size: 14px; font-weight: 400; line-height: 1; color: #979797; margin: 0; }
+
+.setting-customer .single-user-detail-page .username .setting-customer { display: flex; flex-wrap: wrap; align-items: center; }
+.setting-customer .single-user-detail-page .username .setting-customer .report { display: flex; flex-wrap: wrap; align-items: center; font-size: 16px; font-weight: 600; line-height: 1; color: #AEAEAE; background-color: transparent; border: 1px solid#AEAEAE; border-radius: 10px; padding: 12px 25px; }
+.setting-customer .single-user-detail-page .username .setting-customer .report span { display: inline-block; margin: 0 10px 0 0; }
+.setting-customer .single-user-detail-page .username .setting-customer .setting { position: relative; width: 48px; height: 48px; background-color: transparent; border: 1px solid#AEAEAE; border-radius: 10px; margin: 0 0 0 10px; }
+.setting-customer .single-user-detail-page .username .setting-customer .setting img { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: auto; }
+.setting-customer .modal-dialog { position: absolute; top: 0; right: 0; margin: 0; width: 400px; height: 100vh; overflow-y: scroll; background-color: #FFFFFF; }
+
+.setting-customer .modal-dialog { position: absolute; top: 0; right: 0; margin: 0; width: 400px; height: 100vh; overflow-y: scroll; background-color: #FFFFFF; }
+.setting-customer .modal-dialog .modal-content { border-radius: 0; border: none; height: 100vh; }
+.setting-customer .modal-dialog .modal-content .modal-header .modal-title { font-size: 20px; font-weight: 500; line-height: 1; color: #313131; }
+.setting-customer .modal-dialog .modal-content .modal-body { position: relative; }
+
+.setting-customer .phone-content {padding-top: 15px; margin: 0;}
+.setting-customer .modal-dialog .modal-content .modal-body .submit-btn { background-color: white; display: block; width: 100%; padding: 8px 0; border: 1px solid #757575; color: #464646; border-radius: 10px; margin-top: 15px; }
+.setting-customer .phone-numbers {border-bottom: 1px solid #757575;}
+.setting-customer .Gst-numbers {border-bottom: 1px solid #757575;}
+.setting-customer .Gst-content {padding-top: 15px; margin: 0;}
+.setting-customer .Billing-address {border-bottom: 1px solid #757575;}
+.setting-customer .Billing-content {padding-top: 15px; margin: 0;}
+.setting-customer .modal-dialog .modal-content .modal-body .submit-btn { background-color: white; display: block; width: 100%; padding: 8px 0; border: 1px solid #757575; color: #464646; border-radius: 10px; margin-top: 15px; }
+.setting-customer .profile-btn { box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px; background-color: #FFFFFF; padding: 20px 30px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; position: absolute; bottom: 0; right: 0; z-index: 1; width: 100%;}
+.setting-customer .profile-btn button.Delete-btn { font-size: 15px; font-weight: 400; line-height: 1; color: red; background-color: white;  padding: 10px 60px; border: 1px solid red; width: 100%;}

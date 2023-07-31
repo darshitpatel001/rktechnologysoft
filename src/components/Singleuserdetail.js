@@ -53,6 +53,11 @@ export default function Singleuserdetail(props) {
 
     const handleClose1 = () => setShow1(false);
     const handleShow1 = () => setShow1(true);
+
+    const [show2, setShow2] = useState(false);
+
+    const handleClose2 = () => setShow2(false);
+    const handleShow2 = () => setShow2(true);
     const customerId = useParams();
 
     const userId = customerId.id;
@@ -200,7 +205,41 @@ export default function Singleuserdetail(props) {
                     </div>
                     <div className='report-setting-btn'>
                         <button className='report'><span><img src={Fileicon2} alt='' /></span>Report</button>
-                        <button className='setting'><img src={Settingicon} alt='' /></button>
+                        <Button className='setting' onClick={handleShow2}><img src={Settingicon} alt='' /></Button>
+                        <Modal show={show2} onHide={handleClose2} className='setting-customer you-gave-form'>
+                            <Modal.Header closeButton>
+                                <Modal.Title>Party Profile</Modal.Title>
+                            </Modal.Header>
+                            <Modal.Body>
+                                <div className='single-user-detail-page'>
+                                    <div className='username'>
+                                        <div className='name'>
+                                            <span>{firstCharacter}</span>
+                                            <div className='name-number'>
+                                                <h4>{partyName}</h4>
+                                                <p>+91 {phoneNumber}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button className="submit-btn">Edit Profile</button>
+                                <div className='phone-numbers'>
+                                    <h5 className='phone-content'>Phone Number</h5>
+                                    <p className='phone-number'>+91 {phoneNumber}</p>
+                                </div>
+                                <div className='Gst-numbers'>
+                                    <h5 className='Gst-content'> GST Number</h5>
+                                    <p className='Gst-number'>29ABCDE1234TMZP</p>
+                                </div>
+                                <div className='Billing-address'>
+                                    <h5 className='Billing-content'>Billing Address</h5>
+                                    <p className='Billing-addresss'>D-3/5, Kalkaji, New Delhi, DELHI, 110019</p>
+                                </div>
+                                <div className='profile-btn'>
+                                    <Button className='Delete-btn'>Delete</Button>
+                                </div>
+                            </Modal.Body>
+                        </Modal>
                     </div>
                 </div>
                 <div className='date-balance-row'>
@@ -357,6 +396,7 @@ export default function Singleuserdetail(props) {
                         </Modal.Body>
                     </Modal>
                 </div>
+
                 <div className='you-gave-form'>
                     <Modal show={show1} onHide={handleClose1} className='add-customer you-gave-form'>
                         <Modal.Header closeButton>

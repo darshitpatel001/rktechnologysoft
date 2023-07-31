@@ -16,6 +16,16 @@ export default function Item() {
 
     const handleClose1 = () => setShow1(false);
     const handleShow1 = () => setShow1(true);
+
+    const [show2, setShow2] = useState(false);
+
+    const handleClose2 = () => setShow2(false);
+    const handleShow2 = () => setShow2(true);
+
+    const [show3, setShow3] = useState(false);
+
+    const handleClose3 = () => setShow3(false);
+    const handleShow3 = () => setShow3(true);
     return (
         <>
             <section className='Item-section'>
@@ -112,7 +122,93 @@ export default function Item() {
                                 </div>
                             </div>
                             <div className='report-setting-btn'>
-                                <button className='report'>Edit Product</button>
+                                <Button className='report' onClick={handleShow3}>Edit Product</Button>
+                                <Modal show={show3} onHide={handleClose3} className='Item-customer'>
+                                    <Modal.Header closeButton>
+                                        <Modal.Title>Edit Product</Modal.Title>
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                        <form>
+                                            <div className='input number'>
+                                                <div className='all-span'>
+                                                    <span className='label'>Product name</span>
+                                                </div>
+                                                <div className='amount'>
+                                                    <div className='coutry-amount'>
+                                                        <input type='text' placeholder='Product name' name='productname' />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className='input number'>
+                                                <div className='all-span'>
+                                                    <span className='label'>Units</span>
+                                                </div>
+                                                <div className='amount'>
+                                                    <div className='coutry-amount'>
+                                                        <input type='number' name='units' />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className='billing-address'>
+                                                <div className='amount'>
+                                                    <div className='Sales-price'>
+                                                        <div className='input Price'>
+                                                            <div className='coutry-amount'>
+                                                                <span className='label'>Sale Price</span>
+                                                                <input type='number' placeholder='Sales Price' name='salesprice' />
+                                                            </div>
+                                                        </div>
+                                                        <div className='input Date'>
+                                                            <span className='label'>Purchase price</span>
+                                                            <input type='number' placeholder='Purchase Price' name='purchaseprice' />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className='billing-address'>
+                                                <div className='amount'>
+                                                    <div className='Sales-price'>
+                                                        <div className='input Price'>
+                                                            <div className='coutry-amount'>
+                                                                <span className='label'>Opening stock</span>
+                                                                <input type='number' placeholder='Opening stock' name='salesprice' />
+                                                            </div>
+                                                        </div>
+                                                        <div className='input Date'>
+                                                            <span className='label'>Low stock</span>
+                                                            <input type='number' placeholder='Low stock' name='purchaseprice' />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className='input number'>
+                                                <div className='all-span'>
+                                                    <span className='label'>GST %</span>
+                                                </div>
+                                                <div className='amount'>
+                                                    <div className='coutry-amount'>
+                                                        <select className='select'>
+                                                            <option>GST@ 0%</option>
+                                                            <option>GST@ 0.1%</option>
+                                                            <option>GST@ 0.25%</option>
+                                                            <option>GST@ 3%</option>
+                                                            <option>GST@ 5%</option>
+                                                            <option>GST@ 6%</option>
+                                                            <option>GST@ 7.5%</option>
+                                                            <option>GST@ 12%</option>
+                                                            <option>GST@ 18%</option>
+                                                            <option>GST@ 28%</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className='Stock-btn flex'>
+                                                <Button className='Delete-btn'>Delete</Button>
+                                                <Button className='Save-btn'>Save</Button>
+                                            </div>
+                                        </form>
+                                    </Modal.Body>
+                                </Modal>
                             </div>
                         </div>
                     </div>
@@ -171,7 +267,55 @@ export default function Item() {
                     </div>
                     <div className='item-box'>
                         <h5>Track your profits on this item</h5>
-                        <h6><a href=''>STOCK OUT TO TRACK PROFIT </a></h6>
+                        <h6><Button className='Track-Profit-btn' onClick={handleShow2}>STOCK OUT TO TRACK PROFIT </Button></h6>
+                        <Modal show={show2} onHide={handleClose2} className='Item-customer'>
+                            <Modal.Header closeButton>
+                                <Modal.Title>Stock In</Modal.Title>
+                            </Modal.Header>
+                            <Modal.Body>
+                                <form>
+                                    <div className='input number'>
+                                        <div className='all-span'>
+                                            <span className='label'>Enter the quantity of sold products*</span>
+                                        </div>
+                                        <div className='amount'>
+                                            <div className='coutry-amount'>
+                                                <input type='number' placeholder='Enter quantity' name='countryamount' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='billing-address'>
+                                        <div className='amount'>
+                                            <div className='Sales-price'>
+                                                <div className='input Price'>
+                                                    <div className='coutry-amount'>
+                                                        <span className='label'>Sale Price</span>
+                                                        <input type='number' name='saleprice' />
+                                                    </div>
+                                                </div>
+                                                <div className='input Date'>
+                                                    <span className='label'>Sale Date*</span>
+                                                    <input type='date' name='saledate' />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='input number'>
+                                        <div className='all-span'>
+                                            <span className='label'>Add notes (Optional)</span>
+                                        </div>
+                                        <div className='amount'>
+                                            <div className='coutry-amount'>
+                                                <input type='text' placeholder='Enter details (Party name, Bill no. etc.)' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='Stock-btn'>
+                                        <Button className='Stock'>Stock Out</Button>
+                                    </div>
+                                </form>
+                            </Modal.Body>
+                        </Modal>
                     </div>
                     <div className='Item-table-section'>
                         <table>
@@ -211,23 +355,23 @@ export default function Item() {
                                     </div>
                                     <div className='amount'>
                                         <div className='coutry-amount'>
-                                            <input type='number' placeholder='Enter quantity' name='countryamount' />
-                                            <span className='amount-icon'>KGS</span>
+                                            <input type='number' placeholder='soldproduct' name='countryamount' />
+
                                         </div>
                                     </div>
                                 </div>
                                 <div className='billing-address'>
                                     <div className='amount'>
-                                        <div className='city-state'>
+                                        <div className='Sales-price'>
                                             <div className='input Price'>
                                                 <div className='coutry-amount'>
                                                     <span className='label'>Sale Price</span>
-                                                    <input type='number' name='city' />
+                                                    <input type='number' name='saleprice' />
                                                 </div>
                                             </div>
                                             <div className='input Date'>
                                                 <span className='label'>Sale Date*</span>
-                                                <input type='date' name='state' />
+                                                <input type='date' name='saledate' />
                                             </div>
                                         </div>
                                     </div>
@@ -263,13 +407,13 @@ export default function Item() {
                                     <div className='amount'>
                                         <div className='coutry-amount'>
                                             <input type='number' placeholder='Enter quantity' name='countryamount' />
-                                            <span className='amount-icon'>KGS</span>
+
                                         </div>
                                     </div>
                                 </div>
                                 <div className='billing-address'>
                                     <div className='amount'>
-                                        <div className='city-state'>
+                                        <div className='Sales-price'>
                                             <div className='input Price'>
                                                 <div className='coutry-amount'>
                                                     <span className='label'>Sale Price</span>
@@ -296,7 +440,6 @@ export default function Item() {
                                 <div className='Stock-btn'>
                                     <Button className='Stock'>Stock Out</Button>
                                 </div>
-
                             </form>
                         </Modal.Body>
                     </Modal>

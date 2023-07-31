@@ -108,91 +108,91 @@ export default function Item() {
                                 <div className='add-customer'>
                                     <Button variant="primary" onClick={handleShow4}>+ Add Product</Button>
                                     <Modal show={show4} onHide={handleClose4} className='Item-customer'>
-                                    <Modal.Header closeButton>
-                                        <Modal.Title>Add Product</Modal.Title>
-                                    </Modal.Header>
-                                    <Modal.Body>
-                                        <form>
-                                            <div className='input number'>
-                                                <div className='all-span'>
-                                                    <span className='label'>Product name</span>
-                                                </div>
-                                                <div className='amount'>
-                                                    <div className='coutry-amount'>
-                                                        <input type='text' placeholder='Product name' name='productname' />
+                                        <Modal.Header closeButton>
+                                            <Modal.Title>Add Product</Modal.Title>
+                                        </Modal.Header>
+                                        <Modal.Body>
+                                            <form>
+                                                <div className='input number'>
+                                                    <div className='all-span'>
+                                                        <span className='label'>Product name</span>
+                                                    </div>
+                                                    <div className='amount'>
+                                                        <div className='coutry-amount'>
+                                                            <input type='text' placeholder='Product name' name='productname' />
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div className='input number'>
-                                                <div className='all-span'>
-                                                    <span className='label'>Units</span>
-                                                </div>
-                                                <div className='amount'>
-                                                    <div className='coutry-amount'>
-                                                        <input type='number' name='units' />
+                                                <div className='input number'>
+                                                    <div className='all-span'>
+                                                        <span className='label'>Units</span>
+                                                    </div>
+                                                    <div className='amount'>
+                                                        <div className='coutry-amount'>
+                                                            <input type='number' name='units' />
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div className='billing-address'>
-                                                <div className='amount'>
-                                                    <div className='Sales-price'>
-                                                        <div className='input Price'>
-                                                            <div className='coutry-amount'>
-                                                                <span className='label'>Sale Price</span>
-                                                                <input type='number' placeholder='Sales Price' name='salesprice' />
+                                                <div className='billing-address'>
+                                                    <div className='amount'>
+                                                        <div className='Sales-price'>
+                                                            <div className='input Price'>
+                                                                <div className='coutry-amount'>
+                                                                    <span className='label'>Sale Price</span>
+                                                                    <input type='number' placeholder='Sales Price' name='salesprice' />
+                                                                </div>
+                                                            </div>
+                                                            <div className='input Date'>
+                                                                <span className='label'>Purchase price</span>
+                                                                <input type='number' placeholder='Purchase Price' name='purchaseprice' />
                                                             </div>
                                                         </div>
-                                                        <div className='input Date'>
-                                                            <span className='label'>Purchase price</span>
-                                                            <input type='number' placeholder='Purchase Price' name='purchaseprice' />
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div className='billing-address'>
-                                                <div className='amount'>
-                                                    <div className='Sales-price'>
-                                                        <div className='input Price'>
-                                                            <div className='coutry-amount'>
-                                                                <span className='label'>Opening stock</span>
-                                                                <input type='number' placeholder='Opening stock' name='salesprice' />
+                                                <div className='billing-address'>
+                                                    <div className='amount'>
+                                                        <div className='Sales-price'>
+                                                            <div className='input Price'>
+                                                                <div className='coutry-amount'>
+                                                                    <span className='label'>Opening stock</span>
+                                                                    <input type='number' placeholder='Opening stock' name='salesprice' />
+                                                                </div>
+                                                            </div>
+                                                            <div className='input Date'>
+                                                                <span className='label'>Low stock</span>
+                                                                <input type='number' placeholder='Low stock' name='purchaseprice' />
                                                             </div>
                                                         </div>
-                                                        <div className='input Date'>
-                                                            <span className='label'>Low stock</span>
-                                                            <input type='number' placeholder='Low stock' name='purchaseprice' />
+                                                    </div>
+                                                </div>
+                                                <div className='input number'>
+                                                    <div className='all-span'>
+                                                        <span className='label'>GST %</span>
+                                                    </div>
+                                                    <div className='amount'>
+                                                        <div className='coutry-amount'>
+                                                            <select className='select'>
+                                                                <option>GST@ 0%</option>
+                                                                <option>GST@ 0.1%</option>
+                                                                <option>GST@ 0.25%</option>
+                                                                <option>GST@ 3%</option>
+                                                                <option>GST@ 5%</option>
+                                                                <option>GST@ 6%</option>
+                                                                <option>GST@ 7.5%</option>
+                                                                <option>GST@ 12%</option>
+                                                                <option>GST@ 18%</option>
+                                                                <option>GST@ 28%</option>
+                                                            </select>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div className='input number'>
-                                                <div className='all-span'>
-                                                    <span className='label'>GST %</span>
+                                                <div className='Stock-btn flex'>
+                                                    <Button className='Delete-btn'>Delete</Button>
+                                                    <Button className='Save-btn'>Save</Button>
                                                 </div>
-                                                <div className='amount'>
-                                                    <div className='coutry-amount'>
-                                                        <select className='select'>
-                                                            <option>GST@ 0%</option>
-                                                            <option>GST@ 0.1%</option>
-                                                            <option>GST@ 0.25%</option>
-                                                            <option>GST@ 3%</option>
-                                                            <option>GST@ 5%</option>
-                                                            <option>GST@ 6%</option>
-                                                            <option>GST@ 7.5%</option>
-                                                            <option>GST@ 12%</option>
-                                                            <option>GST@ 18%</option>
-                                                            <option>GST@ 28%</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className='Stock-btn flex'>
-                                                <Button className='Delete-btn'>Delete</Button>
-                                                <Button className='Save-btn'>Save</Button>
-                                            </div>
-                                        </form>
-                                    </Modal.Body>
-                                </Modal>
+                                            </form>
+                                        </Modal.Body>
+                                    </Modal>
                                 </div>
                             </div>
                         </Tab>

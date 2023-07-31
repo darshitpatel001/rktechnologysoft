@@ -29,6 +29,7 @@ export default function Cashbook() {
     const [Deleteshow, setDeleteshow] = useState(false);
     const DeleteEnteryClose = () => setDeleteshow(false);
     const DeleteEntery = () => setDeleteshow(true);
+    
     return (
         <>
             <section className="Cash-section">

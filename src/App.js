@@ -7,6 +7,7 @@ import Staff from './components/Staff';
 import Cashbook from './components/Cashbook';
 import Item from './components/Item';
 import Setting from './components/Setting';
+import Addsale from './components/Addsale';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path='/sales' element={<Sales />} />
           <Route path='/staff' element={<Staff />} />
           <Route path='/setting' element={<Setting />} />
+          <Route path='/addsale' element={<Addsale />} />
         </Routes>
       </BrowserRouter>
     </section>

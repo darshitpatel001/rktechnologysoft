@@ -25,7 +25,7 @@ export default function Setting() {
                                 <p className='Book-Setting-p'>Book Settings</p>
                                 <p className='Book-Setting-Delete'>Delete your khata</p>
                             </div>
-                           
+
                         </div>
                         <div className='Account'>
                             <h6>Account Settings</h6>
@@ -36,14 +36,14 @@ export default function Setting() {
                                 <p className='Billing-Setting-p'>Plans and Billing</p>
                                 <p className='Billing-Setting-Delete'>Manage your plans and download invoices</p>
                             </div>
-                           
+
                         </div>
                         <div className='Backup'>
                             <img src={Backup} alt='' />
                             <div className='Backup-Contant'>
                                 <p className='Backup-Setting-p'>Backup Information</p>
                                 <p className='Backup-Setting-Delete'>Check your data sync status</p>
-                                
+
                             </div>
                         </div>
                         <div className='Recycle'>

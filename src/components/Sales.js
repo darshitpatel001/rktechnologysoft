@@ -7,6 +7,8 @@ import Tabs from 'react-bootstrap/Tabs';
 import Searchicon from "../assets/images/Group-38.png"
 import Arrow1 from "../assets/images/Arrow-1.png"
 import Arrow2 from "../assets/images/Arrow-2.png"
+import Addsale from './Addsale';
+import { Link } from 'react-router-dom';
 
 export default function Sales() {
     return (
@@ -123,9 +125,9 @@ export default function Sales() {
                                 <button className="btn">
                                     More
                                 </button>
-                                <button className="btn">
+                                <Link className="btn">
                                     + Add Purchase
-                                </button>
+                                </Link>
                             </div>
                         </Tab>
                         <Tab eventKey="purchase" title="Purchase">

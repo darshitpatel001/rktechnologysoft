@@ -418,33 +418,35 @@ table, thead, tbody, tr, td, th { display: block; }
 .Setting-Section .Setting-details {padding: 20px 30px; background-color: white;}
 .Setting-Section .Setting-details .Book-setting { display: flex;}
 .Setting-Section .Setting-details .heading { color: #8B9DB0;}
-.Setting-Section .Setting-details .Book-setting img {width: 45px; height: 45px; margin-right: 15px;}
+.Setting-Section .Setting-details .Book-setting img {width: 50px; height: 50px; margin-right: 15px;}
 .Setting-Section .Setting-details .Book-setting .arrow {width: 10px; height: 12px; margin-left: 350px; margin-top: 20px;}
 .Setting-Section .Setting-details .Book-setting .Book-Contant .Book-Setting-p {margin: 0;}
 .Setting-Section .Setting-details .Book-setting .Book-Contant .Book-Setting-Delete {color: #B0BECD;}
 .Setting-Section .Setting-details .Account {margin-top: 30px; margin-bottom: 30px; color: #8B9DB0;}
 
 .Setting-Section .Setting-details .Billing { display: flex; padding-bottom: 10px;}
-.Setting-Section .Setting-details .Billing img {width: 45px; height: 45px; margin-right: 15px;}
+.Setting-Section .Setting-details .Billing img {width: 50px; height: 50px; margin-right: 15px;}
 .Setting-Section .Setting-details .Billing .Billing-Contant .Billing-Setting-p {margin: 0;}
 .Setting-Section .Setting-details .Billing .Billing-Contant .Billing-Setting-Delete {color: #B0BECD;}
 
 .Setting-Section .Setting-details .Backup { display: flex; padding-bottom: 10px;}
-.Setting-Section .Setting-details .Backup img {width: 45px; height: 45px; margin-right: 15px;}
+.Setting-Section .Setting-details .Backup img {width: 50px; height: 50px; margin-right: 15px;}
 .Setting-Section .Setting-details .Backup .Backup-Contant .Backup-Setting-p {margin: 0;}
 .Setting-Section .Setting-details .Backup .Backup-Contant .Backup-Setting-Delete {color: #B0BECD;}
 
 .Setting-Section .Setting-details .Recycle { display: flex; padding-bottom: 10px;}
-.Setting-Section .Setting-details .Recycle img {width: 45px; height: 45px; margin-right: 15px;}
+.Setting-Section .Setting-details .Recycle img {width: 50px; height: 50px; margin-right: 15px;}
 .Setting-Section .Setting-details .Recycle .Recycle-Contant .Recycle-Setting-p {margin: 0;}
 .Setting-Section .Setting-details .Recycle .Recycle-Contant .Recycle-Setting-Delete {color: #B0BECD;}
 
 .Setting-Section .Setting-details .Help { display: flex; padding-bottom: 10px;}
-.Setting-Section .Setting-details .Help img {width: 45px; height: 45px; margin-right: 15px;}
+.Setting-Section .Setting-details .Help img {width: 50px; height: 50px; margin-right: 15px;}
 .Setting-Section .Setting-details .Help .Help-Contant .Help-Setting-p {margin: 0;}
 .Setting-Section .Setting-details .Help .Help-Contant .Help-Setting-Delete {color: #B0BECD;}
 
 .Setting-Section .Setting-details .Logout { display: flex;}
-.Setting-Section .Setting-details .Logout img {width: 45px; height: 45px; margin-right: 15px;}
+.Setting-Section .Setting-details .Logout img {width: 50px; height: 50px; margin-right: 15px;}
 .Setting-Section .Setting-details .Logout .Logout-Contant .Logout-Setting-p {margin: 0;}
 .Setting-Section .Setting-details .Logout .Logout-Contant .Logout-Setting-Delete {color: #B0BECD;}
+
+.Add-details .details-section { box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px; background-color: #FFFFFF; padding: 20px 30px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; position: absolute; bottom: 0; right: 0; z-index: 1; width: 100%;}

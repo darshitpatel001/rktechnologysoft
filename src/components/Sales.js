@@ -125,9 +125,9 @@ export default function Sales() {
                                 <button className="btn">
                                     More
                                 </button>
-                                <Link className="btn">
+                                <button className="btn">
                                     + Add Purchase
-                                </Link>
+                                </button>
                             </div>
                         </Tab>
                         <Tab eventKey="purchase" title="Purchase">

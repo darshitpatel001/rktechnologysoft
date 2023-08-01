@@ -79,7 +79,7 @@ export default function Sidebar() {
               <Link to="/staff"><span><img src={Stafficon} alt='icon' /></span>Staff</Link>
             </li>
             <li>
-              <Link to="/"><span><img src={Settingsicon} alt='icon' /></span>Settings</Link>
+              <Link to="/setting"><span><img src={Settingsicon} alt='icon' /></span>Settings</Link>
             </li>
           </ul>
         </div>

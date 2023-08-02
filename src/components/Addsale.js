@@ -56,7 +56,23 @@ export default function Addsale() {
                         </div>
                         <div className='addsale-boxs'>
                             <h6>ITEMS ON THE INVOICE</h6>
-                        
+                            <table border="1px">
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+</table>
                         </div>
                     </div>
 

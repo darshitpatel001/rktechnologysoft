@@ -2,13 +2,13 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFileLines } from "@fortawesome/free-regular-svg-icons"
 import Tab from 'react-bootstrap/Tab';
-import Btn from "../assets/images/Group-298.png"
 import Tabs from 'react-bootstrap/Tabs';
 import Searchicon from "../assets/images/Group-38.png"
 import Arrow1 from "../assets/images/Arrow-1.png"
 import Arrow2 from "../assets/images/Arrow-2.png"
-import Addsale from './Addsale';
-import { Link } from 'react-router-dom';
+import Whatsappicon from "../assets/images/whatsapp.png"
+import Smsicon from "../assets/images/communication.png"
+import Lettericon from "../assets/images/letter-i.png"
 
 export default function Sales() {
     return (
@@ -263,6 +263,58 @@ export default function Sales() {
                             </div>
                         </Tab>
                     </Tabs>
+                </div>
+                <div className='Sales-details'>
+                    <div className='single-user-data'>
+                        <div className='username'>
+                            <div className='name'>
+                                <div className='name-number'>
+                                    <h4>Sale Return #5  </h4>
+                                    <p>01 Aug 2023</p>
+                                </div>
+                            </div>
+                            <div className='report-setting-btn'>
+                                <button className='report'>Edit</button>
+                                <button className='report1'>Delete </button>
+                            </div>
+                        </div>
+                        <div className='date-balance-row'>
+                            <div className='name'>
+                                <span>A</span>
+                                <div className='party-name-number'>
+                                    <p className='Party-name'>Abc</p>
+                                    <p className='phone-number'>123456789</p>
+                                </div>
+                            </div>
+
+                            <div className='net-balance'>
+                                <h4>₹1,018.02</h4>
+                                <p><span>Full Paid</span></p>
+                            </div>
+                        </div>
+                        <div className='send-reminder-row'>
+                            <h6>Send Reminder<span><img src={Lettericon} alt='' /></span></h6>
+                            <div className='send-reminder-btn '>
+                                <button className='whatsapp'><img src={Whatsappicon} alt='' />via<span>Whatsapp</span>from your number</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='Invoice-settled'>
+                        <h6>INVOICE SETTLED AGAINST</h6>
+                        <div className='name'>
+                            <div className='name-number'>
+                                <p className='Invoice-No'>INVOICE NO.</p>
+                                <p className='Invoice-Gst'>#18</p>
+                            </div>
+                            <div className='name-number'>
+                                <p className='Invoice-Date'>INVOICE DATE</p>
+                                <p className='Invoice-Dates'>01 Aug 2023</p>
+                            </div>
+                            <div className='Invoice-Details-btn'>
+                            <button className='btn'>View Invoice Details</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </>

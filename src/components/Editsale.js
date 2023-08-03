@@ -56,7 +56,7 @@ export default function Editsale() {
                         </div>
                         <div className='editsales-boxs d-flex'>
                             <label>INVOICE SETTLED AGAINST</label>
-                            <input type="text" class="form-control" placeholder="18" name="stateofsupply" disabled/>
+                            <input type="text" class="form-control" placeholder="18" name="stateofsupply" disabled />
                         </div>
                     </div>
 

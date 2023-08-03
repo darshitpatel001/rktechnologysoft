@@ -3,8 +3,6 @@ import transation from '../assets/images/image-removebg-preview-(7)-1.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFileLines } from "@fortawesome/free-regular-svg-icons"
 import { Button, Modal } from 'react-bootstrap'
-import DatePicker from 'react-datetime';
-import moment from 'moment';
 
 export default function Cashbook() {
     const [selectedDate, setSelectedDate] = useState("");

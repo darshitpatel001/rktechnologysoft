@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFileLines } from "@fortawesome/free-regular-svg-icons"
 import Tab from 'react-bootstrap/Tab';
@@ -7,10 +7,14 @@ import Searchicon from "../assets/images/Group-38.png"
 import Arrow1 from "../assets/images/Arrow-1.png"
 import Arrow2 from "../assets/images/Arrow-2.png"
 import Whatsappicon from "../assets/images/whatsapp.png"
-import Smsicon from "../assets/images/communication.png"
 import Lettericon from "../assets/images/letter-i.png"
+import { Button, Modal } from 'react-bootstrap'
 
 export default function Sales() {
+    const [Deleteshow, setDeleteshow] = useState(false);
+    const DeleteEnteryClose = () => setDeleteshow(false);
+    const DeleteEntery = () => setDeleteshow(true);
+
     return (
         <>
             <section className='Sales-section'>
@@ -274,8 +278,22 @@ export default function Sales() {
                                 </div>
                             </div>
                             <div className='report-setting-btn'>
-                                <button className='report'>Edit</button>
-                                <button className='report1'>Delete </button>
+                                <Button className='report' >Edit</Button>
+                                <Modal show={Deleteshow} onHide={DeleteEnteryClose} animation={false} className='Delete-Sales'>
+                                        <Modal.Header closeButton>
+                                            <Modal.Title>You sure you want to delete this sale return entry?</Modal.Title>
+                                        </Modal.Header>
+                                        <Modal.Body>Once you delete an entry, you can’t recover it, so think once before deleting</Modal.Body>
+                                        <Modal.Footer>
+                                            <Button variant="secondary" onClick={DeleteEnteryClose}>
+                                                Yes, delete this
+                                            </Button>
+                                            <Button variant="primary" onClick={DeleteEnteryClose}>
+                                                No, don't delete
+                                            </Button>
+                                        </Modal.Footer>
+                                    </Modal>
+                                <button className='report1' onClick={DeleteEntery}>Delete </button>
                             </div>
                         </div>
                         <div className='date-balance-row'>
@@ -304,11 +322,11 @@ export default function Sales() {
                         <div className='name'>
                             <div className='name-number'>
                                 <p className='Invoice-No'>INVOICE NO.</p>
-                                <p className='Invoice-Gst'>#18</p>
+                                <p className='Invoice-Gst'><b>#18</b></p>
                             </div>
                             <div className='name-number'>
                                 <p className='Invoice-Date'>INVOICE DATE</p>
-                                <p className='Invoice-Dates'>01 Aug 2023</p>
+                                <p className='Invoice-Dates'><b>01 Aug 2023</b></p>
                             </div>
                             <div className='Invoice-Details-btn'>
                                 <button className='btn'>View Invoice Details</button>
@@ -336,19 +354,6 @@ export default function Sales() {
                             <div className='single-user-details'>
                                 <div className='Product-Name'>
                                     <div className='name'>
-                                        <h4>Fenugreek seeds</h4>
-                                        <p>Qty 1</p>
-                                    </div>
-                                </div>
-                                <div className='amount'>
-                                    <h4>₹37.80</h4>
-                                    <h6 className='Discount'>Discount 1%</h6>
-                                    <h6 className='Gst'>GST 0.1%</h6>
-                                </div>
-                            </div>
-                            <div className='single-user-details'>
-                                <div className='Product-Name'>
-                                    <div className='name'>
                                         <h4>Suji</h4>
                                         <p>Qty 3</p>
                                     </div>
@@ -359,6 +364,7 @@ export default function Sales() {
                                     <h6 className='Gst'>GST 0.1%</h6>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>

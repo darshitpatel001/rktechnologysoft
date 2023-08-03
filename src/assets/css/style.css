@@ -304,7 +304,7 @@ table, thead, tbody, tr, td, th { display: block; }
 .Sales-details .Invoice-settled .name .btn { background-color: rgba(26, 158, 218, 0.2); border: none;} 
 .Sales-details .Invoice-settled .name .name-number .Invoice-No { margin: 0; padding-right: 30px; font-size: 14px;}
 .Sales-details .Invoice-settled .name .name-number .Invoice-Date { margin: 0; padding-right: 60px; font-size: 14px;}
-
+    
 .Item-section { width: 80%; height: 100vh; overflow: hidden; display: flex; flex-wrap: wrap; align-items: flex-start; }
 .Item-section .detail-section, .Item-section .single-user-data { width: 50%; height: 100vh; overflow: hidden; position: relative; }
 .Item-section .detail-section .nav-tabs { border-bottom: 1px solid #CFCFCF; margin: 0 !important; padding: 30px 0 30px 46px; }
@@ -502,4 +502,18 @@ table, thead, tbody, tr, td, th { display: block; }
 /* box-shadow: 0px 0px 5px #c5c1c1; */
 .Addsale-Section .Addsale-details .Addsale-box .form-label {padding-top: 5px; color: #8B9DB0;}
 .Addsale-Section .addsale-boxs {width: auto; background-color: #ffffff; margin: 30px; padding: 17px; border-radius: 20px; border: 1px solid #CFCFCF;}
+
+.Sales-details .user-detail-section { position: relative; }
+.Sales-details .user-detail-section .user-detail-title { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 5px 46px; background-color: #f0f0f0; }
+.Sales-details .user-detail-section .user-detail-title h5 { font-size: 16px; font-weight: 400; line-height: 1; color: #757575; margin: 0; }
+
+.Sales-details .user-detail-section .user-details { height: 510px; overflow-y: scroll; }
+.Sales-details .user-detail-section .user-details .single-user-details { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 15px 46px; background-color: #FFFFFF; border-bottom: 1px solid rgb(207, 207, 207, 0.3); }
+.Sales-details .user-detail-section .user-details .single-user-details .Product-Name { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+.Sales-details .user-detail-section .user-details .single-user-details .Product-Name .name h4 { font-size: 18px; font-weight: 500; line-height: 1; color: #000000; margin: 0 0 5px; }
+.Sales-details .user-detail-section .user-details .single-user-details .amount .Discount { margin: 0; font-size: 16px; font-weight: 500; line-height: 1; color: #000000;  color: #979797;}
+.Sales-details .user-detail-section .user-details .single-user-details .amount .Gst  { margin: 0; font-size: 16px; font-weight: 500; line-height: 1; color: #000000;  color: #979797;}
+.Sales-details .user-detail-section .user-details .single-user-details .Product-Name .name p { font-size: 14px; font-weight: 400; line-height: 1; color: #979797; margin: 0; }
+.Sales-details .user-detail-section .user-details .single-user-details .amount { text-align: end; }
+.Sales-details .user-detail-section .user-details .single-user-details .amount h4 { font-size: 18px; font-weight: 400; line-height: 1; color: #ff0000; margin: 0 0 5px; }
 

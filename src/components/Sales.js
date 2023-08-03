@@ -311,7 +311,53 @@ export default function Sales() {
                                 <p className='Invoice-Dates'>01 Aug 2023</p>
                             </div>
                             <div className='Invoice-Details-btn'>
-                            <button className='btn'>View Invoice Details</button>
+                                <button className='btn'>View Invoice Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='user-detail-section'>
+                        <div className='user-detail-title'>
+                            <h5>ITEMS RETURNED</h5>
+                        </div>
+                        <div className='user-details'>
+                            <div className='single-user-details'>
+                                <div className='Product-Name'>
+                                    <div className='name'>
+                                        <h4>Fenugreek seeds</h4>
+                                        <p>Qty 1</p>
+                                    </div>
+                                </div>
+                                <div className='amount'>
+                                    <h4>₹37.80</h4>
+                                    <h6 className='Discount'>Discount 1%</h6>
+                                    <h6 className='Gst'>GST 0.1%</h6>
+                                </div>
+                            </div>
+                            <div className='single-user-details'>
+                                <div className='Product-Name'>
+                                    <div className='name'>
+                                        <h4>Fenugreek seeds</h4>
+                                        <p>Qty 1</p>
+                                    </div>
+                                </div>
+                                <div className='amount'>
+                                    <h4>₹37.80</h4>
+                                    <h6 className='Discount'>Discount 1%</h6>
+                                    <h6 className='Gst'>GST 0.1%</h6>
+                                </div>
+                            </div>
+                            <div className='single-user-details'>
+                                <div className='Product-Name'>
+                                    <div className='name'>
+                                        <h4>Suji</h4>
+                                        <p>Qty 3</p>
+                                    </div>
+                                </div>
+                                <div className='amount'>
+                                    <h4>₹130.50</h4>
+                                    <h6 className='Discount'>Discount 3%</h6>
+                                    <h6 className='Gst'>GST 0.1%</h6>
+                                </div>
                             </div>
                         </div>
                     </div>

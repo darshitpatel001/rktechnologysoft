@@ -98,10 +98,9 @@ table, thead, tbody, tr, td, th { display: block; }
 .dashboard .customer-section .single-user-data .single-user-detail-page .date-balance-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 30px; }
 .dashboard .customer-section .single-user-data .single-user-detail-page .date-balance-row .due-date h3 { display: flex; flex-wrap: wrap; align-items: center; font-size: 18px; font-weight: 500; line-height: 1; color: #666666; }
 .dashboard .customer-section .single-user-data .single-user-detail-page .date-balance-row .due-date h3 span img { width: 20px; margin-right: 15px; }
-.dashboard .customer-section .single-user-data .single-user-detail-page .date-balance-row .due-date .date { display: flex; flex-wrap: wrap; align-items: center; }
-.dashboard .customer-section .single-user-data .single-user-detail-page .date-balance-row .due-date .date p { font-size: 18px; font-weight: 400; line-height: 1; color: #666666; margin: 0 20px 0 0; }
+.dashboard .customer-section .single-user-data .single-user-detail-page .date-balance-row .due-date .date .date-btn { position: relative; }
 .dashboard .customer-section .single-user-data .single-user-detail-page .date-balance-row .due-date .date .date-btn button { font-size: 14px; font-weight: 400; line-height: 1; color: #1A9EDA; background-color: transparent; border: 1px solid #1A9EDA; border-radius: 5px; padding: 5px 10px; }
-
+.dashboard .customer-section .single-user-data .single-user-detail-page .date-balance-row .due-date .date .date-btn input { position: absolute; top: 50%; left: 50%; z-index: 1; background: transparent; width: 24px; height: 24px; padding: 0; transform: translate(-50%, -50%); opacity: 0; }
 .dashboard .customer-section .single-user-data .single-user-detail-page .date-balance-row .net-balance { text-align: center; }
 .dashboard .customer-section .single-user-data .single-user-detail-page .date-balance-row .net-balance h4 { font-size: 20px; font-weight: 400; line-height: 1; color: #757575; margin: 0 0 10px; text-transform: uppercase; }
 .dashboard .customer-section .single-user-data .single-user-detail-page .date-balance-row .net-balance p { font-size: 16px; font-weight: 500; line-height: 1; color: #666666; margin: 0; }

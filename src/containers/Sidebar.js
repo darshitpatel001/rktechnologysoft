@@ -40,7 +40,7 @@ export default function Sidebar() {
               <Link to="/customer"><span><img src={Customericon} alt='icon' /></span>Customers</Link>
             </li>
             <li>
-              <Link to="/"><span><img src={Suppliersicon} alt='icon' /></span>Suppliers</Link>
+              <Link to="/customer"><span><img src={Suppliersicon} alt='icon' /></span>Suppliers</Link>
             </li>
           </ul>
         </div>
@@ -59,10 +59,10 @@ export default function Sidebar() {
               <Link to="/sales"><span><img src={Salesicon} alt='icon' /></span>Sales</Link>
             </li>
             <li>
-              <Link to="/"><span><img src={Purchaseicon} alt='icon' /></span>Purchase</Link>
+              <Link to="/sales"><span><img src={Purchaseicon} alt='icon' /></span>Purchase</Link>
             </li>
             <li>
-              <Link to="/"><span><img src={Expensesicon} alt='icon' /></span>Expenses</Link>
+              <Link to="/sales"><span><img src={Expensesicon} alt='icon' /></span>Expenses</Link>
             </li>
             <li>
               <Link to="/cashbook"><span><img src={Cashbookicon} alt='icon' /></span>Cashbook</Link>

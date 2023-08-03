@@ -49,6 +49,14 @@ export default function Customer() {
 
   const [blankPage, setBlankPage] = useState();
 
+  const current = new Date();
+  const date = current.getDate();
+  const month = current.getMonth() + 1;
+  const year = current.getFullYear();
+  const hours = current.getHours();
+  const minutes = current.getMinutes();
+  const seconds = current.getSeconds();
+
   useEffect(() => {
 
     fetch("http://localhost:3001/customer", {
@@ -139,6 +147,9 @@ export default function Customer() {
     }
     else {
 
+      const fullDate = date + "/" + month + "/" + year;
+      const time = hours + ":" + minutes + ":" + seconds;
+
       const customerRecord = {
         firstCharacter: character,
         partyname: partyName,
@@ -150,7 +161,9 @@ export default function Customer() {
         arealocality: areaLocality,
         pincode: pinCode,
         city: city,
-        state: state
+        state: state,
+        date: fullDate,
+        time: time
       }
 
       fetch("http://localhost:3001/customer", {

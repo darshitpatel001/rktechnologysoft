@@ -77,6 +77,8 @@ export default function Singleuserdetail(props) {
     const [partyName, setPartyName] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
 
+    const [fullDateView, setFullDateView] = useState("");
+
     /* You Gave Form Start */
     const [gaveAmount, setGaveAmount] = useState();
     const [gaveDescription, setGaveDescription] = useState();
@@ -135,6 +137,7 @@ export default function Singleuserdetail(props) {
                     setFirstCharacter(record[i].firstCharacter);
                     setPartyName(record[i].partyname);
                     setPhoneNumber(record[i].phonenumber);
+                    setFullDateView(record[i].date);
                     setSingleCustomerData(record[i])
                 }
             }
@@ -142,6 +145,7 @@ export default function Singleuserdetail(props) {
         }).catch((err) => {
             console.log("Record not found");
         })
+
     }, [])
 
     const [dueDate, setDueDate] = useState("");
@@ -187,7 +191,8 @@ export default function Singleuserdetail(props) {
         dueDateMonth = "December"
     }
 
-    console.log(dueDateMonth)
+    const fullDate = dueDateDate + " " + dueDateMonth + " " + dueDateYear;
+
     return (
         <div className={'single-user-data ' + blankPageId}>
             <div className='blank-page'>
@@ -246,7 +251,7 @@ export default function Singleuserdetail(props) {
                     <div className='due-date'>
                         <h3><span><img src={Alarmicon} alt='' /></span>Due Date:</h3>
                         <div className='date'>
-                            <p>{dueDateDate + " " + dueDateMonth + " " + dueDateYear}</p>
+                            <p>{fullDate ? fullDateView : fullDate}</p>
                             <div className='date-btn'>
                                 <button>Edit</button>
                                 <input type='date' onChange={(e) => setDueDate(e.target.value)} min={disablePastDate()} />

@@ -1,18 +1,18 @@
 import React from 'react'
 
-export default function Addsale() {
+export default function Editsale() {
     return (
         <>
-            <section className='Addsale-Section'>
+            <section className='Editsales-Section'>
                 <form>
                     <div className='details-section'>
-                        <h3>Create Sale</h3>
+                        <h3>Edit Sale Return</h3>
                     </div>
 
-                    <div className='Addsale-details'>
+                    <div className='Editsales-details'>
                         <div className='main-box d-flex'>
-                            <div className='Addsale-box'>
-                                <h6>PARTY DETAILS</h6>
+                            <div className='editsales-box'>
+                                <h6>Edit Sale Return</h6>
                                 <div class="row">
                                     <div class="col-6">
                                         <label for="partyname" class="form-label">Party Name</label>
@@ -32,15 +32,15 @@ export default function Addsale() {
                                     </div>
                                 </div>
                             </div>
-                            <div className='Addsale-box'>
-                                <h6>INVOICE DETAILS</h6>
+                            <div className='editsales-box'>
+                                <h6>SALE RETURN DETAILS</h6>
                                 <div class="row">
                                     <div class="col-6">
-                                        <label for="InvoiceNumber" class="form-label">Invoice Number</label>
-                                        <input type="number" class="form-control" placeholder="Invoice Number" name="invoicenumber" />
+                                        <label for="InvoiceNumber" class="form-label">Sale Return Number</label>
+                                        <input type="number" class="form-control" placeholder="Sale Return Number" name="invoicenumber" />
                                     </div>
                                     <div class="col-6">
-                                        <label for="InvoiceDate" class="form-label">Invoice Date</label>
+                                        <label for="InvoiceDate" class="form-label">Sale Return Number</label>
                                         <input type="date" class="form-control" name="invoicedate" />
                                     </div>
                                     <div class="col-6">
@@ -54,9 +54,9 @@ export default function Addsale() {
                                 </div>
                             </div>
                         </div>
-                        <div className='addsale-boxs'>
-                            <h6>ITEMS ON THE INVOICE</h6>
-                        
+                        <div className='editsales-boxs d-flex'>
+                            <label>INVOICE SETTLED AGAINST</label>
+                            <input type="text" class="form-control" placeholder="18" name="stateofsupply" disabled/>
                         </div>
                     </div>
 

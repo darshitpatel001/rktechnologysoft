@@ -9,11 +9,21 @@ import Arrow2 from "../assets/images/Arrow-2.png"
 import Whatsappicon from "../assets/images/whatsapp.png"
 import Lettericon from "../assets/images/letter-i.png"
 import { Button, Modal } from 'react-bootstrap'
+import { useNavigate } from 'react-router';
 
 export default function Sales() {
+    const navigate = useNavigate();
+
     const [Deleteshow, setDeleteshow] = useState(false);
     const DeleteEnteryClose = () => setDeleteshow(false);
     const DeleteEntery = () => setDeleteshow(true);
+
+    const AddSale = () => {
+        navigate('/addsale');
+    };
+    const EditSale = () => {
+        navigate('/editsale');
+    };
 
     return (
         <>
@@ -129,8 +139,8 @@ export default function Sales() {
                                 <button className="btn">
                                     More
                                 </button>
-                                <button className="btn">
-                                    + Add Purchase
+                                <button className="btn" onClick={AddSale}>
+                                    + Add Sale
                                 </button>
                             </div>
                         </Tab>
@@ -259,10 +269,7 @@ export default function Sales() {
                             </div>
                             <div className='user-detail-title'>
                                 <button className="btn">
-                                    More
-                                </button>
-                                <button className="btn">
-                                    + Add Purchase
+                                    + Add Expenses
                                 </button>
                             </div>
                         </Tab>
@@ -278,21 +285,21 @@ export default function Sales() {
                                 </div>
                             </div>
                             <div className='report-setting-btn'>
-                                <Button className='report' >Edit</Button>
+                                <Button className='report' onClick={EditSale}>Edit</Button>
                                 <Modal show={Deleteshow} onHide={DeleteEnteryClose} animation={false} className='Delete-Sales'>
-                                        <Modal.Header closeButton>
-                                            <Modal.Title>You sure you want to delete this sale return entry?</Modal.Title>
-                                        </Modal.Header>
-                                        <Modal.Body>Once you delete an entry, you can’t recover it, so think once before deleting</Modal.Body>
-                                        <Modal.Footer>
-                                            <Button variant="secondary" onClick={DeleteEnteryClose}>
-                                                Yes, delete this
-                                            </Button>
-                                            <Button variant="primary" onClick={DeleteEnteryClose}>
-                                                No, don't delete
-                                            </Button>
-                                        </Modal.Footer>
-                                    </Modal>
+                                    <Modal.Header closeButton>
+                                        <Modal.Title>You sure you want to delete this sale return entry?</Modal.Title>
+                                    </Modal.Header>
+                                    <Modal.Body>Once you delete an entry, you can’t recover it, so think once before deleting</Modal.Body>
+                                    <Modal.Footer>
+                                        <Button variant="secondary" onClick={DeleteEnteryClose}>
+                                            Yes, delete this
+                                        </Button>
+                                        <Button variant="primary" onClick={DeleteEnteryClose}>
+                                            No, don't delete
+                                        </Button>
+                                    </Modal.Footer>
+                                </Modal>
                                 <button className='report1' onClick={DeleteEntery}>Delete </button>
                             </div>
                         </div>

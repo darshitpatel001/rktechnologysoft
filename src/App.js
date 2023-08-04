@@ -21,10 +21,10 @@ function App() {
           <Route path='/item' element={<Item />} />
           <Route path='/cashbook' element={<Cashbook />} />
           <Route path='/sales' element={<Sales />} />
-          <Route path='/staff' element={<Staff />} />
-          <Route path='/setting' element={<Setting />} />
           <Route path='/addsale' element={<Addsale />} />
           <Route path='/editsale' element={<Editsale />} />
+          <Route path='/staff' element={<Staff />} />
+          <Route path='/setting' element={<Setting />} />
         </Routes>
       </BrowserRouter>
     </section>

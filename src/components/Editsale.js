@@ -1,6 +1,15 @@
 import React from 'react'
+import { useState } from 'react';
+import { Button, Modal } from 'react-bootstrap'
+import Deleteicon from "../assets/images/Group-391.png"
 
 export default function Editsale() {
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return (
         <>
             <section className='Editsales-Section'>
@@ -60,28 +69,63 @@ export default function Editsale() {
                         </div>
                         <div className='editsales-boxs'>
                             <table class="table">
-                                <thead class="table-dark">
+                                <thead>
                                     <tr>
-                                        <th>Firstname</th>
-                                        <th>Lastname</th>
-                                        <th>Email</th>
+                                        <th className='sl-no'>Sl. No.</th>
+                                        <th className='items'>Items</th>
+                                        <th className='hsn-code'>Hsn/Sac</th>
+                                        <th className='quantity'>Quantity</th>
+                                        <th className='selling-price'><span>Selling Price</span><span>Rate (Incl. Discount)</span></th>
+                                        <th className='discount-unit'><span>Discount</span><span>Unit</span></th>
+                                        <th className='gst-amount'><span>Gst (%)</span><span>Amount (₹)</span></th>
+                                        <th className='amount'>Amount (₹)</th>
+                                        <th className='delete-icon'></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>John</td>
-                                        <td>Doe</td>
-                                        <td>john@example.com</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mary</td>
-                                        <td>Moe</td>
-                                        <td>mary@example.com</td>
-                                    </tr>
-                                    <tr>
-                                        <td>July</td>
-                                        <td>Dooley</td>
-                                        <td>july@example.com</td>
+                                        <td className='sl-no'>1</td>
+                                        <td className='items'>Masoor dal</td>
+                                        <td className='hsn-code'>
+                                            <Button variant="primary" onClick={handleShow}>Hsn Code</Button>
+                                            <Modal show={show} onHide={handleClose}>
+                                                <Modal.Header closeButton>
+                                                    <Modal.Title>Modal heading</Modal.Title>
+                                                </Modal.Header>
+                                                <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
+                                                <Modal.Footer>
+                                                    <Button variant="secondary" onClick={handleClose}>
+                                                        Close
+                                                    </Button>
+                                                    <Button variant="primary" onClick={handleClose}>
+                                                        Save Changes
+                                                    </Button>
+                                                </Modal.Footer>
+                                            </Modal>
+                                        </td>
+                                        <td className='quantity'><input type='number' /></td>
+                                        <td className='selling-price'><span className='add-number'><input type='number' /></span><span className='Incl-discount'>0</span></td>
+                                        <td className='discount-unit'>
+                                            <span className='add-number'>
+                                                <input type='number' />
+                                            </span>
+                                            <span className='unit-icon'>
+                                                <select>
+                                                    <option value="%">%</option>
+                                                    <option value="₹">₹</option>
+                                                </select>
+                                            </span>
+                                        </td>
+                                        <td className='gst-amount'>
+                                            <span className='gst'>
+                                                <Button>0.25</Button>
+                                            </span>
+                                            <span className='amount'>0.9</span>
+                                        </td>
+                                        <td className='amount'>50</td>
+                                        <td className='delete-icon'>
+                                            <img src={Deleteicon} />
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>

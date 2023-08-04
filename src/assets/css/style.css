@@ -534,3 +534,30 @@ table, thead, tbody, tr, td, th { display: block; }
 
 .dashboard .Editsales-Section .Editsales-details .editsales-boxs .table thead tr, .dashboard .Editsales-Section .Editsales-details .editsales-boxs .table tbody tr { display: flex; }
 .dashboard .Editsales-Section .Editsales-details .editsales-boxs .table thead tr th, .dashboard .Editsales-Section .Editsales-details .editsales-boxs .table tbody tr td { width: 33.3333%; }
+
+.dashboard .Editsales-Section .Editsales-details .editsales-boxs .table :where(thead tr, tbody tr) { display: flex; }
+.dashboard .Editsales-Section .Editsales-details .editsales-boxs .table :where(thead tr th, tbody tr th) { padding: 10px; }
+.dashboard .Editsales-Section .Editsales-details .editsales-boxs .table :where(thead tr th:first-child, tbody tr td:first-child) { width: 5%; }
+.dashboard .Editsales-Section .Editsales-details .editsales-boxs .table :where(thead tr th:nth-child(2), tbody tr td:nth-child(2)) { width: 15%; }
+.dashboard .Editsales-Section .Editsales-details .editsales-boxs .table :where(thead tr th:nth-child(3), tbody tr td:nth-child(3)) { width: 10%; }
+.dashboard .Editsales-Section .Editsales-details .editsales-boxs .table :where(thead tr th:nth-child(4), tbody tr td:nth-child(4)) { width: 6%; }
+.dashboard .Editsales-Section .Editsales-details .editsales-boxs .table :where(thead tr th:nth-child(5), tbody tr td:nth-child(5)) { width: 20%; }
+.dashboard .Editsales-Section .Editsales-details .editsales-boxs .table :where(thead tr th:nth-child(6), tbody tr td:nth-child(6)) { width: 13%; }
+.dashboard .Editsales-Section .Editsales-details .editsales-boxs .table :where(thead tr th:nth-child(7), tbody tr td:nth-child(7)) { width: 15%; }
+.dashboard .Editsales-Section .Editsales-details .editsales-boxs .table :where(thead tr th:nth-child(8), tbody tr td:nth-child(8)) { width: 10%; }
+.dashboard .Editsales-Section .Editsales-details .editsales-boxs .table :where(thead tr th:nth-child(9), tbody tr td:nth-child(9)) { width: 6%; }
+
+.dashboard .Editsales-Section .Editsales-details .editsales-boxs .table thead tr :where(.selling-price, .discount-unit, .gst-amount) { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+
+.dashboard .Editsales-Section .Editsales-details .editsales-boxs .table tbody tr :where(.sl-no, .items, .quantity, .selling-price, .discount-unit, .gst-amount) { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+
+.dashboard .Editsales-Section .Editsales-details .editsales-boxs .table tbody tr .quantity input { width: 100%; }
+.dashboard .Editsales-Section .Editsales-details .editsales-boxs .table tbody tr .selling-price .add-number { width: 35%; display: inline-block; }
+.dashboard .Editsales-Section .Editsales-details .editsales-boxs .table tbody tr .selling-price .add-number input { width: 100%; }
+
+.dashboard .Editsales-Section .Editsales-details .editsales-boxs .table tbody tr .discount-unit .add-number { width: 50%; display: inline-block; }
+.dashboard .Editsales-Section .Editsales-details .editsales-boxs .table tbody tr .discount-unit .add-number input { width: 100%; }
+
+.dashboard .Editsales-Section .Editsales-details .editsales-boxs .table tbody tr > .amount { display: flex; flex-wrap: wrap; align-items: center; }
+.dashboard .Editsales-Section .Editsales-details .editsales-boxs .table tbody tr .delete-icon { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; }
+.dashboard .Editsales-Section .Editsales-details .editsales-boxs .table tbody tr .delete-icon img { width: auto; padding: 8px; border-radius: 8px; background-color: rgba(218, 20, 20, 0.1); }

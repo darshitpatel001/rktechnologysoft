@@ -9,6 +9,7 @@ import Item from './components/Item';
 import Setting from './components/Setting';
 import Addsale from './components/Addsale';
 import Editsale from './components/Editsale';
+import Transactionreport from './components/Transactionreport';
 
 function App() {
   return (
@@ -21,10 +22,11 @@ function App() {
           <Route path='/item' element={<Item />} />
           <Route path='/cashbook' element={<Cashbook />} />
           <Route path='/sales' element={<Sales />} />
-          <Route path='/addsale' element={<Addsale />} />
-          <Route path='/editsale' element={<Editsale />} />
           <Route path='/staff' element={<Staff />} />
           <Route path='/setting' element={<Setting />} />
+          <Route path='/addsale' element={<Addsale />} />
+          <Route path='/editsale' element={<Editsale />} />
+          <Route path='/reports' element={<Transactionreport />} />
         </Routes>
       </BrowserRouter>
     </section>

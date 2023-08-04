@@ -73,7 +73,7 @@ export default function Sidebar() {
           <h5>Others</h5>
           <ul>
             <li>
-              <Link to="/"><span><img src={Reportsicon} alt='icon' /></span>Reports</Link>
+              <Link to="/reports"><span><img src={Reportsicon} alt='icon' /></span>Reports</Link>
             </li>
             <li>
               <Link to="/staff"><span><img src={Stafficon} alt='icon' /></span>Staff</Link>

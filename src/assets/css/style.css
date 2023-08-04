@@ -214,9 +214,12 @@ table, thead, tbody, tr, td, th { display: block; }
 .details-section1 .single-user-data .username .report-setting-btn .report span { display: inline-block; margin: 0 10px 0 0; }
 
 .details-section1 .Description { padding: 20px 30px 0; border-bottom: 1px solid #CFCFCF;}
-.details-section1 .Description .description-content {padding-left: 310px;}
+.details-section1 .Description .description-content {text-align: end;}
 .details-section1 .Description .description-content1 {margin-bottom: 0;}
 .details-section1 .Description .description-content2 {color: #1A9EDA;}      
+.details-section1 .Description-content {padding: 20px 30px 0;}
+.details-section1 .Description-content1 {font-size: 24px; margin-bottom: 0;}
+.details-section1 .Description-content2 {font-size: 20px;}    
 
 .add-customer.you-gave-form .modal-dialog .modal-content .modal-body form .number .amount .coutry-amount { width: 100%; }
 .add-customer.you-gave-form .modal-dialog .modal-content .modal-body form .number .amount .coutry-amount input { border-right: 1px solid #CFCFCF; border-radius: 10px; }

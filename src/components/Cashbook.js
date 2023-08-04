@@ -12,7 +12,7 @@ export default function Cashbook() {
     };
 
     const currentDate = new Date().toISOString().split("T")[0];
-    
+
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -254,15 +254,14 @@ export default function Cashbook() {
                         </div>
                     </div>
                     <div className='Description'>
-                        <div className='row'>
-                            <div className='col-lg-6'>
-                                <p>Description</p>
-                            </div>
-                            <div className='col-lg-6 description-content'>
-                                <p className='description-content1'>₹65</p>
-                                <p className='description-content2'>ONLINE</p>
-                            </div>
+                        <div className='description-content'>
+                            <p className='description-content1'>₹65</p>
+                            <p className='description-content2'>ONLINE</p>
                         </div>
+                    </div>
+                    <div className='Description-content'>
+                        <p className='Description-content1'>Description</p>
+                        <p className='Description-content2'>xyz</p>
                     </div>
                 </div>
 

@@ -12,25 +12,25 @@ export default function Item() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const [show1, setShow1] = useState(false);
+    const [StokInshow, setStokInshow] = useState(false);
 
-    const handleClose1 = () => setShow1(false);
-    const handleShow1 = () => setShow1(true);
+    const StokInClose = () => setStokInshow(false);
+    const StokInShow = () => setStokInshow(true);
 
-    const [show2, setShow2] = useState(false);
+    const [StokInshow1, setStokInshow1] = useState(false);
 
-    const handleClose2 = () => setShow2(false);
-    const handleShow2 = () => setShow2(true);
+    const StokInClose1 = () => setStokInshow1(false);
+    const StokInShow1 = () => setStokInshow1(true);
 
-    const [show3, setShow3] = useState(false);
+    const [EditProductshow, setEditProduct] = useState(false);
 
-    const handleClose3 = () => setShow3(false);
-    const handleShow3 = () => setShow3(true);
+    const setEditProductClose = () => setEditProduct(false);
+    const setEditProductShow = () => setEditProduct(true);
 
-    const [show4, setShow4] = useState(false);
+    const [AddProductshow, setAddProductshow] = useState(false);
 
-    const handleClose4 = () => setShow4(false);
-    const handleShow4 = () => setShow4(true);
+    const AddProductClose = () => setAddProductshow(false);
+    const AddProductShow = () => setAddProductshow(true);
     return (
         <>
             <section className='Item-section'>
@@ -106,8 +106,8 @@ export default function Item() {
                                     </div>
                                 </div>
                                 <div className='add-customer'>
-                                    <Button variant="primary" onClick={handleShow4}>+ Add Product</Button>
-                                    <Modal show={show4} onHide={handleClose4} className='Item-customer'>
+                                    <Button variant="primary" onClick={AddProductShow}>+ Add Product</Button>
+                                    <Modal show={AddProductshow} onHide={AddProductClose} className='Item-customer'>
                                         <Modal.Header closeButton>
                                             <Modal.Title>Add Product</Modal.Title>
                                         </Modal.Header>
@@ -213,8 +213,8 @@ export default function Item() {
                                 </div>
                             </div>
                             <div className='report-setting-btn'>
-                                <Button className='report' onClick={handleShow3}>Edit Product</Button>
-                                <Modal show={show3} onHide={handleClose3} className='Item-customer'>
+                                <Button className='report' onClick={setEditProductShow}>Edit Product</Button>
+                                <Modal show={EditProductshow} onHide={setEditProductClose} className='Item-customer'>
                                     <Modal.Header closeButton>
                                         <Modal.Title>Edit Product</Modal.Title>
                                     </Modal.Header>
@@ -358,8 +358,8 @@ export default function Item() {
                     </div>
                     <div className='item-box'>
                         <h5>Track your profits on this item</h5>
-                        <h6><Button className='Track-Profit-btn' onClick={handleShow2}>STOCK OUT TO TRACK PROFIT </Button></h6>
-                        <Modal show={show2} onHide={handleClose2} className='Item-customer'>
+                        <h6><Button className='Track-Profit-btn' onClick={StokInShow1}>STOCK OUT TO TRACK PROFIT </Button></h6>
+                        <Modal show={StokInshow1} onHide={StokInClose1} className='Item-customer'>
                             <Modal.Header closeButton>
                                 <Modal.Title>Stock In</Modal.Title>
                             </Modal.Header>
@@ -431,7 +431,7 @@ export default function Item() {
                     </div>
                     <div className='you-gave-got-btn'>
                         <Button className='gave' variant="primary" onClick={handleShow}>Stock Out</Button>
-                        <Button className='got' onClick={handleShow1}>Stock In</Button>
+                        <Button className='got' onClick={StokInShow}>Stock In</Button>
                     </div>
 
                     <Modal show={show} onHide={handleClose} className='Item-customer'>
@@ -485,7 +485,7 @@ export default function Item() {
                         </Modal.Body>
                     </Modal>
 
-                    <Modal show={show1} onHide={handleClose1} className='Item-customer'>
+                    <Modal show={StokInshow} onHide={StokInClose} className='Item-customer'>
                         <Modal.Header closeButton>
                             <Modal.Title>Stock In</Modal.Title>
                         </Modal.Header>

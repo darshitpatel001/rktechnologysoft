@@ -425,13 +425,6 @@ input[type=number] { -moz-appearance: textfield; }
 .Item-customer .Stock-btn button.Delete-btn { font-size: 15px; font-weight: 400; line-height: 1; color: red; background-color: white;  padding: 10px 60px; border: 1px solid red;}
 .Item-customer .Stock-btn button.Save-btn { font-size: 15px; font-weight: 400; line-height: 1; color: white; background-color: #1A9EDA;  padding: 10px 60px; border: none;}
 
-.staff { width: 80%; height: 100vh; position: relative; }
-.staff .staff-details { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
-.staff .staff-details img { width: auto; }
-.staff .staff-details h4 { display: inline-block; }
-.staff .staff-details .add-staff {padding-top: 20px;}
-.staff .staff-details .add-staff button { font-size: 18px; font-weight: 400; line-height: 1; color: #FFFFFF; background-color: #1A9EDA; padding: 10px 20px; border: none; border-radius: 10px; }
-
 .setting-customer .setting-customer .single-user-detail-page .username { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 20px 30px 0; }
 .setting-customer .single-user-detail-page .username .name { display: flex; flex-wrap: wrap; align-items: center; }
 .setting-customer .single-user-detail-page .username .name span { width: 40px; height: 40px; font-size: 18px; font-weight: 500; line-height: 40px; color: #1A9EDA; background-color: rgba(26, 158, 218, 0.2); border-radius: 50px; text-align: center; margin-right: 10px; }
@@ -500,13 +493,63 @@ input[type=number] { -moz-appearance: textfield; }
 .Setting-Section .Setting-details .Logout .Logout-Contant .Logout-Setting-Delete {color: #B0BECD;}
 
 
-.Addsale-Section { width: 80%; height: 100vh; position: relative; }
-.Addsale-Section .details-section { box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px; background-color: #FFFFFF; padding: 20px 30px; position: absolute; top: 0; right: 0; z-index: 1; width: 100%;}
-.Addsale-Section .Addsale-details {margin-top: 75px;}
-.Addsale-Section .Addsale-details .Addsale-box {width: 50%; background-color: #ffffff; margin: 30px 30px 0; padding: 17px; border-radius: 20px; border: 1px solid #CFCFCF;}
-/* box-shadow: 0px 0px 5px #c5c1c1; */
-.Addsale-Section .Addsale-details .Addsale-box .form-label {padding-top: 5px; color: #8B9DB0;}
-.Addsale-Section .addsale-boxs {width: auto; background-color: #ffffff; margin: 30px; padding: 17px; border-radius: 20px; border: 1px solid #CFCFCF;}
+.Addsales-Section { width: 80%; height: 100vh; position: relative; overflow-y: auto; }
+.Addsales-Section .details-section { box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px; background-color: #FFFFFF; padding: 20px 30px; position: sticky; top: 0; right: 0; z-index: 1; width: 100%;}
+.Addsales-Section .Addsales-details .Addsales-box {width: 50%; background-color: #ffffff; margin: 30px 30px 0; padding: 17px; border-radius: 20px; border: 1px solid #CFCFCF;}
+/* box-shadow: 0px 0px 5px #c5c1c1;  */
+.Addsales-Section .Addsales-details .Addsales-box .form-label {padding-top: 5px; color: #8B9DB0;}
+.Addsales-Section .Addsales-boxs {width: auto; background-color: #ffffff; margin: 30px; padding: 17px; border-radius: 20px; border: 1px solid #CFCFCF;}
+.Addsales-Section .Addsales-boxs label {padding-top: 8px;} 
+.Addsales-Section .Addsales-boxs input {width: 300px; margin-left: 10px;}
+
+.dashboard .Addsales-Section .Addsales-details .Addsales-boxs .table :where(thead tr, tbody tr) { display: flex; }
+.dashboard .Addsales-Section .Addsales-details .Addsales-boxs .table :where(thead tr th, tbody tr th) { padding: 10px; }
+.dashboard .Addsales-Section .Addsales-details .Addsales-boxs .table :where(thead tr th:first-child, tbody tr td:first-child) { width: 5%; }
+.dashboard .Addsales-Section .Addsales-details .Addsales-boxs .table :where(thead tr th:nth-child(2), tbody tr td:nth-child(2)) { width: 15%; }
+.dashboard .Addsales-Section .Addsales-details .Addsales-boxs .table :where(thead tr th:nth-child(3), tbody tr td:nth-child(3)) { width: 10%; }
+.dashboard .Addsales-Section .Addsales-details .Addsales-boxs .table :where(thead tr th:nth-child(4), tbody tr td:nth-child(4)) { width: 6%; }
+.dashboard .Addsales-Section .Addsales-details .Addsales-boxs .table :where(thead tr th:nth-child(5), tbody tr td:nth-child(5)) { width: 20%; }
+.dashboard .Addsales-Section .Addsales-details .Addsales-boxs .table :where(thead tr th:nth-child(6), tbody tr td:nth-child(6)) { width: 13%; }
+.dashboard .Addsales-Section .Addsales-details .Addsales-boxs .table :where(thead tr th:nth-child(7), tbody tr td:nth-child(7)) { width: 15%; }
+.dashboard .Addsales-Section .Addsales-details .Addsales-boxs .table :where(thead tr th:nth-child(8), tbody tr td:nth-child(8)) { width: 10%; }
+.dashboard .Addsales-Section .Addsales-details .Addsales-boxs .table :where(thead tr th:nth-child(9), tbody tr td:nth-child(9)) { width: 6%; }
+
+.dashboard .Addsales-Section .Addsales-details .Addsales-boxs .table thead tr :where(.selling-price, .discount-unit, .gst-amount) { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+
+.dashboard .Addsales-Section .Addsales-details .Addsales-boxs .table tbody tr :where(.sl-no, .items, .quantity, .selling-price, .discount-unit, .gst-amount) { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+
+.dashboard .Addsales-Section .Addsales-details .Addsales-boxs .table tbody tr .quantity input { width: 100%; }
+.dashboard .Addsales-Section .Addsales-details .Addsales-boxs .table tbody tr .selling-price .add-number { width: 35%; display: inline-block; }
+.dashboard .Addsales-Section .Addsales-details .Addsales-boxs .table tbody tr .selling-price .add-number input { width: 100%; }
+
+.dashboard .Addsales-Section .Addsales-details .Addsales-boxs .table tbody tr .discount-unit .add-number { width: 50%; display: inline-block; }
+.dashboard .Addsales-Section .Addsales-details .Addsales-boxs .table tbody tr .discount-unit .add-number input { width: 100%; }
+
+.dashboard .Addsales-Section .Addsales-details .Addsales-boxs .table tbody tr > .amount { display: flex; flex-wrap: wrap; align-items: center; }
+.dashboard .Addsales-Section .Addsales-details .Addsales-boxs .table tbody tr .delete-icon { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; }
+.dashboard .Addsales-Section .Addsales-details .Addsales-boxs .table tbody tr .delete-icon img { width: auto; padding: 8px; border-radius: 8px; background-color: rgba(218, 20, 20, 0.1); }
+
+.dashboard .Addsales-Section .Addsales-details .Addsales-boxs .hsn-btn{ background-color: #1A9EDA; border: none;}
+.dashboard .Addsales-Section .Addsales-details .Addsales-boxs .Gst-btn{ background-color: #1A9EDA; border: none;}
+.dashboard .Addsales-Section .Addsales-details .Addsales-boxs .Items-Inventory {padding-top: 14px;}
+.dashboard .Addsales-Section .Addsales-details .Addsales-boxs .Inventory-btn {background-color: #1A9EDA; border: none; color: white;}
+
+.Addsales-Section .Addsales-details .Addsales-boxes {width: 50%; background-color: #ffffff; margin: 30px 30px 0; padding: 17px; border-radius: 20px; border: 1px solid #CFCFCF;}
+
+.Addsales-Section .Addsales-details .Addsales-boxes .Total h5 {padding-top: 10px;}
+.Addsales-Section .Addsales-details .Addsales-boxes .paid-via {padding-top: 20px;}
+.Addsales-Section .Addsales-details .Addsales-boxes .Balance p {padding-left: 480px;}
+.Addsales-Section .Addsales-details .Addsales-boxes .paid-via .radio-btn {padding-left: 360px;}
+.Addsales-Section .Addsales-details .Addsales-boxes .Information { font-size: 18px;}
+.Addsales-Section .Addsales-details .Addsales-boxes .paid-via label {font-size: 18px;}
+.Addsales-Section .Addsales-details .Addsales-boxes .paid-via p {font-size: 18px;}
+.Addsales-Section .Addsales-details .Addsales-boxes .Private input {width: 50%;}
+.Addsales-Section .Addsales-details .Addsales-boxes .amount { position: relative; display: flex; padding-left: 300px;}
+.Addsales-Section .Addsales-details .Addsales-boxes .amount input { padding: 10px 20px 10px 35px; border-radius: 10px ; }
+.Addsales-Section .Addsales-details .Addsales-boxes .amount .amount-icon { position: absolute; top: 50%; right: 190px; transform: translateY(-50%); font-size: 16px; font-weight: 400; line-height: 1; color: #51515e; }
+
+.Addsales-Section .details-section1 { text-align: end; position: sticky; box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px; background-color: #FFFFFF; padding: 20px 30px; bottom: 0; right: 0; z-index: 1; width: 100%;}
+.Addsales-Section .details-section1  Button {background-color: #1A9EDA; border: none;}
 
 .Sales-details .user-detail-section { position: relative; }
 .Sales-details .user-detail-section .user-detail-title { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 5px 46px; background-color: #f0f0f0; }
@@ -599,3 +642,69 @@ input[type=number] { -moz-appearance: textfield; }
 
 .dashboard .report-section .report-sidebar .filter .report { display: flex; flex-wrap: wrap; align-items: center; padding: 15px 30px; background-color: #FFF; border-bottom: 1px solid #e1e1e1; }
 .dashboard .report-section .report-sidebar .filter .report h4 { font-size: 16px; font-weight: 400; line-height: 1; color: #535353; margin: 0; }
+
+.dashboard .report-section .transaction-report-section { width: 80%; height: 100vh; background-color: #FFF; box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.05); }
+.dashboard .report-section .transaction-report-section .transaction-report-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 30px; }
+.dashboard .report-section .transaction-report-section .transaction-report-header .icon-text { display: flex; flex-wrap: wrap; align-items: center; }
+.dashboard .report-section .transaction-report-section .transaction-report-header .icon-text img { width: auto; }
+.dashboard .report-section .transaction-report-section .transaction-report-header .icon-text h2 { font-size: 24px; font-weight: 500; line-height: 1; margin: 0 0 0 15px; }
+
+.dashboard .report-section .transaction-report-section .transaction-report-header .download-btns button { font-size: 18px; font-weight: 500; line-height: 1; color: #fff; background-color: #1A9EDA; border: none; border-radius: 8px; padding: 15px 20px; display: flex; flex-wrap: wrap; align-items: center; }
+.dashboard .report-section .transaction-report-section .transaction-report-header .download-btns button .icon img { width: 20px; margin-right: 10px; }
+
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .nav-tabs { margin: 0 !important; padding: 0 30px; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .nav-tabs li button { border: none; color: #777; font-size: 18px; font-weight: 400; line-height: 1; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .nav-tabs li button.active { border-bottom: 3px solid #1A9EDA; color: #1A9EDA; font-weight: 500; }
+
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .tab-content { height: calc(100vh - 154px); overflow-y: auto; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .filter-part { display: flex; flex-wrap: wrap; align-items: center; padding: 15px 30px; border-bottom: 1px solid #dee2e6; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .filter-part .filter { margin-right: 15px; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .filter-part .filter .heading { font-size: 18px; font-weight: 400; line-height: 1; color: #000; margin: 0 0 8px; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .filter-part .filter :where(input, select) { font-size: 16px; font-weight: 600; color: #CFCFCF; border: 2px solid #8B9DB0; background-color: transparent; padding: 10px 15px; border-radius: 10px;}
+
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data { padding: 15px 30px; position: relative; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .table thead { position: sticky; top: 0; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .total-entries-heading { font-size: 16px; font-weight: 500; line-height: 1; margin: 0 0 10px; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail { display: flex; flex-wrap: wrap; align-items: center; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .tl-amount { margin-right: 15px; padding: 20px 50px 20px 20px; border-radius: 10px; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .you-gave-amount { background-color: rgba(255, 0, 0, 0.1); }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .you-got-amount { background-color: rgba(5, 140, 76, 0.1); }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .net-balance-amount { background-color: rgba(102, 102, 102, 0.1); }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .tl-amount .amount { font-size: 22px; font-weight: 500; color: #000; line-height: 1; margin: 0 0 8px; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .tl-amount .title { font-size: 16px; font-weight: 400; line-height: 1; margin: 0; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .you-gave-amount .title { color: #ff0000; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .you-got-amount .title { color: #058c4c; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .net-balance-amount .title { color: #666666; }
+
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-datatable { padding: 0 30px 30px; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-datatable .table { margin: 0; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-datatable .table :where(thead tr, tbody tr) { display: flex; flex-wrap: wrap; align-items: center; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-datatable .table :where(thead tr .date, tbody tr .date) { width: 15%; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-datatable .table :where(thead tr .customer-name, tbody tr .customer-name) { width: 25%; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-datatable .table :where(thead tr .details, tbody tr .details) { width: 30%; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-datatable .table :where(thead tr .you-gave, tbody tr .you-gave) { width: 15%; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-datatable .table :where(thead tr .you-got, tbody tr .you-got) { width: 15%; }
+
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .salesreport-datatable { height: calc(100vh - 365px); overflow-y: auto; position: relative; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .salesreport-datatable .table thead { position: sticky; top: 0; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .salesreport-datatable .table :where(thead tr .date, tbody tr .date) { width: 11%; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .salesreport-datatable .table :where(thead tr .invoice-name, tbody tr .invoice-name) { width: 9%; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .salesreport-datatable .table :where(thead tr .party-name, tbody tr .party-name) { width: 18%; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .salesreport-datatable .table :where(thead tr .transactions, tbody tr .transactions) { width: 14%; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .salesreport-datatable .table :where(thead tr .payment, tbody tr .payment) { width: 14%; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .salesreport-datatable .table :where(thead tr .amount, tbody tr .amount) { width: 14%; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .salesreport-datatable .table :where(thead tr .balance, tbody tr .balance) { width: 20%; }
+
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .cashbook-datatable { height: calc(100vh - 365px); overflow-y: auto; position: relative; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .cashbook-datatable .table thead { position: sticky; top: 0; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .cashbook-datatable .table :where(thead tr .date, tbody tr .date) { width: 12%; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .cashbook-datatable .table :where(thead tr .totel-on, tbody tr .totel-on) { width: 14%; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .cashbook-datatable .table :where(thead tr .totel-out, tbody tr .totel-out) { width: 22%; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .cashbook-datatable .table :where(thead tr .balance, tbody tr .balance) { width: 50%; }
+
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .pl-amount { margin-right: 15px; padding: 20px 50px 20px 20px; border-radius: 10px; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .pl-amount .amount { font-size: 22px; font-weight: 500; color: #000; line-height: 1; margin: 0 0 8px; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .pl-amount .title { font-size: 16px; font-weight: 400; line-height: 1; margin: 0; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .you-gavee-amount { background-color: #dff5ff; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .you-gott-amount { background-color: #dff5ff}
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .net-balancee-amount { background-color: #dff5ff; }

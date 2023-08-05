@@ -49,8 +49,8 @@ export default function Reportsidebar() {
             <img src={Purchaseicon} />
             <h4>Purchase Report</h4>
           </div>
-          </Link>
-          <Link to="/cashbookreport">
+        </Link>
+        <Link to="/cashbookreport">
           <div className='cashbook-report report'>
             <img src={Cashbookicon} />
             <h4>Cashbook Report</h4>
@@ -61,10 +61,12 @@ export default function Reportsidebar() {
         <h3>GST Reports</h3>
       </div>
       <div className='gst-reports-filter filter'>
-        <div className='gstr1-report report'>
-          <img src={Gstricon1} />
-          <h4>GSTR-1</h4>
-        </div>
+        <Link to="/gstr1">
+          <div className='gstr1-report report'>
+            <img src={Gstricon1} />
+            <h4>GSTR-1</h4>
+          </div>
+        </Link>
         <div className='gstr2-report report'>
           <img src={Gstricon2} />
           <h4>GSTR-2</h4>

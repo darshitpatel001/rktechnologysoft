@@ -657,10 +657,10 @@ input[type=number] { -moz-appearance: textfield; }
 .dashboard .report-section .transaction-report-section .customer-supplier-reports .nav-tabs li button.active { border-bottom: 3px solid #1A9EDA; color: #1A9EDA; font-weight: 500; }
 
 .dashboard .report-section .transaction-report-section .customer-supplier-reports .tab-content { height: calc(100vh - 154px); overflow-y: auto; }
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .filter-part { display: flex; flex-wrap: wrap; align-items: center; padding: 15px 30px; border-bottom: 1px solid #dee2e6; }
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .filter-part .filter { margin-right: 15px; }
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .filter-part .filter .heading { font-size: 18px; font-weight: 400; line-height: 1; color: #000; margin: 0 0 8px; }
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .filter-part .filter :where(input, select) { font-size: 16px; font-weight: 600; color: #CFCFCF; border: 2px solid #8B9DB0; background-color: transparent; padding: 10px 15px; border-radius: 10px;}
+.dashboard .report-section .transaction-report-section .filter-part { display: flex; flex-wrap: wrap; align-items: center; padding: 15px 30px; border-bottom: 1px solid #dee2e6; }
+.dashboard .report-section .transaction-report-section .filter-part .filter { margin-right: 15px; }
+.dashboard .report-section .transaction-report-section .filter-part .filter .heading { font-size: 18px; font-weight: 400; line-height: 1; color: #000; margin: 0 0 8px; }
+.dashboard .report-section .transaction-report-section .filter-part .filter :where(input, select) { font-size: 16px; font-weight: 600; color: #CFCFCF; border: 2px solid #8B9DB0; background-color: transparent; padding: 10px 15px; border-radius: 10px;}
 
 .dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data { padding: 15px 30px; position: relative; }
 .dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .table thead { position: sticky; top: 0; }
@@ -684,6 +684,8 @@ input[type=number] { -moz-appearance: textfield; }
 .dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-datatable .table :where(thead tr .details, tbody tr .details) { width: 30%; }
 .dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-datatable .table :where(thead tr .you-gave, tbody tr .you-gave) { width: 15%; }
 .dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-datatable .table :where(thead tr .you-got, tbody tr .you-got) { width: 15%; }
+
+.dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .gstrone-datatable .table :where(thead tr .gstin-uin-no, tbody tr .gstin-uin-no) { width: 5%; }
 
 .dashboard .report-section .transaction-report-section .customer-supplier-reports .salesreport-datatable { height: calc(100vh - 365px); overflow-y: auto; position: relative; }
 .dashboard .report-section .transaction-report-section .customer-supplier-reports .salesreport-datatable .table thead { position: sticky; top: 0; }

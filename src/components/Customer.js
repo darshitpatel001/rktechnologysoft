@@ -197,7 +197,7 @@ export default function Customer() {
   return (
     <section className='customer-section'>
       <div className='detail-section'>
-        <Tabs defaultActiveKey="customers" id="uncontrolled-tab-example" className="mb-3" >
+        <Tabs defaultActiveKey={pageIdText} id="uncontrolled-tab-example" className="mb-3" >
           <Tab eventKey="customers" title="Customers">
             <div className='amount-row'>
               <div className='you-give-amount amount'>

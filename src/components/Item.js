@@ -198,7 +198,154 @@ export default function Item() {
                         </Tab>
 
                         <Tab eventKey="Services" title="Services">
-                            Services
+                            <div className='filter-rows'>
+                                <div className='search-filter filter'>
+                                    <h4>Search for Services</h4>
+                                    <div className='search-filter-input'>
+                                        <img src={Searchicon} alt='' />
+                                        <input type='text' placeholder='Name or Phonenumber' />
+                                    </div>
+                                </div>
+                                <div className='select-filter filter'>
+                                    <h4>Filter By</h4>
+                                    <div className='select-filter-select select'>
+                                        <img src={Filtericon} className='filter-icon' alt='' />
+                                        <select>
+                                            <option value="">Select</option>
+                                            <option value="">You'll Give</option>
+                                            <option value="">You'll Get</option>
+                                        </select>
+                                        <img src={Downicon} className='down-icon' alt='' />
+                                    </div>
+                                </div>
+                                <div className='sort-filter filter'>
+                                    <h4>Sort By</h4>
+                                    <div className='sort-filter-select select'>
+                                        <img src={Sorticon} className='filter-icon' alt='' />
+                                        <select>
+                                            <option>Select</option>
+                                            <option>Most Recent</option>
+                                            <option>Highest Amount</option>
+                                            <option>Least Amount</option>
+                                            <option>By Name</option>
+                                            <option>Oldest</option>
+                                        </select>
+                                        <img src={Downicon} className='down-icon' alt='' />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='user-detail-section'>
+                                <div className='user-detail-title'>
+                                    <h5>SERVICE NAME</h5>
+                                    <h5 className='Sales-Price'>SALES PRICE</h5>
+                                    <h5>NO. OF SALES</h5>
+                                </div>
+                                <div className='user-detailes'>
+                                    <div className='single-user-details'>
+                                        <div className='Product-name'>
+                                            <span></span>
+                                            <div className='name'>
+                                                <h4>Apples</h4>
+                                            </div>
+                                        </div>
+                                        <div className='amount'>
+                                            <h4>₹ 200</h4>
+                                        </div>
+                                        <div className='Stock-Qty'>
+                                            <h4>0</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='add-customer'>
+                                    <Button variant="primary" onClick={AddProductShow}>+ Add Service</Button>
+                                    <Modal show={AddProductshow} onHide={AddProductClose} className='Item-customer'>
+                                        <Modal.Header closeButton>
+                                            <Modal.Title>Add Product</Modal.Title>
+                                        </Modal.Header>
+                                        <Modal.Body>
+                                            <form>
+                                                <div className='input number'>
+                                                    <div className='all-span'>
+                                                        <span className='label'>Product name</span>
+                                                    </div>
+                                                    <div className='amount'>
+                                                        <div className='coutry-amount'>
+                                                            <input type='text' placeholder='Product name' name='productname' />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className='input number'>
+                                                    <div className='all-span'>
+                                                        <span className='label'>Units</span>
+                                                    </div>
+                                                    <div className='amount'>
+                                                        <div className='coutry-amount'>
+                                                            <input type='number' name='units' />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className='billing-address'>
+                                                    <div className='amount'>
+                                                        <div className='Sales-price'>
+                                                            <div className='input Price'>
+                                                                <div className='coutry-amount'>
+                                                                    <span className='label'>Sale Price</span>
+                                                                    <input type='number' placeholder='Sales Price' name='salesprice' />
+                                                                </div>
+                                                            </div>
+                                                            <div className='input Date'>
+                                                                <span className='label'>Purchase price</span>
+                                                                <input type='number' placeholder='Purchase Price' name='purchaseprice' />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className='billing-address'>
+                                                    <div className='amount'>
+                                                        <div className='Sales-price'>
+                                                            <div className='input Price'>
+                                                                <div className='coutry-amount'>
+                                                                    <span className='label'>Opening stock</span>
+                                                                    <input type='number' placeholder='Opening stock' name='salesprice' />
+                                                                </div>
+                                                            </div>
+                                                            <div className='input Date'>
+                                                                <span className='label'>Low stock</span>
+                                                                <input type='number' placeholder='Low stock' name='purchaseprice' />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className='input number'>
+                                                    <div className='all-span'>
+                                                        <span className='label'>GST %</span>
+                                                    </div>
+                                                    <div className='amount'>
+                                                        <div className='coutry-amount'>
+                                                            <select className='select'>
+                                                                <option>GST@ 0%</option>
+                                                                <option>GST@ 0.1%</option>
+                                                                <option>GST@ 0.25%</option>
+                                                                <option>GST@ 3%</option>
+                                                                <option>GST@ 5%</option>
+                                                                <option>GST@ 6%</option>
+                                                                <option>GST@ 7.5%</option>
+                                                                <option>GST@ 12%</option>
+                                                                <option>GST@ 18%</option>
+                                                                <option>GST@ 28%</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className='Stock-btn flex'>
+                                                    <Button className='Delete-btn'>Delete</Button>
+                                                    <Button className='Save-btn'>Save</Button>
+                                                </div>
+                                            </form>
+                                        </Modal.Body>
+                                    </Modal>
+                                </div>
+                            </div>
                         </Tab>
                     </Tabs>
                 </div>

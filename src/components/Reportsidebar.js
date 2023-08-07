@@ -67,10 +67,12 @@ export default function Reportsidebar() {
             <h4>GSTR-1</h4>
           </div>
         </Link>
+        <Link to="/gstr2">
         <div className='gstr2-report report'>
           <img src={Gstricon2} />
           <h4>GSTR-2</h4>
         </div>
+        </Link>
         <div className='gstr3-report report'>
           <img src={Gstricon3b} />
           <h4>GSTR-3B</h4>

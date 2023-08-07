@@ -4,7 +4,7 @@ import { Tab, Tabs } from 'react-bootstrap';
 import Transactionicon from "../assets/images/transaction-reports-icon.png"
 import Pdficon from "../assets/images/pdf.png"
 
-export default function Gstrone() {
+export default function Gstrtwo() {
     return (
         <div className='report-section'>
             <Reportsidebar />
@@ -12,7 +12,7 @@ export default function Gstrone() {
                 <div className='transaction-report-header'>
                     <div className='icon-text'>
                         <img src={Transactionicon} />
-                        <h2>GSTR-1</h2>
+                        <h2>GSTR-2</h2>
                     </div>
                     <div className='download-btns'>
                         <button><span className='icon'><img src={Pdficon} /></span>Download PDF</button>
@@ -41,8 +41,8 @@ export default function Gstrone() {
                     </div>
                 </div>
                 <div className='customer-supplier-reports'>
-                    <Tabs defaultActiveKey="sale" id="uncontrolled-tab-example" className="mb-3" >
-                        <Tab eventKey="sale" title="Sale">
+                    <Tabs defaultActiveKey="Purchase" id="uncontrolled-tab-example" className="mb-3" >
+                        <Tab eventKey="Purchase" title="Purchase">
                             <div className='entries-datatable gstrone-datatable'>
                                 <table class="table">
                                     <thead>
@@ -148,13 +148,13 @@ export default function Gstrone() {
                                 </table>
                             </div>
                         </Tab>
-                        <Tab eventKey="salereturn" title="Sale Return">
+                        <Tab eventKey="Purchasereturn" title="Purchase Return">
                             <div className='entries-datatable gstrone-datatable salesreturn-datatable'>
                                 <table class="table">
                                     <thead>
                                         <tr>
                                             <th className='gstin-uin-no' rowSpan="2">GSTIN/UIN NO.</th>
-                                            <th className='invoice'>Invoice
+                                            <th className='invoice'>DEBIT NOTE
                                                 <div className='invoice-list'>
                                                     <th className='party-name'>Party Name</th>
                                                     <th className='date-inner'>Date</th>

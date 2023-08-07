@@ -25,6 +25,12 @@ export default function Sales() {
         navigate('/editsale');
     };
 
+ const Addpurchase = () => {
+        navigate('/addpurchase');
+    };
+    const Editpurchase = () => {
+        navigate('/editpurchase');
+    };
     return (
         <>
             <section className='Sales-section'>
@@ -205,10 +211,10 @@ export default function Sales() {
                                 <button className="btn">
                                     More
                                 </button>
-                                <button className="btn">
+                                <button className="btn" onClick={Addpurchase}>
                                     + Add Purchase
                                 </button>
-                            </div>
+                            </div>  
                         </Tab>
                         <Tab eventKey="expenses" title="Expenses">
                             <div className='filter-row'>

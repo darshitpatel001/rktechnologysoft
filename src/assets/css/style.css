@@ -404,6 +404,7 @@ input[type=number] { -moz-appearance: textfield; }
 .Item-section .Item-boxs .col-sm-3{ padding-top: 10px; border-right: 1px solid #CFCFCF;}
 .Item-section .Item-boxs .box{ border-bottom: 1px solid #CFCFCF; padding-top: 10px;}   
 .Item-section .item-box { background-color: rgba(26, 158, 218, 0.2); border-radius: 15px; margin-left: 20px; margin-right: 20px; padding: 10px 10px;}
+.Item-section .item-box .Track-Profit-btn { background-color: #F16621; border: none;}
 .Item-section .item-box h5 {padding-top: 8px;}
 
 .Item-section .Item-table-section { margin: 30px 30px 15px; }

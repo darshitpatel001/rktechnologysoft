@@ -16,6 +16,8 @@ import Gstrone from './components/Gstrone';
 import Backupinformation from './components/Backupinformation';
 import Helpsupport from './components/Helpsupport';
 import Gstrtwo from './components/Gstrtwo';
+import Addpurchase from './components/Addpurchase';
+import Editpurchase from './components/Editpurchase';
 
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
           <Route path='/helpsupport' element={<Helpsupport />} />
           <Route path='/addsale' element={<Addsale />} />
           <Route path='/editsale' element={<Editsale />} />
+          <Route path='/addpurchase' element={<Addpurchase />} />
+          <Route path='/editpurchase' element={<Editpurchase />} />
           <Route path='/reports' element={<Transactionreport />} />
           <Route path='/salesreport' element={<SalesReport />} />
           <Route path='/purchasereport' element={<PurchaseReport />} />

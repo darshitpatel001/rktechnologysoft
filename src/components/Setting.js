@@ -5,7 +5,7 @@ import Backup from '../assets/images/Backup.png'
 import Recycle from '../assets/images/Recycle-bin.png'
 import Help from '../assets/images/Help-support.png'
 import Logout from '../assets/images/Logout.png'
-import arrow from '../assets/images/Vector-(3).png'
+import { Link } from 'react-router-dom'
 
 export default function Setting() {
     return (
@@ -40,11 +40,12 @@ export default function Setting() {
                         </div>
                         <div className='Backup'>
                             <img src={Backup} alt='' />
-                            <div className='Backup-Contant'>
-                                <p className='Backup-Setting-p'>Backup Information</p>
-                                <p className='Backup-Setting-Delete'>Check your data sync status</p>
-
-                            </div>
+                            <Link to="/backupinformation">
+                                <div className='Backup-Contant'>
+                                    <p className='Backup-Setting-p'>Backup Information</p>
+                                    <p className='Backup-Setting-Delete'>Check your data sync status</p>
+                                </div>
+                            </Link>
                         </div>
                         <div className='Recycle'>
                             <img src={Recycle} alt='' />
@@ -55,10 +56,12 @@ export default function Setting() {
                         </div>
                         <div className='Help'>
                             <img src={Help} alt='' />
-                            <div className='Help-Contant'>
-                                <p className='Help-Setting-p'>Help & Support</p>
-                                <p className='Help-Setting-Delete'>Understand how Khatabook works</p>
-                            </div>
+                            <Link to="/helpsupport">
+                                <div className='Help-Contant'>
+                                    <p className='Help-Setting-p'>Help & Support</p>
+                                    <p className='Help-Setting-Delete'>Understand how Khatabook works</p>
+                                </div>
+                            </Link>
                         </div>
                         <div className='Logout'>
                             <img src={Logout} alt='' />

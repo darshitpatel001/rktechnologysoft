@@ -13,6 +13,8 @@ import SalesReport from './components/SalesReport';
 import PurchaseReport from './components/PurchaseReport';
 import CashbookReport from './components/CashbookReport';
 import Gstrone from './components/Gstrone';
+import Backupinformation from './components/Backupinformation';
+import Helpsupport from './components/Helpsupport';
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
           <Route path='/cashbook' element={<Cashbook />} />
           <Route path='/sales' element={<Sales />} />
           <Route path='/setting' element={<Setting />} />
+          <Route path='/backupinformation' element={<Backupinformation />} />
+          <Route path='/helpsupport' element={<Helpsupport />} />
           <Route path='/addsale' element={<Addsale />} />
           <Route path='/editsale' element={<Editsale />} />
           <Route path='/reports' element={<Transactionreport />} />

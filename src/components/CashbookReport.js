@@ -4,9 +4,9 @@ import Transactionicon from "../assets/images/cashbook-reports-icon.png"
 import Pdficon from "../assets/images/pdf.png"
 
 export default function CashbookReport() {
-    return (
-        <>
-            <div className='report-section'>
+  return (
+    <>
+ <div className='report-section'>
                 <Reportsidebar />
                 <div className='transaction-report-section'>
                     <div className='transaction-report-header'>
@@ -62,7 +62,7 @@ export default function CashbookReport() {
                                 </div>
                             </div>
                         </div>
-                        <div className='entries-datatable cashbook-datatable'>
+                        <div className='entries-datatable transactionreport-datatable cashbook-datatable'>
                             <table class="table">
                                 <thead>
                                     <tr>
@@ -70,7 +70,7 @@ export default function CashbookReport() {
                                         <th className='totel-on'>TOTAL IN</th>
                                         <th className='totel-out'>TOTAL OUT</th>
                                         <th className='balance'>BALANCE</th>
-
+                                        
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -86,6 +86,6 @@ export default function CashbookReport() {
                     </div>
                 </div>
             </div>
-        </>
-    )
+    </>
+  )
 }

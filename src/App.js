@@ -18,6 +18,7 @@ import Helpsupport from './components/Helpsupport';
 import Gstrtwo from './components/Gstrtwo';
 import Addpurchase from './components/Addpurchase';
 import Editpurchase from './components/Editpurchase';
+import Gstrthreeb from './components/Gstrthreeb';
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
           <Route path='/cashbookreport' element={<CashbookReport />} />
           <Route path='/gstr1' element={<Gstrone />} />
           <Route path='/gstr2' element={<Gstrtwo />} />
+          <Route path='/gstr3b' element={<Gstrthreeb />} />
         </Routes>
       </BrowserRouter>
     </section>

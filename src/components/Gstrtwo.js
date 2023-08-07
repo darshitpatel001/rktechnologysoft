@@ -23,7 +23,7 @@ export default function Gstrtwo() {
                         <h5 className='heading'>Period</h5>
                         <select>
                             <option value="This Year">This Year</option>
-                            <option value="This Quarter">This Quarter</option>
+                            <option value="This Quarter">This Quarter</option>  
                             <option value="This Month">This Month</option>
                             <option value="This Week">This Week</option>
                             <option value="Yesterday">Yesterday</option>

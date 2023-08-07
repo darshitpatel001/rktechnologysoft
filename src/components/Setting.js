@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
 export default function Setting() {
     return (
         <>
-            <div className="Setting-details">
+            <div className="Setting-details main-setting-section">
                 <div className='details-section'>
                     <h3>Setting</h3>
                 </div>
@@ -69,11 +69,6 @@ export default function Setting() {
                                 <p className='Logout-Setting-p'>Logout</p>
                                 <p className='Logout-Setting-Delete'>You will be logged out after data backup is complete</p>
                             </div>
-                        </div>
-                    </div>
-                    <div className='Setting-details-content'>
-                        <div>
-
                         </div>
                     </div>
                 </section>

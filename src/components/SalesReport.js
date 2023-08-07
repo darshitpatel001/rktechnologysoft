@@ -64,7 +64,7 @@ export default function SalesReport() {
                                 </div>
                             </div>
                         </div>
-                        <div className='entries-datatable salesreport-datatable'>
+                        <div className='entries-datatable transactionreport-datatable salesreport-datatable'>
                             <table class="table">
                                 <thead>
                                     <tr>

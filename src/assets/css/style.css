@@ -480,9 +480,10 @@ input[type=number] { -moz-appearance: textfield; }
 .setting-customer .profile-btn { box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px; background-color: #FFFFFF; padding: 20px 30px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; position: absolute; bottom: 0; right: 0; z-index: 1; width: 100%;}
 .setting-customer .profile-btn button.Delete-btn { font-size: 15px; font-weight: 400; line-height: 1; color: red; background-color: white;  padding: 10px 60px; border: 1px solid red; width: 100%;}
 
-.Setting-details {  width: 40%; }
+.Setting-Section {width: 40%; display: flex; flex-wrap: wrap; align-items: flex-start; margin-top: 70px; }
+.main-setting-section { position: relative; }
+.Setting-details { width: 80%; }
 .Setting-details .details-section { border-bottom: 1px solid rgba(0, 0, 0, 0.1) ; background-color: #FFFFFF; padding: 20px 30px; display: flex; flex-wrap: wrap; align-items: center;  position: absolute; top: 0; right: 0; z-index: 1; width: 100%; height: 70px;}
-.Setting-Section {width: 100%; display: flex; flex-wrap: wrap; align-items: flex-start; margin-top: 70px; }
 .Setting-Section .Setting-details, .Setting-Section .Setting-details-content {width: 100%; }
 .Setting-Section .Setting-details {padding: 20px 30px; background-color: white; height: calc(100vh - 70px);}
 .Setting-Section .Setting-details .Book-setting { display: flex;}
@@ -523,7 +524,15 @@ input[type=number] { -moz-appearance: textfield; }
 .Backupinformation .Details-section .information {padding: 20px 30px;}
 .Backupinformation .Details-section .information p {color: #B0BECD;}
 
+.Backupinformation .Setting-details { width: 40%; }
+.Backupinformation .Setting-details .Setting-Section { width: 100%; }
+.Backupinformation .Setting-details .Setting-Section .Setting-details { width: 100%; }
+.Backupinformation .Details-section { width: 60%; }
+
 .Helpsupport {display: flex; flex-wrap: wrap; align-items: flex-start; position: relative; width: 80%;}
+.Helpsupport .Setting-details { width: 40%; }
+.Helpsupport .Setting-details .Setting-Section { display: block; width: 100%; }
+.Helpsupport .Setting-details .Setting-Section .Setting-details { width: 100%; }
 .Helpsupport .Details-section { width: 60%; margin-top: 70px; }
 .Helpsupport .Details-section .information {padding: 20px 30px;}
 .Helpsupport .Details-section .information .box {display: flex; background-color: rgb(255, 255, 255); padding: 10px 10px;  border-radius: 10px; border: 1px solid #dee2e6;}
@@ -698,60 +707,62 @@ input[type=number] { -moz-appearance: textfield; }
 .dashboard .report-section .transaction-report-section .filter-part .filter { margin-right: 15px; }
 .dashboard .report-section .transaction-report-section .filter-part .filter .heading { font-size: 18px; font-weight: 400; line-height: 1; color: #000; margin: 0 0 8px; }
 .dashboard .report-section .transaction-report-section .filter-part .filter :where(input, select) { font-size: 16px; font-weight: 600; color: #CFCFCF; border: 2px solid #8B9DB0; background-color: transparent; padding: 10px 15px; border-radius: 10px;}
+.entries-data { padding: 15px 30px; position: relative; }
+.entries-data .table thead { position: sticky; top: 0; }
+.entries-data .total-entries-heading { font-size: 16px; font-weight: 500; line-height: 1; margin: 0 0 10px; }
+.entries-data .amount-detail { display: flex; flex-wrap: wrap; align-items: center; }
+.entries-data .amount-detail .tl-amount { margin-right: 15px; padding: 20px 50px 20px 20px; border-radius: 10px; }
+.entries-data .amount-detail .you-gave-amount { background-color: rgba(255, 0, 0, 0.1); }
+.entries-data .amount-detail .you-got-amount { background-color: rgba(5, 140, 76, 0.1); }
+.entries-data .amount-detail .net-balance-amount { background-color: rgba(102, 102, 102, 0.1); }
+.entries-data .amount-detail .tl-amount .amount { font-size: 22px; font-weight: 500; color: #000; line-height: 1; margin: 0 0 8px; }
+.entries-data .amount-detail .tl-amount .title { font-size: 16px; font-weight: 400; line-height: 1; margin: 0; }
+.entries-data .amount-detail .you-gave-amount .title { color: #ff0000; }
+.entries-data .amount-detail .you-got-amount .title { color: #058c4c; }
+.entries-data .amount-detail .net-balance-amount .title { color: #666666; }
 
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data { padding: 15px 30px; position: relative; }
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .table thead { position: sticky; top: 0; }
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .total-entries-heading { font-size: 16px; font-weight: 500; line-height: 1; margin: 0 0 10px; }
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail { display: flex; flex-wrap: wrap; align-items: center; }
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .tl-amount { margin-right: 15px; padding: 20px 50px 20px 20px; border-radius: 10px; }
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .you-gave-amount { background-color: rgba(255, 0, 0, 0.1); }
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .you-got-amount { background-color: rgba(5, 140, 76, 0.1); }
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .net-balance-amount { background-color: rgba(102, 102, 102, 0.1); }
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .tl-amount .amount { font-size: 22px; font-weight: 500; color: #000; line-height: 1; margin: 0 0 8px; }
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .tl-amount .title { font-size: 16px; font-weight: 400; line-height: 1; margin: 0; }
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .you-gave-amount .title { color: #ff0000; }
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .you-got-amount .title { color: #058c4c; }
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .net-balance-amount .title { color: #666666; }
+.entries-datatable.transactionreport-datatable { padding: 0 30px 30px; }
+.entries-datatable { padding: 0 0 15px; width: 100%; overflow-x: auto; }
+.entries-datatable .table { margin: 0; width: 1750px; }
+.entries-datatable.transactionreport-datatable .table { margin: 0; width: 100%; }
+.entries-datatable .table :where(thead tr, tbody tr) { display: flex; flex-wrap: wrap; align-items: center; }
+.entries-datatable .table :where(thead tr .date, tbody tr .date) { width: 15%; }
+.entries-datatable .table :where(thead tr .customer-name, tbody tr .customer-name) { width: 25%; }
+.entries-datatable .table :where(thead tr .details, tbody tr .details) { width: 30%; }
+.entries-datatable .table :where(thead tr .you-gave, tbody tr .you-gave) { width: 15%; }
+.entries-datatable .table :where(thead tr .you-got, tbody tr .you-got) { width: 15%; }
 
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-datatable { padding: 0 0 15px; width: 100%; overflow-x: auto; }
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-datatable .table { margin: 0; width: 1750px; }
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-datatable .table :where(thead tr, tbody tr) { display: flex; flex-wrap: wrap; align-items: center; }
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-datatable .table :where(thead tr .date, tbody tr .date) { width: 15%; }
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-datatable .table :where(thead tr .customer-name, tbody tr .customer-name) { width: 25%; }
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-datatable .table :where(thead tr .details, tbody tr .details) { width: 30%; }
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-datatable .table :where(thead tr .you-gave, tbody tr .you-gave) { width: 15%; }
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-datatable .table :where(thead tr .you-got, tbody tr .you-got) { width: 15%; }
-
-.dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .gstrone-datatable .table thead tr .gstin-uin-no { width: 10%; height: 83px; line-height: 66px; border-right: 1px solid #dee2ed; border-left: 1px solid #dee2eb; }
-.dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .gstrone-datatable .table tbody tr .gstin-uin-no { width: 10%; padding: 20px 8px; border-right: 1px solid #dee2ed; border-left: 1px solid #dee2eb; }
-.dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .gstrone-datatable .table thead tr .invoice { text-align: center; width: 30%; border-right: 1px solid #dee2ed; padding: 8px 0; }
-.dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .gstrone-datatable .table tbody tr .invoice { text-align: center; width: 30%; padding: 20px 8px; border-right: 1px solid #dee2ed; }
-.dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .gstrone-datatable .table thead tr .invoice .invoice-list { display: flex; flex-wrap: wrap; align-items: center; text-align: start; justify-content: space-between; padding: 9px 8px 0; border-top: 1px solid #dee2ed; margin: 8px 0 0; }
-.dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .gstrone-datatable .table tbody tr .invoice .invoice-list { display: flex; flex-wrap: wrap; align-items: center; text-align: start; justify-content: space-between; padding-top: 0px; }
-.dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .gstrone-datatable .table :where(thead tr .invoice .invoice-list .party-name, tbody tr .invoice .invoice-list .party-name) { width: 25%; }
-.dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .gstrone-datatable .table :where(thead tr .invoice .invoice-list .no-inner, tbody tr .invoice .invoice-list .no-inner) { width: 10%; }
-.dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .gstrone-datatable .table :where(thead tr .invoice .invoice-list .invoice-date-inner, tbody tr .invoice .invoice-list .invoice-date-inner) { width: 10%; }
-.dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .gstrone-datatable .table :where(thead tr .invoice .invoice-list .date-inner, tbody tr .invoice .invoice-list .date-inner) { width: 20%; }
-.dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .gstrone-datatable .table :where(thead tr .invoice .invoice-list .value-inner, tbody tr .invoice .invoice-list .value-inner) { width: 15%; }
-.dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .gstrone-datatable .table thead tr .rate { height: 83px; line-height: 66px; width: 4%; border-right: 1px solid #dee2eb; }
-.dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .gstrone-datatable .table tbody tr .rate { width: 4%; padding: 20px 8px; border-right: 1px solid #dee2eb; }
-.dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .gstrone-datatable .table thead tr .cess-rate { height: 83px; line-height: 66px; width: 6%; border-right: 1px solid #dee2eb; }
-.dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .gstrone-datatable .table tbody tr .cess-rate { width: 6%; padding: 20px 8px; border-right: 1px solid #dee2eb; }
-.dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .gstrone-datatable .table thead tr .taxable-value { height: 83px; line-height: 66px; width: 7%; border-right: 1px solid #dee2eb; }
-.dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .gstrone-datatable .table tbody tr .taxable-value { width: 7%; padding: 20px 8px; border-right: 1px solid #dee2eb; }
-.dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .gstrone-datatable .table thead tr .tax-amount { width: 35%; text-align: center; padding: 8px 0; border-right: 1px solid #dee2eb; }
-.dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .gstrone-datatable .table tbody tr .tax-amount { width: 35%; text-align: center; padding: 20px 8px; border-right: 1px solid #dee2eb; }
-.dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .gstrone-datatable .table thead tr .tax-amount .tax-amount-list { display: flex; flex-wrap: wrap; align-items: center; text-align: start; padding: 9px 8px 0; border-top: 1px solid #dee2ed; margin: 8px 0 0; } 
-.dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .gstrone-datatable .table tbody tr .tax-amount .tax-amount-list { display: flex; flex-wrap: wrap; align-items: center; text-align: start; padding-top: 0px; } 
-.dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .gstrone-datatable .table :where(thead tr .tax-amount .tax-amount-list .integrated-tax-inner, tbody tr .tax-amount .tax-amount-list .integrated-tax-inner) { width: 22%; padding: 0 10px; }
-.dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .gstrone-datatable .table :where(thead tr .tax-amount .tax-amount-list .central-tax-inner, tbody tr .tax-amount .tax-amount-list .central-tax-inner) { width: 18%; padding: 0 10px; }
-.dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .gstrone-datatable .table :where(thead tr .tax-amount .tax-amount-list .state-ut-tax-inner, tbody tr .tax-amount .tax-amount-list .state-ut-tax-inner) { width: 20%; padding: 0 10px; }
-.dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .gstrone-datatable .table :where(thead tr .tax-amount .tax-amount-list .cess-tax-inner, tbody tr .tax-amount .tax-amount-list .cess-tax-inner) { width: 15%; padding: 0 10px; }
-.dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .gstrone-datatable .table :where(thead tr .tax-amount .tax-amount-list .additional-tax-inner, tbody tr .tax-amount .tax-amount-list .additional-tax-inner) { width: 25%; padding: 0 10px; }
-.dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .gstrone-datatable .table thead tr .place-of-supply { height: 83px; line-height: 66px; width: 8%; padding: 8px 10px; }
-.dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .gstrone-datatable .table tbody tr .place-of-supply { width: 8%; padding: 20px 8px; height: 65px; line-height: 24px; }
+.gstrone-datatable .table thead tr .gstin-uin-no { width: 10%; height: 83px; line-height: 66px; border-right: 1px solid #dee2ed; border-left: 1px solid #dee2eb; }
+.gstrone-datatable .table tbody tr .gstin-uin-no { width: 10%; padding: 20px 8px; border-right: 1px solid #dee2ed; border-left: 1px solid #dee2eb; }
+.gstrone-datatable .table thead tr .invoice { text-align: center; width: 30%; border-right: 1px solid #dee2ed; padding: 8px 0; }
+.gstrone-datatable .table tbody tr .invoice { text-align: center; width: 30%; padding: 20px 8px; border-right: 1px solid #dee2ed; }
+.gstrone-datatable .table thead tr .invoice .invoice-list { display: flex; flex-wrap: wrap; align-items: center; text-align: start; justify-content: space-between; padding: 9px 8px 0; border-top: 1px solid #dee2ed; margin: 8px 0 0; }
+.gstrone-datatable .table tbody tr .invoice .invoice-list { display: flex; flex-wrap: wrap; align-items: center; text-align: start; justify-content: space-between; padding-top: 0px; }
+.gstrone-datatable .table :where(thead tr .invoice .invoice-list .party-name, tbody tr .invoice .invoice-list .party-name) { width: 25%; }
+.gstrone-datatable .table :where(thead tr .invoice .invoice-list .no-inner, tbody tr .invoice .invoice-list .no-inner) { width: 10%; }
+.gstrone-datatable .table :where(thead tr .invoice .invoice-list .invoice-date-inner, tbody tr .invoice .invoice-list .invoice-date-inner) { width: 10%; }
+.gstrone-datatable .table :where(thead tr .invoice .invoice-list .date-inner, tbody tr .invoice .invoice-list .date-inner) { width: 20%; }
+.gstrone-datatable .table :where(thead tr .invoice .invoice-list .value-inner, tbody tr .invoice .invoice-list .value-inner) { width: 15%; }
+.gstrone-datatable .table thead tr .rate { height: 83px; line-height: 66px; width: 4%; border-right: 1px solid #dee2eb; }
+.gstrone-datatable .table tbody tr .rate { width: 4%; padding: 20px 8px; border-right: 1px solid #dee2eb; }
+.gstrone-datatable .table thead tr .cess-rate { height: 83px; line-height: 66px; width: 6%; border-right: 1px solid #dee2eb; }
+.gstrone-datatable .table tbody tr .cess-rate { width: 6%; padding: 20px 8px; border-right: 1px solid #dee2eb; }
+.gstrone-datatable .table thead tr .taxable-value { height: 83px; line-height: 66px; width: 7%; border-right: 1px solid #dee2eb; }
+.gstrone-datatable .table tbody tr .taxable-value { width: 7%; padding: 20px 8px; border-right: 1px solid #dee2eb; }
+.gstrone-datatable .table thead tr .tax-amount { width: 35%; text-align: center; padding: 8px 0; border-right: 1px solid #dee2eb; }
+.gstrone-datatable .table tbody tr .tax-amount { width: 35%; text-align: center; padding: 20px 8px; border-right: 1px solid #dee2eb; }
+.gstrone-datatable .table thead tr .tax-amount .tax-amount-list { display: flex; flex-wrap: wrap; align-items: center; text-align: start; padding: 9px 8px 0; border-top: 1px solid #dee2ed; margin: 8px 0 0; } 
+.gstrone-datatable .table tbody tr .tax-amount .tax-amount-list { display: flex; flex-wrap: wrap; align-items: center; text-align: start; padding-top: 0px; } 
+.gstrone-datatable .table :where(thead tr .tax-amount .tax-amount-list .integrated-tax-inner, tbody tr .tax-amount .tax-amount-list .integrated-tax-inner) { width: 22%; padding: 0 10px; }
+.gstrone-datatable .table :where(thead tr .tax-amount .tax-amount-list .central-tax-inner, tbody tr .tax-amount .tax-amount-list .central-tax-inner) { width: 18%; padding: 0 10px; }
+.gstrone-datatable .table :where(thead tr .tax-amount .tax-amount-list .state-ut-tax-inner, tbody tr .tax-amount .tax-amount-list .state-ut-tax-inner) { width: 20%; padding: 0 10px; }
+.gstrone-datatable .table :where(thead tr .tax-amount .tax-amount-list .cess-tax-inner, tbody tr .tax-amount .tax-amount-list .cess-tax-inner) { width: 15%; padding: 0 10px; }
+.gstrone-datatable .table :where(thead tr .tax-amount .tax-amount-list .additional-tax-inner, tbody tr .tax-amount .tax-amount-list .additional-tax-inner) { width: 25%; padding: 0 10px; }
+.gstrone-datatable .table thead tr .place-of-supply { height: 83px; line-height: 66px; width: 8%; padding: 8px 10px; }
+.gstrone-datatable .table tbody tr .place-of-supply { width: 8%; padding: 20px 8px; height: 65px; line-height: 24px; }
 
 .dashboard .report-section .transaction-report-section .customer-supplier-reports .salesreturn-datatable .table :where(thead tr, tbody tr) { width: 110%; }
+.dashboard .report-section .gstr-report-section { overflow-y: auto; }
 .dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .salesreturn-datatable .table :where(thead tr .invoice .invoice-list .party-name, tbody tr .invoice .invoice-list .party-name) { width: 20%; }
 .dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .salesreturn-datatable .table :where(thead tr .invoice .invoice-list .date-inner, tbody tr .invoice .invoice-list .date-inner) { width: 17%; }
 .dashboard .report-section .gstr-report-section .customer-supplier-reports .tab-content .tab-pane .salesreturn-datatable .table :where(thead tr .invoice .invoice-list .no-inner, tbody tr .invoice .invoice-list .no-inner) { width: 16%; }
@@ -778,6 +789,38 @@ input[type=number] { -moz-appearance: textfield; }
 .dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .pl-amount { margin-right: 15px; padding: 20px 50px 20px 20px; border-radius: 10px; }
 .dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .pl-amount .amount { font-size: 22px; font-weight: 500; color: #000; line-height: 1; margin: 0 0 8px; }
 .dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .pl-amount .title { font-size: 16px; font-weight: 400; line-height: 1; margin: 0; }
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .you-gavee-amount { background-color: rgba(102, 102, 102, 0.1); }
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .you-gott-amount { background-color: rgba(102, 102, 102, 0.1)}
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .net-balancee-amount { background-color: rgba(102, 102, 102, 0.1)}
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .you-gavee-amount { background-color: #dff5ff; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .you-gott-amount { background-color: #dff5ff}
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .net-balancee-amount { background-color: #dff5ff; }
+
+.dashboard .report-section .gstr-report-section .table-heading .heading { padding: 15px 30px 0; margin: 0 0 20px; font-size: 16px; font-weight: 500; line-height: 1; color: #000; text-transform: capitalize; }
+.dashboard .report-section .gstr-report-section .table-title .title { padding: 20px 30px 0; margin: 0 0 20px; font-size: 14px; font-weight: 500; line-height: 1; color: #000; text-transform: capitalize; }
+
+.dashboard .report-section .gstr-report-section .gstrthreeb-datatable .table :where(thead tr .nature-of-supplies, tbody tr .nature-of-supplies) { width: 25%; }
+.dashboard .report-section .gstr-report-section .gstrthreeb-datatable .table tbody tr .nature-of-supplies { height: 89px; line-height: 72px; }
+.dashboard .report-section .gstr-report-section .gstrthreeb-datatable .table tbody tr .nature-of-supplies span { display: inline-block; width: 75%; line-height: 1.5; }
+.dashboard .report-section .gstr-report-section .gstrthreeb-datatable .table :where(thead tr .taxable-value, tbody tr .taxable-value) { width: 20%; }
+.dashboard .report-section .gstr-report-section .gstrthreeb-datatable .table :where(thead tr .integrated-tax, tbody tr .integrated-tax) { width: 15%; }
+.dashboard .report-section .gstr-report-section .gstrthreeb-datatable .table :where(thead tr .central-tax, tbody tr .central-tax) { width: 15%; }
+.dashboard .report-section .gstr-report-section .gstrthreeb-datatable .table :where(thead tr .state-ut-tax, tbody tr .state-ut-tax) { width: 15%; }
+.dashboard .report-section .gstr-report-section .gstrthreeb-datatable .table :where(thead tr .cess, tbody tr .cess) { width: 10%; }
+.dashboard .report-section .gstr-report-section .gstrthreeb-datatable .table :where(tbody tr .taxable-value, tbody tr .integrated-tax, tbody tr .central-tax, tbody tr .state-ut-tax, tbody tr .cess) { height: 89px; line-height: 72px; }
+
+.dashboard .report-section .gstr-report-section .gstrthreeb-datatable-inner { padding: 0 30px 15px; }
+.dashboard .report-section .gstr-report-section .gstrthreeb-datatable-inner .table { margin: 0; width: 1420px; }
+.dashboard .report-section .gstr-report-section .gstrthreeb-datatable-inner .table thead tr { width: 100%; border-top: 1px solid #dee2eb; }
+.dashboard .report-section .gstr-report-section .gstrthreeb-datatable-inner .table thead .place-of-supply { width: 16%; border-right: 1px solid #dee2ed; border-left: 1px solid #dee2eb; }
+.dashboard .report-section .gstr-report-section .gstrthreeb-datatable-inner .table thead .supplies-unregistered-persons { text-align: center; width: 28%; border-right: 1px solid #dee2ed; padding: 9px 0; }
+.dashboard .report-section .gstr-report-section .gstrthreeb-datatable-inner .table thead .supplies-unregistered-persons .supplies-unregistered-persons-list { display: flex; flex-wrap: wrap; align-items: center; text-align: start; justify-content: space-between; padding: 9px 8px 0; border-top: 1px solid #dee2ed; margin: 8px 0 0; }
+.dashboard .report-section .gstr-report-section .gstrthreeb-datatable-inner .table thead .supplies-unregistered-persons .supplies-unregistered-persons-list :where(.taxable-value-inner, .integrated-tax) { font-size: 15px; }
+
+.dashboard .report-section .gstr-report-section .gstrthreeb-datatable-2 .table tbody tr .nature-of-supplies span { width: 60%; } 
+.dashboard .report-section .gstr-report-section .gstrthreeb-datatable-2 .table :where(thead tr .nature-of-supplies, tbody tr .nature-of-supplies) { width: 30%; }
+.dashboard .report-section .gstr-report-section .gstrthreeb-datatable-2 .table :where(thead tr .integrated-tax, tbody tr .integrated-tax) { width: 20%; }
+.dashboard .report-section .gstr-report-section .gstrthreeb-datatable-2 .table :where(thead tr .central-tax, tbody tr .central-tax) { width: 20%; }
+.dashboard .report-section .gstr-report-section .gstrthreeb-datatable-2 .table :where(thead tr .state-ut-tax, tbody tr .state-ut-tax) { width: 20%; }
+
+.dashboard .report-section .gstr-report-section .gstrthreeb-datatable-4 .table :where(thead tr .nature-of-supplies, tbody tr .nature-of-supplies) { width: 50%; }
+.dashboard .report-section .gstr-report-section .gstrthreeb-datatable-4 .table tbody tr .nature-of-supplies { line-height: 89px; }
+.dashboard .report-section .gstr-report-section .gstrthreeb-datatable-4 .table :where(thead tr .integrated-tax, tbody tr .integrated-tax) { width: 25%; }
+.dashboard .report-section .gstr-report-section .gstrthreeb-datatable-4 .table :where(thead tr .central-tax, tbody tr .central-tax) { width: 25%; }

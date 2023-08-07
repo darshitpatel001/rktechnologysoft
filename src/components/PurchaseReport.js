@@ -62,7 +62,7 @@ export default function PurchaseReport() {
                                 </div>
                             </div>
                         </div>
-                        <div className='entries-datatable salesreport-datatable'>
+                        <div className='entries-datatable transactionreport-datatable salesreport-datatable'>
                             <table class="table">
                                 <thead>
                                     <tr>

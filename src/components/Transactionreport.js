@@ -64,7 +64,7 @@ export default function Transactionreport() {
                                     </div>
                                 </div>
                             </div>
-                            <div className='entries-datatable'>
+                            <div className='entries-datatable transactionreport-datatable'>
                                 <table class="table">
                                     <thead>
                                         <tr>
@@ -138,7 +138,7 @@ export default function Transactionreport() {
                                     </div>
                                 </div>
                             </div>
-                            <div className='entries-datatable'>
+                            <div className='entries-datatable transactionreport-datatable'>
                                 <table class="table">
                                     <thead>
                                         <tr>

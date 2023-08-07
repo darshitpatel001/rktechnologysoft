@@ -59,10 +59,10 @@ export default function Sidebar() {
               <Link to="/sales"><span><img src={Salesicon} alt='icon' /></span>Sales</Link>
             </li>
             <li>
-              <Link to="/purchase"><span><img src={Purchaseicon} alt='icon' /></span>Purchase</Link>
+              <Link to="/sales"><span><img src={Purchaseicon} alt='icon' /></span>Purchase</Link>
             </li>
             <li>
-              <Link to="/expenses"><span><img src={Expensesicon} alt='icon' /></span>Expenses</Link>
+              <Link to="/sales"><span><img src={Expensesicon} alt='icon' /></span>Expenses</Link>
             </li>
             <li>
               <Link to="/cashbook"><span><img src={Cashbookicon} alt='icon' /></span>Cashbook</Link>

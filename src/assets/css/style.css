@@ -718,6 +718,6 @@ input[type=number] { -moz-appearance: textfield; }
 .dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .pl-amount { margin-right: 15px; padding: 20px 50px 20px 20px; border-radius: 10px; }
 .dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .pl-amount .amount { font-size: 22px; font-weight: 500; color: #000; line-height: 1; margin: 0 0 8px; }
 .dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .pl-amount .title { font-size: 16px; font-weight: 400; line-height: 1; margin: 0; }
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .you-gavee-amount { background-color: #dff5ff; }
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .you-gott-amount { background-color: #dff5ff}
-.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .net-balancee-amount { background-color: #dff5ff; }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .you-gavee-amount { background-color: rgba(102, 102, 102, 0.1); }
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .you-gott-amount { background-color: rgba(102, 102, 102, 0.1)}
+.dashboard .report-section .transaction-report-section .customer-supplier-reports .entries-data .amount-detail .net-balancee-amount { background-color: rgba(102, 102, 102, 0.1)}

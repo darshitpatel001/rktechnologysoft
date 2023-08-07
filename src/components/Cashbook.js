@@ -234,7 +234,7 @@ export default function Cashbook() {
                                 </Modal>
 
                                 <Button className='report1' onClick={DeleteEntery}>Delete </Button>
-                                <div className='Delete-Cashbook1    '>
+                                <div className='Delete-Cashbook1'>
                                     <Modal show={Deleteshow} onHide={DeleteEnteryClose} animation={false} className='Delete-Cashbook'>
                                         <Modal.Header closeButton>
                                             <Modal.Title>Delete entry</Modal.Title>

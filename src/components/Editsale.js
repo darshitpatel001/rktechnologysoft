@@ -185,8 +185,8 @@ export default function Editsale() {
                         </div>
                         <div className='editsales-boxes'>
                             <div className='Private'>
-                            <h6>Private to you</h6>
-                            <input type='text' class="form-control" placeholder='Add Notes' name='' />
+                                <h6>Private to you</h6>
+                                <input type='text' class="form-control" placeholder='Add Notes' name='' />
                             </div>
                         </div>
                     </div>

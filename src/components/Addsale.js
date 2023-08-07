@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap'
 import Deleteicon from "../assets/images/Group-391.png"
-import Accordion from 'react-bootstrap/Accordion'; 
+import Accordion from 'react-bootstrap/Accordion';
 
 export default function Addsale() {
     const [show, setShow] = useState(false);
@@ -184,8 +184,8 @@ export default function Addsale() {
                         </div>
                         <div className='Addsales-boxes'>
                             <div className='Private'>
-                            <h6>Private to you</h6>
-                            <input type='text' class="form-control" placeholder='Add Notes' name='' />
+                                <h6>Private to you</h6>
+                                <input type='text' class="form-control" placeholder='Add Notes' name='' />
                             </div>
                         </div>
                     </div>

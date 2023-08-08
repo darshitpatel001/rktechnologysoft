@@ -12,7 +12,7 @@ export default function Helpsupport() {
                         <h5>Help & Support </h5>
                         <div className='box'>
                             <img src={Callus} />
-                            <h5>Call Us on +91 3559446454</h5>
+                            <h5>Call Us on +91 9725483242</h5>
                         </div>
                     </div>
                 </div>

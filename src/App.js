@@ -19,6 +19,8 @@ import Gstrtwo from './components/Gstrtwo';
 import Addpurchase from './components/Addpurchase';
 import Editpurchase from './components/Editpurchase';
 import Gstrthreeb from './components/Gstrthreeb';
+import Salereturn from './components/Salereturn';
+import PurchaseReturn from './components/PurchaseReturn';
 
 function App() {
   return (
@@ -36,8 +38,10 @@ function App() {
           <Route path='/helpsupport' element={<Helpsupport />} />
           <Route path='/addsale' element={<Addsale />} />
           <Route path='/editsale' element={<Editsale />} />
+          <Route path='/salereturn' element={<Salereturn />} />
           <Route path='/addpurchase' element={<Addpurchase />} />
           <Route path='/editpurchase' element={<Editpurchase />} />
+          <Route path='/purchasereturn' element={<PurchaseReturn />} />
           <Route path='/reports' element={<Transactionreport />} />
           <Route path='/salesreport' element={<SalesReport />} />
           <Route path='/purchasereport' element={<PurchaseReport />} />

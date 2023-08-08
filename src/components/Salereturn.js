@@ -4,22 +4,23 @@ import { Button, Modal } from 'react-bootstrap'
 import Deleteicon from "../assets/images/Group-391.png"
 import Accordion from 'react-bootstrap/Accordion';
 
-export default function Addpurchase() {
+export default function Salereturn() {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
     return (
         <>
-            <section className='Addsales-Section'>
+            <section className='Editsales-Section'>
                 <form>
                     <div className='details-section'>
-                        <h3>Create Purchase</h3>
+                        <h3>Create Sale Return</h3>
                     </div>
 
-                    <div className='Addsales-details'>
+                    <div className='Editsales-details'>
                         <div className='main-box d-flex'>
-                            <div className='Addsales-box'>
+                            <div className='editsales-box'>
                                 <h6>PARTY DETAILS</h6>
                                 <div class="row">
                                     <div class="col-6">
@@ -40,15 +41,15 @@ export default function Addpurchase() {
                                     </div>
                                 </div>
                             </div>
-                            <div className='Addsales-box'>
-                                <h6>PURCHASE DETAILS</h6>
+                            <div className='editsales-box'>
+                                <h6>SALE RETURN DETAILS</h6>
                                 <div class="row">
                                     <div class="col-6">
-                                        <label for="Purchasereturn" class="form-label">Purchase Number</label>
-                                        <input type="number" class="form-control" placeholder="Purchase Number" name="invoicenumber" />
+                                        <label for="InvoiceNumber" class="form-label">Sale Return Number</label>
+                                        <input type="number" class="form-control" placeholder="Sale Return Number" name="invoicenumber" />
                                     </div>
                                     <div class="col-6">
-                                        <label for="PurchaseDate" class="form-label">Purchase Date</label>
+                                        <label for="InvoiceDate" class="form-label">Sale Return Number</label>
                                         <input type="date" class="form-control" name="invoicedate" />
                                     </div>
                                     <div class="col-6">
@@ -62,11 +63,11 @@ export default function Addpurchase() {
                                 </div>
                             </div>
                         </div>
-                        <div className='Addsales-boxs d-flex'>
-                            <label>ITEMS ON THE PURCHASE </label>
+                        <div className='editsales-boxs d-flex'>
+                            <label>INVOICE SETTLED AGAINST</label>
                             <input type="text" class="form-control" placeholder="18" name="stateofsupply" disabled />
                         </div>
-                        <div className='Addsales-boxs'>
+                        <div className='editsales-boxs'>
                             <table class="table">
                                 <thead>
                                     <tr>
@@ -133,7 +134,7 @@ export default function Addpurchase() {
                             </table>
                         </div>
                         <div className='main-boxs d-flex'>
-                            <div className='Addsales-boxes'>
+                            <div className='editsales-boxes'>
                                 <Accordion defaultActiveKey="0" flush>
                                     <Accordion.Item eventKey="0">
                                         <Accordion.Header>
@@ -156,7 +157,7 @@ export default function Addpurchase() {
 
                                 </Accordion>
                             </div>
-                            <div className='Addsales-boxes'>
+                            <div className='editsales-boxes'>
                                 <div className='Total d-flex'>
                                     <h5>Totel Amount</h5>
                                     <div className='amount'>
@@ -181,7 +182,7 @@ export default function Addpurchase() {
                                 </div>
                             </div>
                         </div>
-                        <div className='Addsales-boxes'>
+                        <div className='editsales-boxes'>
                             <div className='Private'>
                                 <h6>Private to you</h6>
                                 <input type='text' class="form-control" placeholder='Add Notes' name='' />
@@ -189,7 +190,7 @@ export default function Addpurchase() {
                         </div>
                     </div>
                     <div className='details-section1'>
-                        <Button>Create Purchase</Button>
+                        <Button>Create Sale Return</Button>
                     </div>
 
                 </form>

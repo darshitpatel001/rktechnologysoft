@@ -10,6 +10,13 @@ import Whatsappicon from "../assets/images/whatsapp.png"
 import Lettericon from "../assets/images/letter-i.png"
 import { Button, Modal } from 'react-bootstrap'
 import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
+import sale from '../assets/images/sales.png'
+import salereturn from '../assets/images/salesreturn.png'
+import PaymentIn from '../assets/images/Payment in.png'
+import purchased from '../assets/images/purchase.png'
+import purchasereturn from '../assets/images/purchasereturn.png'
+import paymentout from '../assets/images/payment out.png'
 
 export default function Sales() {
     const navigate = useNavigate();
@@ -18,6 +25,26 @@ export default function Sales() {
     const DeleteEnteryClose = () => setDeleteshow(false);
     const DeleteEntery = () => setDeleteshow(true);
 
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    const [purchase, setpurchaseshow] = useState(false);
+
+    const purchaseClose = () => setpurchaseshow(false);
+    const purchaseshow = () => setpurchaseshow(true);
+
+    const [AddProductshow, setAddProductshow] = useState(false);
+
+    const AddProductClose = () => setAddProductshow(false);
+    const AddProductShow = () => setAddProductshow(true);
+
+    const [paymentIn, setpaymentIn] = useState(false);
+
+    const paymentInClose = () => setpaymentIn(false);
+    const paymentInshow = () => setpaymentIn(true);
+
     const AddSale = () => {
         navigate('/addsale');
     };
@@ -25,7 +52,7 @@ export default function Sales() {
         navigate('/editsale');
     };
 
- const Addpurchase = () => {
+    const Addpurchase = () => {
         navigate('/addpurchase');
     };
     const Editpurchase = () => {
@@ -102,7 +129,7 @@ export default function Sales() {
                                 <div className='user-details'>
                                     <div className='single-user-details'>
                                         <div className='username'>
-                                            <span>D</span>
+                                            <span></span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
                                                 <p>17 Jul 2023</p>
@@ -115,7 +142,7 @@ export default function Sales() {
                                     </div>
                                     <div className='single-user-details'>
                                         <div className='username'>
-                                            <span>D</span>
+                                            <span></span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
                                                 <p>17 Jul 2023</p>
@@ -128,7 +155,7 @@ export default function Sales() {
                                     </div>
                                     <div className='single-user-details'>
                                         <div className='username'>
-                                            <span>D</span>
+                                            <span></span>
                                             <div className='name'>
                                                 <h4>Darshit</h4>
                                                 <p>17 Jul 2023</p>
@@ -142,9 +169,106 @@ export default function Sales() {
                                 </div>
                             </div>
                             <div className='user-detail-title'>
-                                <button className="btn">
+                                <Button className="btn" onClick={handleShow}>
                                     More
-                                </button>
+                                </Button>
+                                <Modal show={show} className='sales-model' onHide={handleClose} animation={false}>
+                                    <Modal.Body>
+                                        <div className='more'>
+                                            <div className='sale'>
+                                                <Link to='/addsale'>
+                                                    <img src={sale} className='sales' />
+                                                </Link>
+                                                <Link to='/salereturn'>
+                                                    <img src={salereturn} className='sales-return' />
+                                                </Link>
+                                                <Button className="sales-btn">
+                                                    <img src={PaymentIn} onClick={paymentInshow} className='payment-in' />
+                                                </Button>
+                                                <Modal show={paymentIn} onHide={paymentInClose} className='payment-in-modal'>
+                                                    <Modal.Header closeButton>
+                                                        <Modal.Title>You Got ₹</Modal.Title>
+                                                    </Modal.Header>
+                                                    <Modal.Body>
+                                                        <form>
+                                                            <div className='payment-out'>
+                                                                <div className='amount'>
+                                                                    <div className='Sales-price'>
+                                                                        <div className='input Price'>
+                                                                            <div className='coutry-amount'>
+                                                                                <span className='label'>Payment Number</span>
+                                                                                <input type='number' placeholder='Payment Number' name='salesprice' />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div className='input Date'>
+                                                                            <span className='label'>Date</span>
+                                                                            <input type='date' placeholder='Purchase Price' name='purchaseprice' />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div className='customer-detailes'>
+                                                                <div className='customer-detailes-label'>
+                                                                    <span className='label'>CUSTOMER DETAILS</span>
+                                                                </div>
+                                                                <Button className='party-btn'>Select Party</Button>
+                                                            </div>
+
+                                                            <div className='input'>
+                                                                <div className='all-span'>
+                                                                    <span className='label'>Amount Paid</span>
+                                                                </div>
+                                                                <div className='amount'>
+                                                                    <div className='coutry-amount'>
+                                                                        <input type='number' className='inputs' placeholder='Enter Amount' name='productname' />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div className='cash-online'>
+                                                                <div className='all-span'>
+                                                                    <span className='label'>Payment Mode</span>
+                                                                </div>
+                                                                <input type="radio" class="form-check-input" name="optradio" />
+                                                                <label class="form-check-label" className='radio-labal' for="">Cash</label>
+                                                                <input type="radio" class="form-check-input" name="optradio" />
+                                                                <label class="form-check-label" className='radio-labal' for="">Online</label>
+                                                            </div>
+                                                            <div className='input number'>
+                                                                <div className='all-span'>
+                                                                    <span className='label'>Enter Details</span>
+                                                                </div>
+                                                                <div className='amount'>
+                                                                    <div className='coutry-amount'>
+                                                                        <input type='number' placeholder='Enter Your Notes' name='productname' />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div className='input number'>
+                                                                <div className='all-span'>
+                                                                    <span className='label'>Reference Bill No.</span>
+                                                                </div>
+                                                                <div className='amount'>
+                                                                    <div className='coutry-amount'>
+                                                                        <input type='number' placeholder='Enter Reference Bill No' name='productname' />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div className='Stock-btn'>
+                                                                <Button className='Save-btn'>Save</Button>
+                                                            </div>
+                                                        </form>
+                                                    </Modal.Body>
+                                                </Modal>
+                                            </div>
+                                            <div className='sale-content'>
+                                                <h6 className='sales-content' onClick={AddSale}>Sale</h6>
+                                                <h6 className='sales-return-content'>Sale Return</h6>
+                                                <h6 className='payment-in-content'>Payment In</h6>
+                                            </div>
+                                        </div>
+                                    </Modal.Body>
+                                </Modal>
                                 <button className="btn" onClick={AddSale}>
                                     + Add Sale
                                 </button>
@@ -168,7 +292,7 @@ export default function Sales() {
                                 <div className='user-details'>
                                     <div className='single-user-details'>
                                         <div className='username'>
-                                            <span>K</span>
+                                            <span></span>
                                             <div className='name'>
                                                 <h4>Kapil</h4>
                                                 <p>17 Jul 2023</p>
@@ -181,7 +305,7 @@ export default function Sales() {
                                     </div>
                                     <div className='single-user-details'>
                                         <div className='username'>
-                                            <span>K</span>
+                                            <span></span>
                                             <div className='name'>
                                                 <h4>Kapil</h4>
                                                 <p>17 Jul 2023</p>
@@ -194,7 +318,7 @@ export default function Sales() {
                                     </div>
                                     <div className='single-user-details'>
                                         <div className='username'>
-                                            <span>K</span>
+                                            <span></span>
                                             <div className='name'>
                                                 <h4>Kapil</h4>
                                                 <p>17 Jul 2023</p>
@@ -208,13 +332,110 @@ export default function Sales() {
                                 </div>
                             </div>
                             <div className='user-detail-title'>
-                                <button className="btn">
+                                <Button className="btn" onClick={purchaseshow}>
                                     More
-                                </button>
+                                </Button>
+                                <Modal show={purchase} className='purchase-model' onHide={purchaseClose} animation={false}>
+                                    <Modal.Body>
+                                        <div className='more'>
+                                            <div className='purchase'>
+                                                <Link to='/addpurchase'>
+                                                    <img src={purchased} className='purchases' />
+                                                </Link>
+                                                <Link to='/purchasereturn'>
+                                                    <img src={purchasereturn} className='purchase-return' />
+                                                </Link>
+                                                <Button className="purchase-btn">
+                                                    <img src={paymentout} onClick={AddProductShow} className='payment-out' />
+                                                </Button>
+                                                <Modal show={AddProductshow} onHide={AddProductClose} className='payment-out-modal'>
+                                                    <Modal.Header closeButton>
+                                                        <Modal.Title>You Paid ₹</Modal.Title>
+                                                    </Modal.Header>
+                                                    <Modal.Body>
+                                                        <form>
+                                                            <div className='payment-out'>
+                                                                <div className='amount'>
+                                                                    <div className='Sales-price'>
+                                                                        <div className='input Price'>
+                                                                            <div className='coutry-amount'>
+                                                                                <span className='label'>Payment Number</span>
+                                                                                <input type='number' placeholder='Payment Number' name='salesprice' />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div className='input Date'>
+                                                                            <span className='label'>Date</span>
+                                                                            <input type='date' placeholder='Purchase Price' name='purchaseprice' />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div className='customer-detailes'>
+                                                                <div className='customer-detailes-label'>
+                                                                    <span className='label'>CUSTOMER DETAILS</span>
+                                                                </div>
+                                                                <Button className='party-btn'>Select Party</Button>
+                                                            </div>
+
+                                                            <div className='input'>
+                                                                <div className='all-span'>
+                                                                    <span className='label'>Amount Paid</span>
+                                                                </div>
+                                                                <div className='amount'>
+                                                                    <div className='coutry-amount'>
+                                                                        <input type='number' className='inputs' placeholder='Enter Amount' name='productname' />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div className='cash-online'>
+                                                                <div className='all-span'>
+                                                                    <span className='label'>Payment Mode</span>
+                                                                </div>
+                                                                <input type="radio" class="form-check-input" name="optradio" />
+                                                                <label class="form-check-label" className='radio-labal' for="">Cash</label>
+                                                                <input type="radio" class="form-check-input" name="optradio" />
+                                                                <label class="form-check-label" className='radio-labal' for="">Online</label>
+                                                            </div>
+                                                            <div className='input number'>
+                                                                <div className='all-span'>
+                                                                    <span className='label'>Enter Details</span>
+                                                                </div>
+                                                                <div className='amount'>
+                                                                    <div className='coutry-amount'>
+                                                                        <input type='number' placeholder='Enter Your Notes' name='productname' />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div className='input number'>
+                                                                <div className='all-span'>
+                                                                    <span className='label'>Reference Bill No.</span>
+                                                                </div>
+                                                                <div className='amount'>
+                                                                    <div className='coutry-amount'>
+                                                                        <input type='number' placeholder='Enter Reference Bill No' name='productname' />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div className='Stock-btn'>
+                                                                <Button className='Save-btn'>Save</Button>
+                                                            </div>
+                                                        </form>
+                                                    </Modal.Body>
+                                                </Modal>
+                                            </div>
+                                            <div className='purchase-content'>
+                                                <h6 className='purchases-content' onClick={AddSale}>Purchase</h6>
+                                                <h6 className='purchase-return-content'>Purchase Return</h6>
+                                                <h6 className='payment-out-content'>Payment Out</h6>
+                                            </div>
+                                        </div>
+                                    </Modal.Body>
+                                </Modal>
                                 <button className="btn" onClick={Addpurchase}>
                                     + Add Purchase
                                 </button>
-                            </div>  
+                            </div>
                         </Tab>
                         <Tab eventKey="expenses" title="Expenses">
                             <div className='filter-row'>
@@ -234,41 +455,38 @@ export default function Sales() {
                                 <div className='user-details'>
                                     <div className='single-user-details'>
                                         <div className='username'>
-                                            <span>P</span>
+                                            <span></span>
                                             <div className='name'>
-                                                <h4>Parth</h4>
+                                                <h4>Office Expenses</h4>
                                                 <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
                                             <h4>₹ 200</h4>
-                                            <p>Online</p>
                                         </div>
                                     </div>
                                     <div className='single-user-details'>
                                         <div className='username'>
-                                            <span>P</span>
+                                            <span></span>
                                             <div className='name'>
-                                                <h4>Parth</h4>
+                                                <h4>Rent</h4>
                                                 <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
                                             <h4>₹ 200</h4>
-                                            <p>Online</p>
                                         </div>
                                     </div>
                                     <div className='single-user-details'>
                                         <div className='username'>
-                                            <span>P</span>
+                                            <span></span>
                                             <div className='name'>
-                                                <h4>Parth</h4>
+                                                <h4>Utilities</h4>
                                                 <p>17 Jul 2023</p>
                                             </div>
                                         </div>
                                         <div className='amount'>
                                             <h4>₹ 200</h4>
-                                            <p>Online</p>
                                         </div>
                                     </div>
                                 </div>

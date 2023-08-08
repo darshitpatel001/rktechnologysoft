@@ -10,10 +10,10 @@ import { Link } from 'react-router-dom'
 export default function Setting() {
     return (
         <>
+            <div className='setting-heading-section'>
+                <h3>Setting</h3>
+            </div>
             <div className="Setting-details main-setting-section">
-                <div className='details-section'>
-                    <h3>Setting</h3>
-                </div>
                 <section className='Setting-Section'>
                     <div className='Setting-details'>
                         <div className='heading'>

@@ -7,6 +7,7 @@ export default function Backupinformation() {
             <div className='Backupinformation'>
                 <Setting />
                 <div className='Details-section'>
+                    <div className='box'></div>
                     <div className='information'>
                         <h5>Backup Information </h5>
                         <p>Your data is automatically backed-up when you are connected to the internet</p>

@@ -483,7 +483,7 @@ input[type=number] { -moz-appearance: textfield; }
 .Setting-Section {width: 40%; display: flex; flex-wrap: wrap; align-items: flex-start; margin-top: 70px; }
 .main-setting-section { position: relative; }
 .Setting-details { width: 80%; }
-.Setting-details .details-section { border-bottom: 1px solid rgba(0, 0, 0, 0.1) ; background-color: #FFFFFF; padding: 20px 30px; display: flex; flex-wrap: wrap; align-items: center;  position: absolute; top: 0; right: 0; z-index: 1; width: 100%; height: 70px;}
+.setting-heading-section { border-bottom: 1px solid rgba(0, 0, 0, 0.1) ; background-color: #FFFFFF; padding: 20px 30px; display: flex; flex-wrap: wrap; align-items: center;  position: absolute; top: 0; right: 0; z-index: 1; width: 80%; height: 70px;}
 .Setting-Section .Setting-details, .Setting-Section .Setting-details-content {width: 100%; }
 .Setting-Section .Setting-details {padding: 20px 30px; background-color: white; height: calc(100vh - 70px);}
 .Setting-Section .Setting-details .Book-setting { display: flex;}
@@ -520,6 +520,7 @@ input[type=number] { -moz-appearance: textfield; }
 .Setting-Section .Setting-details .Logout .Logout-Contant .Logout-Setting-Delete {color: #B0BECD;}
 
 .Backupinformation {display: flex; flex-wrap: wrap; align-items: flex-start; position: relative; width: 80%;}
+.Backupinformation .setting-heading-section { width: 100%; }
 .Backupinformation .Details-section { width: 60%; margin-top: 70px; }
 .Backupinformation .Details-section .information {padding: 20px 30px;}
 .Backupinformation .Details-section .information p {color: #B0BECD;}
@@ -530,6 +531,7 @@ input[type=number] { -moz-appearance: textfield; }
 .Backupinformation .Details-section { width: 60%; }
 
 .Helpsupport {display: flex; flex-wrap: wrap; align-items: flex-start; position: relative; width: 80%;}
+.Helpsupport .setting-heading-section { width: 100%; }
 .Helpsupport .Setting-details { width: 40%; }
 .Helpsupport .Setting-details .Setting-Section { display: block; width: 100%; }
 .Helpsupport .Setting-details .Setting-Section .Setting-details { width: 100%; }
@@ -601,7 +603,76 @@ input[type=number] { -moz-appearance: textfield; }
 .Sales-details .user-detail-section .user-detail-title { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 5px 46px; background-color: #f0f0f0; }
 .Sales-details .user-detail-section .user-detail-title h5 { font-size: 16px; font-weight: 400; line-height: 1; color: #757575; margin: 0; }
 
-.Sales-details .user-detail-section .user-details { height: 510px; overflow-y: scroll; }
+.sales-model .modal-dialog .modal-content .modal-body {height: 200px;}
+.sales-model .modal-dialog { transform: translate(-50%, -50%) !important; width: 32%; position: absolute; top: 50%; left: 50%; margin: 0; }
+.sales-model .modal-dialog .modal-content .modal-header .modal-title{color: #39ae41;}
+.sales-model .modal-dialog .modal-content .modal-body .more {margin-top: 35px;}
+.sales-model .modal-dialog .modal-content .modal-body .more .sale {display: flex;}
+.sales-model .modal-dialog .modal-content .modal-body .more .sale img{width: 65px; }
+.sales-model .modal-dialog .modal-content .modal-body .more .sale .sales { margin-left: 94px; } 
+.sales-model .modal-dialog .modal-content .modal-body .more .sale .sales-btn {border: none; background: none}
+.sales-model .modal-dialog .modal-content .modal-body .more .sale .sales-return { margin-left: 40px;}
+.sales-model .modal-dialog .modal-content .modal-body .more .sale .payment-in { margin-left: 40px;}
+.sales-model .modal-dialog .modal-content .modal-body .more .sale-content {display: flex;}
+.sales-model .modal-dialog .modal-content .modal-body .more .sale-content {margin-top: 10px;}
+.sales-model .modal-dialog .modal-content .modal-body .more .sale-content .sales-content {margin-left: 111px;}
+.sales-model .modal-dialog .modal-content .modal-body .more .sale-content .sales-return-content {margin-left: 51px;}
+.sales-model .modal-dialog .modal-content .modal-body .more .sale-content .payment-in-content {margin-left: 30px;}
+
+.purchase-model .modal-dialog .modal-content .modal-body {height: 200px;}
+.purchase-model .modal-dialog { transform: translate(-50%, -50%) !important; width: 32%; position: absolute; top: 50%; left: 50%; margin: 0;}
+.purchase-model .modal-dialog .modal-content .modal-body .more {margin-top: 35px;}
+.purchase-model .modal-dialog .modal-content .modal-body .more .purchase {display: flex;}
+.purchase-model .modal-dialog .modal-content .modal-body .more .purchase .purchase-btn {border: none; background: none}
+.purchase-model .modal-dialog .modal-content .modal-body .more .purchase img{width: 65px; }
+.purchase-model .modal-dialog .modal-content .modal-body .more .purchase .purchases { margin-left: 72px; } 
+.purchase-model .modal-dialog .modal-content .modal-body .more .purchase .purchase-return { margin-left: 58px;}
+.purchase-model .modal-dialog .modal-content .modal-body .more .purchase .payment-out { margin-left: 55px;}
+.purchase-model .modal-dialog .modal-content .modal-body .more .purchase-content {display: flex;}
+.purchase-model .modal-dialog .modal-content .modal-body .more .purchase-content {margin-top: 10px;}
+.purchase-model .modal-dialog .modal-content .modal-body .more .purchase-content .purchases-content {margin-left: 72px;}
+.purchase-model .modal-dialog .modal-content .modal-body .more .purchase-content .purchase-return-content {margin-left: 32px;}
+.purchase-model .modal-dialog .modal-content .modal-body .more .purchase-content .payment-out-content {margin-left: 30px;}
+
+.payment-in-modal .modal-dialog { position: absolute; top: 0; right: 0; margin: 0; width: 400px; height: 100vh; overflow-y: scroll; background-color: #FFFFFF; }
+.payment-in-modal .modal-dialog .modal-content { border-radius: 0; border: none; height: 100vh; }
+.payment-in-modal .modal-dialog .modal-content .modal-header .modal-title { font-size: 20px; font-weight: 500; line-height: 1; color: #39ae41; }
+.payment-in-modal .modal-dialog .modal-content .modal-body form .input { margin-bottom: 20px; }
+.payment-in-modal .modal-dialog .modal-content .modal-body form .customer-detailes {padding-bottom: 20px;}
+.payment-in-modal .modal-dialog .modal-content .modal-body form .cash-online {padding-bottom: 10px;}
+.payment-in-modal .modal-dialog .modal-content .modal-body form .cash-online .radio-labal {margin-left: 10px; margin-right: 10px;}
+.payment-in-modal .modal-dialog .modal-content .modal-body form .party-btn {background-color: white; border-color: #1A9EDA; color: #1A9EDA;}
+.payment-in-modal .modal-dialog .modal-content .modal-body form .input input { display: block; background-color: #FFFFFF; border: 1px solid #CFCFCF; width: 350px; padding: 10px 20px 10px 30px; font-size: 16px; color: #AEAEAE; border-radius: 10px; }
+
+.payment-in-modal .payment-out .input .label { display: block; font-size: 18px; font-weight: 400; line-height: 1; color: #464646; margin-bottom: 10px; }
+.payment-in-modal .modal-dialog .modal-content .modal-body form .payment-out .input input { display: block; background-color: #FFFFFF; border: 1px solid #CFCFCF; width: 100%; padding: 10px 20px 10px 30px; font-size: 16px; color: #AEAEAE; border-radius: 10px; }
+.payment-in-modal .payment-out .Sales-price { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+.payment-in-modal .payment-out .Sales-price .Price { width: calc(50% - 10px); margin-right: 10px; }
+.payment-in-modal .payment-out .Sales-price .Date { width: calc(50% - 10px); margin-left: 10px; }
+
+.payment-in-modal .Stock-btn { box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px; background-color: #FFFFFF; padding: 20px 30px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; position: absolute; bottom: 0; right: 0; z-index: 1; width: 100%;}
+.payment-in-modal .Stock-btn button.Save-btn { width: 100%;font-size: 15px; font-weight: 400; line-height: 1; color: white; background-color: #1A9EDA;  padding: 10px 60px; border: none;}
+
+.payment-out-modal .modal-dialog { position: absolute; top: 0; right: 0; margin: 0; width: 400px; height: 100vh; overflow-y: scroll; background-color: #FFFFFF; }
+.payment-out-modal .modal-dialog .modal-content { border-radius: 0; border: none; height: 100vh; }
+.payment-out-modal .modal-dialog .modal-content .modal-header .modal-title { font-size: 20px; font-weight: 500; line-height: 1; color: red; }
+.payment-out-modal .modal-dialog .modal-content .modal-body form .input { margin-bottom: 20px; }
+.payment-out-modal .modal-dialog .modal-content .modal-body form .customer-detailes {padding-bottom: 20px;}
+.payment-out-modal .modal-dialog .modal-content .modal-body form .cash-online {padding-bottom: 10px;}
+.payment-out-modal .modal-dialog .modal-content .modal-body form .cash-online .radio-labal {margin-left: 10px; margin-right: 10px;}
+.payment-out-modal .modal-dialog .modal-content .modal-body form .party-btn {background-color: white; border-color: #1A9EDA; color: #1A9EDA;}
+.payment-out-modal .modal-dialog .modal-content .modal-body form .input input { display: block; background-color: #FFFFFF; border: 1px solid #CFCFCF; width: 350px; padding: 10px 20px 10px 30px; font-size: 16px; color: #AEAEAE; border-radius: 10px; }
+
+.payment-out-modal .payment-out .input .label { display: block; font-size: 18px; font-weight: 400; line-height: 1; color: #464646; margin-bottom: 10px; }
+.payment-out-modal .modal-dialog .modal-content .modal-body form .payment-out .input input { display: block; background-color: #FFFFFF; border: 1px solid #CFCFCF; width: 100%; padding: 10px 20px 10px 30px; font-size: 16px; color: #AEAEAE; border-radius: 10px; }
+.payment-out-modal .payment-out .Sales-price { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+.payment-out-modal .payment-out .Sales-price .Price { width: calc(50% - 10px); margin-right: 10px; }
+.payment-out-modal .payment-out .Sales-price .Date { width: calc(50% - 10px); margin-left: 10px; }
+
+.payment-out-modal .Stock-btn { box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px; background-color: #FFFFFF; padding: 20px 30px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; position: absolute; bottom: 0; right: 0; z-index: 1; width: 100%;}
+.payment-out-modal .Stock-btn button.Save-btn { width: 100%;font-size: 15px; font-weight: 400; line-height: 1; color: white; background-color: #1A9EDA;  padding: 10px 60px; border: none;}
+
+.Sales-details .user-detail-section .user-details { height: 510px; overflow-y: scroll; } 
 .Sales-details .user-detail-section .user-details .single-user-details { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 15px 46px; background-color: #FFFFFF; border-bottom: 1px solid rgb(207, 207, 207, 0.3); }
 .Sales-details .user-detail-section .user-details .single-user-details .Product-Name { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
 .Sales-details .user-detail-section .user-details .single-user-details .Product-Name .name h4 { font-size: 18px; font-weight: 500; line-height: 1; color: #000000; margin: 0 0 5px; }

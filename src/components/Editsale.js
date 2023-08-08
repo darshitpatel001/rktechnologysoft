@@ -22,7 +22,7 @@ export default function Editsale() {
                     <div className='Editsales-details'>
                         <div className='main-box d-flex'>
                             <div className='editsales-box'>
-                                <h6>Edit Sale Return</h6>
+                                <h6>PARTY DETAILS</h6>
                                 <div class="row">
                                     <div class="col-6">
                                         <label for="partyname" class="form-label">Party Name</label>

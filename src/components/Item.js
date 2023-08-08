@@ -14,7 +14,7 @@ export default function Item() {
 
     const [StokInshow, setStokInshow] = useState(false);
 
-    const StokInClose = () => setStokInshow(false);
+    const StokInClose = () => setStokInshow(false); 
     const StokInShow = () => setStokInshow(true);
 
     const [StokInshow1, setStokInshow1] = useState(false);

@@ -4,17 +4,17 @@ import { Button, Modal } from 'react-bootstrap'
 import Deleteicon from "../assets/images/Group-391.png"
 import Accordion from 'react-bootstrap/Accordion';
 
-export default function Addpurchase() {
+export default function PurchaseReturn() {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    return (
-        <>
-            <section className='Addsales-Section'>
+  return (
+    <>
+       <section className='Addsales-Section'>
                 <form>
                     <div className='details-section'>
-                        <h3>Create Purchase</h3>
+                        <h3>Create Purchase Return</h3>
                     </div>
 
                     <div className='Addsales-details'>
@@ -41,14 +41,14 @@ export default function Addpurchase() {
                                 </div>
                             </div>
                             <div className='Addsales-box'>
-                                <h6>PURCHASE DETAILS</h6>
+                                <h6>PURCHASE RETURN DETAILS</h6>
                                 <div class="row">
                                     <div class="col-6">
-                                        <label for="Purchasereturn" class="form-label">Purchase Number</label>
-                                        <input type="number" class="form-control" placeholder="Purchase Number" name="invoicenumber" />
+                                        <label for="Purchasereturn" class="form-label">Purchase Return Number</label>
+                                        <input type="number" class="form-control" placeholder="Purchase Return Number" name="invoicenumber" />
                                     </div>
                                     <div class="col-6">
-                                        <label for="PurchaseDate" class="form-label">Purchase Date</label>
+                                        <label for="PurchaseDate" class="form-label">Purchase Return Date</label>
                                         <input type="date" class="form-control" name="invoicedate" />
                                     </div>
                                     <div class="col-6">
@@ -63,7 +63,7 @@ export default function Addpurchase() {
                             </div>
                         </div>
                         <div className='Addsales-boxs d-flex'>
-                            <label>ITEMS ON THE PURCHASE </label>
+                            <label>ITEMS ON THE PURCHASE RETURN</label>
                             <input type="text" class="form-control" placeholder="18" name="stateofsupply" disabled />
                         </div>
                         <div className='Addsales-boxs'>
@@ -189,11 +189,11 @@ export default function Addpurchase() {
                         </div>
                     </div>
                     <div className='details-section1'>
-                        <Button>Create Purchase</Button>
+                        <Button>Create Purchase Return</Button>
                     </div>
 
                 </form>
             </section>
-        </>
-    )
+    </>
+  )
 }

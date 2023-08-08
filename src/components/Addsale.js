@@ -190,7 +190,7 @@ export default function Addsale() {
                         </div>
                     </div>
                     <div className='details-section1'>
-                        <Button>Edit Sale Return</Button>
+                        <Button>Create Sale</Button>
                     </div>
 
                 </form>

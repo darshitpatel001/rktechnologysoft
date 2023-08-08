@@ -41,11 +41,25 @@
       "city": "13135",
       "state": "1131513",
       "id": 3
+    },
+    {
+      "firstCharacter": "R",
+      "partyname": "Raj ",
+      "phonenumber": "09561850391",
+      "countryamount": "1",
+      "gavegot": "You'll Get",
+      "gstin": "1",
+      "billingaddress": "1",
+      "arealocality": "1",
+      "pincode": "1",
+      "city": "1",
+      "state": "1",
+      "date": "8/8/2023",
+      "time": "16:11:40",
+      "id": 4
     }
   ],
-  "supplier" : [
-    {
-      
-    }
+  "supplier": [
+    {}
   ]
 }

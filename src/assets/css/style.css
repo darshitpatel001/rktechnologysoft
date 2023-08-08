@@ -682,7 +682,7 @@ input[type=number] { -moz-appearance: textfield; }
 .Expense-modal .modal-dialog .modal-content .modal-header .modal-title { font-size: 20px; font-weight: 500; line-height: 1; color: black; }
 .Expense-modal .modal-dialog .modal-content .modal-body form .input { margin-bottom: 20px; }
 .Expense-modal .modal-dialog .modal-content .modal-body form .input input { display: block; background-color: #FFFFFF; border: 1px solid #CFCFCF; width: 350px; padding: 10px 20px 10px 30px; font-size: 16px; color: #AEAEAE; border-radius: 10px; }
-.Expense-modal .modal-dialog .modal-content .modal-body form .Expense-btn { width: 100%; background-color: white; border-color: #1A9EDA; color: #1A9EDA;}
+.Expense-modal .modal-dialog .modal-content .modal-body form .Expense-btn { width: 100%; background-color: white; border-color: #1A9EDA; color: #1A9EDA; margin-bottom: 10px;}
 
 .Expense-modal .payment-out .input .label { display: block; font-size: 18px; font-weight: 400; line-height: 1; color: #464646; margin-bottom: 10px; }
 .Expense-modal .modal-dialog .modal-content .modal-body form .payment-out .input input { display: block; background-color: #FFFFFF; border: 1px solid #CFCFCF; width: 100%; padding: 10px 20px 10px 30px; font-size: 16px; color: #AEAEAE; border-radius: 10px; }

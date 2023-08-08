@@ -26,7 +26,7 @@ function App() {
   return (
     <section className='dashboard'>
       <BrowserRouter>
-        <Sidebar />      
+        <Sidebar />
         <Routes>
           <Route path='/:page' element={<Customer />} />
           <Route path='/customer/:id' element={<Customer />} />

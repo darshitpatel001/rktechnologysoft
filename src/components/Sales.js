@@ -185,81 +185,6 @@ export default function Sales() {
                                                 <Button className="sales-btn">
                                                     <img src={PaymentIn} onClick={paymentInshow} className='payment-in' />
                                                 </Button>
-                                                <Modal show={paymentIn} onHide={paymentInClose} className='payment-in-modal'>
-                                                    <Modal.Header closeButton>
-                                                        <Modal.Title>You Got ₹</Modal.Title>
-                                                    </Modal.Header>
-                                                    <Modal.Body>
-                                                        <form>
-                                                            <div className='payment-out'>
-                                                                <div className='amount'>
-                                                                    <div className='Sales-price'>
-                                                                        <div className='input Price'>
-                                                                            <div className='coutry-amount'>
-                                                                                <span className='label'>Payment Number</span>
-                                                                                <input type='number' placeholder='Payment Number' name='salesprice' />
-                                                                            </div>
-                                                                        </div>
-                                                                        <div className='input Date'>
-                                                                            <span className='label'>Date</span>
-                                                                            <input type='date' placeholder='Purchase Price' name='purchaseprice' />
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className='customer-detailes'>
-                                                                <div className='customer-detailes-label'>
-                                                                    <span className='label'>CUSTOMER DETAILS</span>
-                                                                </div>
-                                                                <Button className='party-btn'>Select Party</Button>
-                                                            </div>
-
-                                                            <div className='input'>
-                                                                <div className='all-span'>
-                                                                    <span className='label'>Amount Paid</span>
-                                                                </div>
-                                                                <div className='amount'>
-                                                                    <div className='coutry-amount'>
-                                                                        <input type='number' className='inputs' placeholder='Enter Amount' name='productname' />
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className='cash-online'>
-                                                                <div className='all-span'>
-                                                                    <span className='label'>Payment Mode</span>
-                                                                </div>
-                                                                <input type="radio" class="form-check-input" name="optradio" />
-                                                                <label class="form-check-label" className='radio-labal' for="">Cash</label>
-                                                                <input type="radio" class="form-check-input" name="optradio" />
-                                                                <label class="form-check-label" className='radio-labal' for="">Online</label>
-                                                            </div>
-                                                            <div className='input number'>
-                                                                <div className='all-span'>
-                                                                    <span className='label'>Enter Details</span>
-                                                                </div>
-                                                                <div className='amount'>
-                                                                    <div className='coutry-amount'>
-                                                                        <input type='number' placeholder='Enter Your Notes' name='productname' />
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className='input number'>
-                                                                <div className='all-span'>
-                                                                    <span className='label'>Reference Bill No.</span>
-                                                                </div>
-                                                                <div className='amount'>
-                                                                    <div className='coutry-amount'>
-                                                                        <input type='number' placeholder='Enter Reference Bill No' name='productname' />
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div className='Stock-btn'>
-                                                                <Button className='Save-btn'>Save</Button>
-                                                            </div>
-                                                        </form>
-                                                    </Modal.Body>
-                                                </Modal>
                                             </div>
                                             <div className='sale-content'>
                                                 <h6 className='sales-content' onClick={AddSale}>Sale</h6>
@@ -267,6 +192,81 @@ export default function Sales() {
                                                 <h6 className='payment-in-content'>Payment In</h6>
                                             </div>
                                         </div>
+                                    </Modal.Body>
+                                </Modal>
+                                <Modal show={paymentIn} onHide={paymentInClose} className='payment-in-modal'>
+                                    <Modal.Header closeButton>
+                                        <Modal.Title>You Got ₹</Modal.Title>
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                        <form>
+                                            <div className='payment-in'>
+                                                <div className='amount'>
+                                                    <div className='Sales-price'>
+                                                        <div className='input Price'>
+                                                            <div className='coutry-amount'>
+                                                                <span className='label'>Payment Number</span>
+                                                                <input type='number' placeholder='Payment Number' name='salesprice' />
+                                                            </div>
+                                                        </div>
+                                                        <div className='input Date'>
+                                                            <span className='label'>Date</span>
+                                                            <input type='date' placeholder='Purchase Price' name='purchaseprice' />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className='customer-detailes'>
+                                                <div className='customer-detailes-label'>
+                                                    <span className='label'>CUSTOMER DETAILS</span>
+                                                </div>
+                                                <Button className='party-btn'>Select Party</Button>
+                                            </div>
+
+                                            <div className='input'>
+                                                <div className='all-span'>
+                                                    <span className='label'>Amount Paid</span>
+                                                </div>
+                                                <div className='amount'>
+                                                    <div className='coutry-amount'>
+                                                        <input type='number' className='inputs' placeholder='Enter Amount' name='productname' />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className='cash-online'>
+                                                <div className='all-span'>
+                                                    <span className='label'>Payment Mode</span>
+                                                </div>
+                                                <input type="radio" class="form-check-input" name="optradio" />
+                                                <label class="form-check-label" className='radio-labal' for="">Cash</label>
+                                                <input type="radio" class="form-check-input" name="optradio" />
+                                                <label class="form-check-label" className='radio-labal' for="">Online</label>
+                                            </div>
+                                            <div className='input number'>
+                                                <div className='all-span'>
+                                                    <span className='label'>Enter Details</span>
+                                                </div>
+                                                <div className='amount'>
+                                                    <div className='coutry-amount'>
+                                                        <input type='number' placeholder='Enter Your Notes' name='productname' />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className='input number'>
+                                                <div className='all-span'>
+                                                    <span className='label'>Reference Bill No.</span>
+                                                </div>
+                                                <div className='amount'>
+                                                    <div className='coutry-amount'>
+                                                        <input type='number' placeholder='Enter Reference Bill No' name='productname' />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div className='Stock-btn'>
+                                                <Button className='Save-btn'>Save</Button>
+                                            </div>
+                                        </form>
                                     </Modal.Body>
                                 </Modal>
                                 <button className="btn" onClick={AddSale}>

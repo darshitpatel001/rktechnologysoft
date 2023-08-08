@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { Tab, Tabs } from 'react-bootstrap'
 import Arrow1 from "../assets/images/Arrow-1.png"
 import Arrow2 from "../assets/images/Arrow-2.png"
@@ -448,10 +448,13 @@ export default function Customer() {
                   <Accordion.Item eventKey="0">
                     <Accordion.Header>Add GSTIN & Address</Accordion.Header>
                     <Accordion.Body>
-                      <div className='input gstin'>
-                        <span className='label'>Gstin</span>
-                        <input type='text' placeholder='Add GSTIN' name='gstin' value={gstin} onChange={(e) => setGstin(e.target.value)} />
-                        <span className='error'>{gstinError}</span>
+                      <div className='search-filter filter'>
+                        <div className='search-filter-input'>
+                          <a href='https://services.gst.gov.in/services/searchtp' target="_blank">
+                          <img src={Searchicon} alt='' />
+                          </a>
+                          <input type='text' placeholder='Add GSTIN' name='gstin' value={gstin} onChange={(e) => setGstin(e.target.value)} />
+                        </div>
                       </div>
                       <div className='billing-address'>
                         <h2>Billing Address</h2>

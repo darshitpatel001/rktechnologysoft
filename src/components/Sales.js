@@ -45,6 +45,11 @@ export default function Sales() {
     const paymentInClose = () => setpaymentIn(false);
     const paymentInshow = () => setpaymentIn(true);
 
+    const [AddExpensesshow, setAddExpensesshow] = useState(false);
+
+    const AddExpensesClose = () => setAddExpensesshow(false);
+    const AddExpensesShow = () => setAddExpensesshow(true);
+
     const AddSale = () => {
         navigate('/addsale');
     };
@@ -492,9 +497,53 @@ export default function Sales() {
                                 </div>
                             </div>
                             <div className='user-detail-title'>
-                                <button className="btn">
+                                <Button className="btn" onClick={AddExpensesShow}>
                                     + Add Expenses
-                                </button>
+                                </Button>
+                                <Modal show={AddExpensesshow} onHide={AddExpensesClose} className='Expense-modal'>
+                                    <Modal.Header closeButton>
+                                        <Modal.Title>Create an Expense</Modal.Title>
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                        <form>
+                                            <div className='payment-out'>
+                                                <div className='amount'>
+                                                    <div className='Sales-price'>
+                                                        <div className='input Price'>
+                                                            <div className='coutry-amount'>
+                                                                <span className='label'>Expense Number</span>
+                                                                <input type='number' placeholder='Expense Number' name='salesprice' />
+                                                            </div>
+                                                        </div>
+                                                        <div className='input Date'>
+                                                            <span className='label'>Expense Date</span>
+                                                            <input type='date' placeholder='Purchase Price' name='purchaseprice' />
+                                                        </div>
+
+                                                        <div className='customer-detailes-labels'>
+                                                            <span className='label'>Expense Item Details</span>
+                                                        </div>
+                                                        <Button className='Expense-btn'>+ Select Expense Items</Button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div className='input'>
+                                                <div className='all-span'>
+                                                    <span className='label'>Amount Paid</span>
+                                                </div>
+                                                <div className='amount'>
+                                                    <div className='coutry-amount'>
+                                                        <input type='number' className='inputs' placeholder='Enter Amount' name='productname' />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className='Stock-btn'>
+                                                <Button className='Save-btn'>Save</Button>
+                                            </div>
+                                        </form>
+                                    </Modal.Body>
+                                </Modal>
                             </div>
                         </Tab>
                     </Tabs>

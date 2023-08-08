@@ -159,6 +159,10 @@ input[type=number] { -moz-appearance: textfield; }
 .add-customer .modal-dialog .modal-content .modal-body form .number .amount .select select { background-color: transparent; border: 1px solid #CFCFCF; padding: 10px 30px 10px 10px; font-size: 16px; color: #ff0000; border-radius: 0 10px 10px 0; appearance: none; z-index: 1; position: relative; }
 .add-customer .modal-dialog .modal-content .modal-body form .number .amount .select img { position: absolute; top: 50%; right: 10px; transform: translateY(-50%); width: 10px; z-index: 0; }
 .add-customer .modal-dialog .modal-content .modal-body form .number .amount .coutry-amount .amount-icon { position: absolute; top: 50%; left: 15px; transform: translateY(-50%); font-size: 16px; font-weight: 400; line-height: 1; color: #51515e; }
+.add-customer .modal-dialog .modal-content .modal-body form .accordion .accordion-item .accordion-collapse .accordion-body .search-filter { width: 100%; padding-bottom: 20px;}
+.add-customer .modal-dialog .modal-content .modal-body form .accordion .accordion-item .accordion-collapse .accordion-body .search-filter .search-filter-input { position: relative; }
+.add-customer .modal-dialog .modal-content .modal-body form .accordion .accordion-item .accordion-collapse .accordion-body .search-filter .search-filter-input img { position: absolute; top: 50%; right: 15px; transform: translateY(-50%); width: auto; }
+.add-customer .modal-dialog .modal-content .modal-body form .accordion .accordion-item .accordion-collapse .accordion-body .search-filter .search-filter-input input { display: block; background-color: #FFFFFF; border: 1px solid #CFCFCF; width: 100%; padding: 10px 20px 10px 30px; font-size: 16px; color: #AEAEAE; border-radius: 10px; }
 
 .add-customer .modal-dialog .modal-content .modal-body form .accordion:visited, .add-customer .modal-dialog .modal-content .modal-body form .accordion .accordion-item:visited, .add-customer .modal-dialog .modal-content .modal-body form .accordion .accordion-item .accordion-header:visited, .add-customer .modal-dialog .modal-content .modal-body form .accordion .accordion-item .accordion-header .accordion-button:visited, .add-customer .modal-dialog .modal-content .modal-body form .accordion .accordion-item .accordion-header .accordion-button:focus { text-decoration: none; box-shadow: none; outline: none; border: none; }
 .add-customer .modal-dialog .modal-content .modal-body form .accordion .accordion-item { border: none; }
@@ -662,6 +666,7 @@ input[type=number] { -moz-appearance: textfield; }
 .payment-out-modal .modal-dialog .modal-content .modal-body form .cash-online .radio-labal {margin-left: 10px; margin-right: 10px;}
 .payment-out-modal .modal-dialog .modal-content .modal-body form .party-btn {background-color: white; border-color: #1A9EDA; color: #1A9EDA;}
 .payment-out-modal .modal-dialog .modal-content .modal-body form .input input { display: block; background-color: #FFFFFF; border: 1px solid #CFCFCF; width: 350px; padding: 10px 20px 10px 30px; font-size: 16px; color: #AEAEAE; border-radius: 10px; }
+.payment-out-modal .modal-dialog .modal-content .modal-body form .Expense-btn { width: 100%; background-color: white; border-color: #1A9EDA; color: #1A9EDA;}
 
 .payment-out-modal .payment-out .input .label { display: block; font-size: 18px; font-weight: 400; line-height: 1; color: #464646; margin-bottom: 10px; }
 .payment-out-modal .modal-dialog .modal-content .modal-body form .payment-out .input input { display: block; background-color: #FFFFFF; border: 1px solid #CFCFCF; width: 100%; padding: 10px 20px 10px 30px; font-size: 16px; color: #AEAEAE; border-radius: 10px; }
@@ -671,6 +676,22 @@ input[type=number] { -moz-appearance: textfield; }
 
 .payment-out-modal .Stock-btn { box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px; background-color: #FFFFFF; padding: 20px 30px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; position: absolute; bottom: 0; right: 0; z-index: 1; width: 100%;}
 .payment-out-modal .Stock-btn button.Save-btn { width: 100%;font-size: 15px; font-weight: 400; line-height: 1; color: white; background-color: #1A9EDA;  padding: 10px 60px; border: none;}
+
+.Expense-modal .modal-dialog { position: absolute; top: 0; right: 0; margin: 0; width: 400px; height: 100vh; overflow-y: scroll; background-color: #FFFFFF; }
+.Expense-modal .modal-dialog .modal-content { border-radius: 0; border: none; height: 100vh; }
+.Expense-modal .modal-dialog .modal-content .modal-header .modal-title { font-size: 20px; font-weight: 500; line-height: 1; color: black; }
+.Expense-modal .modal-dialog .modal-content .modal-body form .input { margin-bottom: 20px; }
+.Expense-modal .modal-dialog .modal-content .modal-body form .input input { display: block; background-color: #FFFFFF; border: 1px solid #CFCFCF; width: 350px; padding: 10px 20px 10px 30px; font-size: 16px; color: #AEAEAE; border-radius: 10px; }
+.Expense-modal .modal-dialog .modal-content .modal-body form .Expense-btn { width: 100%; background-color: white; border-color: #1A9EDA; color: #1A9EDA;}
+
+.Expense-modal .payment-out .input .label { display: block; font-size: 18px; font-weight: 400; line-height: 1; color: #464646; margin-bottom: 10px; }
+.Expense-modal .modal-dialog .modal-content .modal-body form .payment-out .input input { display: block; background-color: #FFFFFF; border: 1px solid #CFCFCF; width: 100%; padding: 10px 20px 10px 30px; font-size: 16px; color: #AEAEAE; border-radius: 10px; }
+.Expense-modal .payment-out .Sales-price { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+.Expense-modal .payment-out .Sales-price .Price { width: calc(50% - 10px); margin-right: 10px; }
+.Expense-modal .payment-out .Sales-price .Date { width: calc(50% - 10px); margin-left: 10px; }
+
+.Expense-modal .Stock-btn { box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px; background-color: #FFFFFF; padding: 20px 30px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; position: absolute; bottom: 0; right: 0; z-index: 1; width: 100%;}
+.Expense-modal .Stock-btn button.Save-btn { width: 100%;font-size: 15px; font-weight: 400; line-height: 1; color: white; background-color: #1A9EDA;  padding: 10px 60px; border: none;}
 
 .Sales-details .user-detail-section .user-details { height: 510px; overflow-y: scroll; } 
 .Sales-details .user-detail-section .user-details .single-user-details { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 15px 46px; background-color: #FFFFFF; border-bottom: 1px solid rgb(207, 207, 207, 0.3); }

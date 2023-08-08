@@ -1,6 +1,5 @@
 import React from 'react'
 import Reportsidebar from "./Reportsidebar";
-import { Tab, Tabs } from 'react-bootstrap';
 import Transactionicon from "../assets/images/transaction-reports-icon.png"
 import Pdficon from "../assets/images/pdf.png"
 
@@ -12,7 +11,7 @@ export default function Gstrthreeb() {
                 <div className='transaction-report-header'>
                     <div className='icon-text'>
                         <img src={Transactionicon} />
-                        <h2>GSTR-1</h2>
+                        <h2>GSTR-3B</h2>
                     </div>
                     <div className='download-btns'>
                         <button><span className='icon'><img src={Pdficon} /></span>Download PDF</button>
